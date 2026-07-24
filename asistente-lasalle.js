@@ -21,7 +21,7 @@
   var NOMBRE = "Juana";
   // Si se despliega el proxy (para que cualquiera use el chat sin poner clave), aqui va su URL.
   // Vacio = cada usuario ingresa su propia clave de Gemini en Configuracion.
-  var BACKEND_URL = "";
+  var BACKEND_URL = "https://juana-lasalle.jfrubiano.workers.dev/";
 
   function get(k, d) { try { return localStorage.getItem(k) || d; } catch (e) { return d; } }
   function set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
