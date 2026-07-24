@@ -1,0 +1,477 @@
+/* ============================================================================
+   ASISTENTE DEL TABLERO DE PROSPECTIVA · Universidad de La Salle
+   Chat con voz (entrada y salida) + generacion de graficas a pedido (Gemini).
+   Requiere: window.LASALLE_KB (base-conocimiento.js) y Chart.js (ya cargado).
+   Publicable en GitHub Pages. La clave de API se guarda solo en el navegador.
+   ============================================================================ */
+(function () {
+  "use strict";
+  if (window.__asistenteLaSalle) return;
+  window.__asistenteLaSalle = true;
+
+  /* ---------- Configuracion y paleta de marca ---------- */
+  var PAL = {
+    navy: "#0B1B2B", navyMed: "#1A2A4A", teal: "#1F7A8C", gold: "#C8963E",
+    neon: "#00F0B5", azul: "#7FB0D0", cream: "#F8F5EE", white: "#FFFFFF",
+    ink: "#182430", muted: "#5c6b78", green: "#2e8b6f", red: "#b5502f", purple: "#7d5a9c"
+  };
+  var SERIE = [PAL.teal, PAL.gold, PAL.azul, PAL.green, PAL.purple, PAL.navyMed];
+  var LS = { key: "lasalle_gemini_key", model: "lasalle_gemini_model", voz: "lasalle_voz_out" };
+  var MODELO_DEF = "gemini-2.5-flash";
+
+  function get(k, d) { try { return localStorage.getItem(k) || d; } catch (e) { return d; } }
+  function set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+
+  /* ---------- Formato de numeros en espanol ---------- */
+  function nEs(v) {
+    if (typeof v !== "number") { var p = parseFloat(v); if (isNaN(p)) return v; v = p; }
+    return v.toLocaleString("es-CO", { maximumFractionDigits: 2 });
+  }
+
+  /* ---------- Estilos ---------- */
+  var CSS = `
+  #als-btn{position:fixed;bottom:22px;right:22px;z-index:99998;width:60px;height:60px;border:none;border-radius:50%;
+    background:linear-gradient(135deg,${PAL.teal},${PAL.gold});color:#fff;cursor:pointer;box-shadow:0 8px 26px rgba(11,27,43,.34);
+    display:flex;align-items:center;justify-content:center;transition:transform .18s,box-shadow .18s}
+  #als-btn:hover{transform:translateY(-2px) scale(1.04);box-shadow:0 12px 32px rgba(11,27,43,.42)}
+  #als-btn svg{width:28px;height:28px}
+  #als-panel{position:fixed;bottom:22px;right:22px;z-index:99999;width:410px;max-width:calc(100vw - 24px);height:640px;
+    max-height:calc(100vh - 40px);background:${PAL.cream};border-radius:18px;box-shadow:0 18px 60px rgba(11,27,43,.40);
+    display:none;flex-direction:column;overflow:hidden;font-family:'Source Sans 3',system-ui,sans-serif;color:${PAL.ink}}
+  #als-panel.open{display:flex;animation:alsUp .28s ease}
+  @keyframes alsUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  .als-head{background:linear-gradient(135deg,${PAL.navy},${PAL.navyMed});color:#fff;padding:13px 15px;display:flex;align-items:center;gap:10px}
+  .als-head .mk{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,${PAL.teal},${PAL.gold});flex:none}
+  .als-head .tt{flex:1;min-width:0}
+  .als-head .tt b{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:14.5px;display:block;line-height:1.1}
+  .als-head .tt span{font-size:9px;text-transform:uppercase;letter-spacing:1.1px;color:${PAL.azul};display:block;margin-top:2px}
+  .als-icon{background:rgba(127,176,208,.16);border:none;color:#fff;width:32px;height:32px;border-radius:8px;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;flex:none;transition:background .15s}
+  .als-icon:hover{background:rgba(127,176,208,.34)}
+  .als-icon svg{width:17px;height:17px}
+  .als-icon.on{background:${PAL.gold};color:${PAL.navy}}
+  .als-body{flex:1;overflow-y:auto;padding:16px 14px;display:flex;flex-direction:column;gap:12px;scroll-behavior:smooth}
+  .als-msg{max-width:88%;padding:10px 13px;border-radius:13px;font-size:13.5px;line-height:1.55;white-space:normal;word-wrap:break-word}
+  .als-msg.u{align-self:flex-end;background:${PAL.navy};color:#fff;border-bottom-right-radius:4px}
+  .als-msg.a{align-self:flex-start;background:#fff;border:1px solid rgba(11,27,43,.09);box-shadow:0 2px 10px rgba(11,27,43,.05);border-bottom-left-radius:4px}
+  .als-msg.a b{color:${PAL.navy};font-weight:600}
+  .als-msg.a a{color:${PAL.teal}}
+  .als-msg ul{margin:6px 0 2px;padding-left:18px}.als-msg li{margin:3px 0}
+  .als-src{font-size:10.5px;color:${PAL.muted};margin-top:7px;padding-top:6px;border-top:1px solid rgba(11,27,43,.08);line-height:1.4}
+  .als-chartbox{background:#fff;border:1px solid rgba(11,27,43,.09);border-radius:12px;padding:12px 12px 8px;margin-top:9px}
+  .als-chartbox .ct{font-family:'Playfair Display',Georgia,serif;font-size:13px;color:${PAL.navy};margin-bottom:8px;line-height:1.2}
+  .als-chartwrap{position:relative;height:230px}
+  .als-chartbox .cf{font-size:9.5px;color:${PAL.muted};margin-top:6px;line-height:1.35}
+  .als-typing{align-self:flex-start;display:flex;gap:4px;padding:12px 14px;background:#fff;border:1px solid rgba(11,27,43,.09);border-radius:13px}
+  .als-typing i{width:7px;height:7px;border-radius:50%;background:${PAL.azul};animation:alsBlink 1.2s infinite}
+  .als-typing i:nth-child(2){animation-delay:.2s}.als-typing i:nth-child(3){animation-delay:.4s}
+  @keyframes alsBlink{0%,60%,100%{opacity:.3}30%{opacity:1}}
+  .als-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+  .als-chip{background:rgba(31,122,140,.10);border:1px solid rgba(31,122,140,.25);color:${PAL.navy};font-size:11.5px;
+    padding:6px 10px;border-radius:16px;cursor:pointer;text-align:left;line-height:1.3;transition:background .15s}
+  .als-chip:hover{background:rgba(31,122,140,.20)}
+  .als-foot{padding:10px 12px;background:${PAL.cream};border-top:1px solid rgba(11,27,43,.10)}
+  .als-inputrow{display:flex;align-items:flex-end;gap:7px;background:#fff;border:1px solid rgba(11,27,43,.16);border-radius:13px;padding:5px 6px 5px 12px}
+  .als-inputrow textarea{flex:1;border:none;outline:none;resize:none;font-family:inherit;font-size:13.5px;color:${PAL.ink};
+    background:transparent;max-height:96px;line-height:1.4;padding:6px 0}
+  .als-send,.als-mic{border:none;border-radius:10px;width:36px;height:36px;flex:none;cursor:pointer;display:flex;align-items:center;justify-content:center}
+  .als-send{background:${PAL.teal};color:#fff}.als-send:hover{background:#2792a6}
+  .als-mic{background:rgba(11,27,43,.06);color:${PAL.navy}}.als-mic:hover{background:rgba(11,27,43,.12)}
+  .als-mic.rec{background:${PAL.red};color:#fff;animation:alsPulse 1.1s infinite}
+  @keyframes alsPulse{0%{box-shadow:0 0 0 0 rgba(181,80,47,.5)}70%{box-shadow:0 0 0 9px rgba(181,80,47,0)}100%{box-shadow:0 0 0 0 rgba(181,80,47,0)}}
+  .als-send svg,.als-mic svg{width:18px;height:18px}
+  .als-hint{font-size:10px;color:${PAL.muted};text-align:center;margin-top:6px}
+  .als-cfg{position:absolute;inset:0;background:${PAL.cream};z-index:5;display:none;flex-direction:column;padding:18px 16px;overflow-y:auto}
+  .als-cfg.show{display:flex}
+  .als-cfg h4{font-family:'Playfair Display',Georgia,serif;color:${PAL.navy};font-size:16px;margin:0 0 4px}
+  .als-cfg p{font-size:12px;color:${PAL.muted};line-height:1.5;margin:0 0 14px}
+  .als-cfg label{font-size:10.5px;text-transform:uppercase;letter-spacing:.9px;color:${PAL.muted};font-weight:600;display:block;margin:10px 0 5px}
+  .als-cfg input{width:100%;border:1px solid rgba(11,27,43,.18);border-radius:9px;padding:9px 11px;font-family:inherit;font-size:13px;outline:none}
+  .als-cfg input:focus{border-color:${PAL.teal}}
+  .als-cfg .save{margin-top:18px;background:${PAL.teal};color:#fff;border:none;border-radius:10px;padding:11px;font-size:13px;font-weight:600;cursor:pointer}
+  .als-cfg .save:hover{background:#2792a6}
+  .als-cfg .lnk{font-size:11.5px;color:${PAL.teal};margin-top:12px;text-align:center;display:block;text-decoration:none}
+  .als-err{color:${PAL.red};font-size:12px;margin-top:8px}
+  @media(max-width:480px){#als-panel{bottom:0;right:0;width:100vw;height:100vh;max-height:100vh;border-radius:0}}
+  `;
+
+  /* ---------- Iconos ---------- */
+  var IC = {
+    chat: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"/></svg>',
+    close: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 6 6 18M6 6l12 12"/></svg>',
+    send: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>',
+    mic: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4"/></svg>',
+    spk: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a9 9 0 0 1 0 14"/></svg>',
+    spkoff: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="m23 9-6 6M17 9l6 6"/></svg>',
+    cfg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>'
+  };
+
+  /* ---------- Construccion del DOM ---------- */
+  var style = document.createElement("style");
+  style.textContent = CSS;
+  document.head.appendChild(style);
+
+  var btn = document.createElement("button");
+  btn.id = "als-btn"; btn.setAttribute("aria-label", "Abrir asistente"); btn.innerHTML = IC.chat;
+  document.body.appendChild(btn);
+
+  var panel = document.createElement("div");
+  panel.id = "als-panel";
+  panel.innerHTML =
+    '<div class="als-head">' +
+      '<div class="mk"></div>' +
+      '<div class="tt"><b>Asistente de Prospectiva</b><span>Universidad de La Salle</span></div>' +
+      '<button class="als-icon" id="als-voz" title="Voz de respuesta"></button>' +
+      '<button class="als-icon" id="als-cfgbtn" title="Configuracion">' + IC.cfg + '</button>' +
+      '<button class="als-icon" id="als-x" title="Cerrar">' + IC.close + '</button>' +
+    '</div>' +
+    '<div class="als-body" id="als-body"></div>' +
+    '<div class="als-foot">' +
+      '<div class="als-inputrow">' +
+        '<textarea id="als-in" rows="1" placeholder="Pregunta o pide una grafica..."></textarea>' +
+        '<button class="als-mic" id="als-mic" title="Hablar">' + IC.mic + '</button>' +
+        '<button class="als-send" id="als-send" title="Enviar">' + IC.send + '</button>' +
+      '</div>' +
+      '<div class="als-hint">Respuestas basadas en el tablero. Verifica cifras sensibles.</div>' +
+    '</div>' +
+    '<div class="als-cfg" id="als-cfg">' +
+      '<h4>Configuracion</h4>' +
+      '<p>El asistente usa la API de Google Gemini. Tu clave se guarda solo en este navegador y nunca se sube a GitHub.</p>' +
+      '<label>Clave de API de Google Gemini</label>' +
+      '<input id="als-key" type="password" placeholder="AIza..." autocomplete="off">' +
+      '<label>Modelo</label>' +
+      '<input id="als-mdl" type="text" placeholder="' + MODELO_DEF + '">' +
+      '<div class="als-err" id="als-cfgerr"></div>' +
+      '<button class="save" id="als-savecfg">Guardar</button>' +
+      '<a class="lnk" href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Obtener una clave gratis en Google AI Studio</a>' +
+    '</div>';
+  document.body.appendChild(panel);
+
+  var $ = function (id) { return document.getElementById(id); };
+  var body = $("als-body");
+
+  /* ---------- Estado ---------- */
+  var historial = [];            // {role:'user'|'model', text}
+  var vozOut = get(LS.voz, "1") === "1";
+  var recognizing = false, recog = null;
+
+  /* ---------- Voz de respuesta (toggle) ---------- */
+  function pintarVoz() {
+    var b = $("als-voz");
+    b.innerHTML = vozOut ? IC.spk : IC.spkoff;
+    b.classList.toggle("on", vozOut);
+    b.title = vozOut ? "Voz de respuesta: activada" : "Voz de respuesta: silenciada";
+  }
+  pintarVoz();
+
+  /* ---------- Sintesis de voz (salida) ---------- */
+  var vozEs = null;
+  function cargarVoz() {
+    if (!("speechSynthesis" in window)) return;
+    var vs = window.speechSynthesis.getVoices();
+    vozEs = vs.filter(function (v) { return /es(-|_)?(CO|419|MX|US|ES)/i.test(v.lang) || /^es/i.test(v.lang); })
+              .sort(function (a) { return /CO|419|MX/i.test(a.lang) ? -1 : 1; })[0] || null;
+  }
+  if ("speechSynthesis" in window) {
+    cargarVoz();
+    window.speechSynthesis.onvoiceschanged = cargarVoz;
+  }
+  function hablar(txt) {
+    if (!vozOut || !("speechSynthesis" in window) || !txt) return;
+    try {
+      window.speechSynthesis.cancel();
+      var u = new SpeechSynthesisUtterance(txt.slice(0, 700));
+      u.lang = "es-CO"; if (vozEs) u.voice = vozEs; u.rate = 1.02; u.pitch = 1;
+      window.speechSynthesis.speak(u);
+    } catch (e) {}
+  }
+  function callar() { if ("speechSynthesis" in window) try { window.speechSynthesis.cancel(); } catch (e) {} }
+
+  /* ---------- Reconocimiento de voz (entrada) ---------- */
+  var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  function initRecog() {
+    if (!SR) return null;
+    var r = new SR();
+    r.lang = "es-CO"; r.interimResults = true; r.continuous = false; r.maxAlternatives = 1;
+    r.onstart = function () { recognizing = true; $("als-mic").classList.add("rec"); };
+    r.onend = function () { recognizing = false; $("als-mic").classList.remove("rec"); };
+    r.onerror = function () { recognizing = false; $("als-mic").classList.remove("rec"); };
+    r.onresult = function (e) {
+      var t = "";
+      for (var i = 0; i < e.results.length; i++) t += e.results[i][0].transcript;
+      $("als-in").value = t; autosize($("als-in"));
+      if (e.results[e.results.length - 1].isFinal) { setTimeout(function () { enviar(); }, 250); }
+    };
+    return r;
+  }
+  function toggleMic() {
+    if (!SR) { pintarError("Tu navegador no soporta dictado por voz. Usa Chrome en el computador."); return; }
+    if (recognizing) { try { recog.stop(); } catch (e) {} return; }
+    callar();
+    if (!recog) recog = initRecog();
+    try { recog.start(); } catch (e) {}
+  }
+
+  /* ---------- Utilidades de UI ---------- */
+  function autosize(el) { el.style.height = "auto"; el.style.height = Math.min(el.scrollHeight, 96) + "px"; }
+  function scrollAbajo() { body.scrollTop = body.scrollHeight; }
+
+  function mdLite(s) {
+    s = s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    s = s.replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
+    s = s.replace(/\[([^\]]+)\]\((https?:[^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+    // listas con guion
+    var lineas = s.split("\n"), out = [], enLista = false;
+    for (var i = 0; i < lineas.length; i++) {
+      var m = /^\s*[-•]\s+(.*)/.exec(lineas[i]);
+      if (m) { if (!enLista) { out.push("<ul>"); enLista = true; } out.push("<li>" + m[1] + "</li>"); }
+      else { if (enLista) { out.push("</ul>"); enLista = false; } out.push(lineas[i]); }
+    }
+    if (enLista) out.push("</ul>");
+    return out.join("\n").replace(/\n{2,}/g, "<br><br>").replace(/\n/g, "<br>");
+  }
+
+  function msgUsuario(txt) {
+    var d = document.createElement("div");
+    d.className = "als-msg u"; d.textContent = txt; body.appendChild(d); scrollAbajo();
+  }
+  function msgAsistente(txt, spec, fuente) {
+    var d = document.createElement("div");
+    d.className = "als-msg a";
+    d.innerHTML = mdLite(txt || "");
+    if (fuente) { var f = document.createElement("div"); f.className = "als-src"; f.innerHTML = "Fuente: " + mdLite(fuente); d.appendChild(f); }
+    body.appendChild(d);
+    if (spec) { try { renderGrafica(d, spec); } catch (e) { /* si falla, se ignora la grafica */ } }
+    scrollAbajo();
+    return d;
+  }
+  function typing(on) {
+    var t = $("als-typing");
+    if (on && !t) { t = document.createElement("div"); t.className = "als-typing"; t.id = "als-typing"; t.innerHTML = "<i></i><i></i><i></i>"; body.appendChild(t); scrollAbajo(); }
+    else if (!on && t) t.remove();
+  }
+  function pintarError(m) { msgAsistente(m); }
+
+  /* ---------- Render de graficas con estilo de marca ---------- */
+  function renderGrafica(cont, spec) {
+    if (!window.Chart || !spec || !spec.etiquetas || !spec.series) return;
+    var box = document.createElement("div"); box.className = "als-chartbox";
+    if (spec.titulo) { var ct = document.createElement("div"); ct.className = "ct"; ct.textContent = spec.titulo; box.appendChild(ct); }
+    var wrap = document.createElement("div"); wrap.className = "als-chartwrap";
+    var cv = document.createElement("canvas"); wrap.appendChild(cv); box.appendChild(wrap);
+    if (spec.fuente) { var cf = document.createElement("div"); cf.className = "cf"; cf.textContent = "Fuente: " + spec.fuente; box.appendChild(cf); }
+    cont.appendChild(box);
+
+    var tipo = (spec.tipo || "barras").toLowerCase();
+    var unidad = spec.unidad || "";
+    var fmt = function (v) { return nEs(v) + (unidad === "%" ? "%" : ""); };
+
+    var cfg;
+    if (tipo === "doughnut" || tipo === "dona" || tipo === "torta") {
+      var vals = spec.series[0].datos, tot = vals.reduce(function (a, b) { return a + (+b || 0); }, 0);
+      cfg = {
+        type: "doughnut",
+        data: { labels: spec.etiquetas, datasets: [{ data: vals, backgroundColor: spec.etiquetas.map(function (_, i) { return SERIE[i % SERIE.length]; }), borderColor: "#fff", borderWidth: 2 }] },
+        options: baseOpc(false),
+      };
+      cfg.options.cutout = "58%";
+      cfg.options.plugins.legend = { position: "bottom", labels: { boxWidth: 11, font: { size: 11 }, padding: 10 } };
+      cfg.options.plugins.datalabels = { display: true, color: "#fff", font: { size: 11, weight: "700" },
+        formatter: function (v) { return tot ? Math.round(v / tot * 100) + "%" : v; } };
+    } else if (tipo === "lineas" || tipo === "linea" || tipo === "line") {
+      cfg = { type: "line",
+        data: { labels: spec.etiquetas, datasets: spec.series.map(function (s, i) {
+          var c = SERIE[i % SERIE.length];
+          return { label: s.nombre || "", data: s.datos, borderColor: c, backgroundColor: hex2rgba(c, .08),
+                   fill: true, tension: .35, borderWidth: 2.4, pointRadius: 3, pointBackgroundColor: c }; }) },
+        options: baseOpc(spec.series.length > 1) };
+      ejeY(cfg, unidad);
+    } else if (tipo === "radar") {
+      cfg = { type: "radar",
+        data: { labels: spec.etiquetas, datasets: spec.series.slice(0, 3).map(function (s, i) {
+          var c = SERIE[i % SERIE.length];
+          return { label: s.nombre || "", data: s.datos, borderColor: c, backgroundColor: hex2rgba(c, .18), borderWidth: 2, pointBackgroundColor: c }; }) },
+        options: baseOpc(spec.series.length > 1) };
+      cfg.options.scales = { r: { angleLines: { color: "rgba(11,27,43,.08)" }, grid: { color: "rgba(11,27,43,.08)" }, pointLabels: { font: { size: 10 } }, ticks: { display: false } } };
+    } else {
+      var horiz = (tipo === "barras_h" || tipo === "barras_horizontal" || tipo === "ranking" || tipo === "horizontal");
+      var una = spec.series.length === 1;
+      cfg = { type: "bar",
+        data: { labels: spec.etiquetas, datasets: spec.series.map(function (s, i) {
+          var col;
+          if (una) { var mx = Math.max.apply(null, s.datos.map(Number)); col = s.datos.map(function (v) { return (+v === mx) ? PAL.gold : PAL.teal; }); }
+          else col = SERIE[i % SERIE.length];
+          return { label: s.nombre || "", data: s.datos, backgroundColor: col, borderRadius: 4, barPercentage: .78, categoryPercentage: .74 }; }) },
+        options: baseOpc(!una) };
+      if (horiz) cfg.options.indexAxis = "y";
+      cfg.options.plugins.datalabels = {
+        display: true, anchor: "end", align: "end", clamp: true, offset: 2,
+        color: PAL.navy, font: { size: 10.5, weight: "700" }, formatter: fmt
+      };
+      cfg.options.layout = { padding: horiz ? { right: 34 } : { top: 22 } };
+      ejeY(cfg, unidad, horiz);
+    }
+    new window.Chart(cv.getContext("2d"), cfg);
+  }
+  function baseOpc(legend) {
+    return { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: legend ? { position: "bottom", labels: { boxWidth: 11, font: { size: 11 }, padding: 10 } } : { display: false },
+                 datalabels: { display: false },
+                 tooltip: { callbacks: { label: function (c) { var v = c.parsed.y != null ? c.parsed.y : (c.parsed.x != null ? c.parsed.x : c.parsed); return (c.dataset.label ? c.dataset.label + ": " : "") + nEs(v); } } } },
+      scales: {} };
+  }
+  function ejeY(cfg, unidad, horiz) {
+    var val = { beginAtZero: true, grid: { color: "rgba(11,27,43,.06)" }, ticks: { font: { size: 10 }, callback: function (v) { return nEs(v) + (unidad === "%" ? "%" : ""); } } };
+    var cat = { grid: { display: false }, ticks: { font: { size: 10 } } };
+    if (horiz) { cfg.options.scales.x = val; cfg.options.scales.y = cat; }
+    else { cfg.options.scales.y = val; cfg.options.scales.x = cat; }
+  }
+  function hex2rgba(h, a) { var n = parseInt(h.slice(1), 16); return "rgba(" + (n >> 16 & 255) + "," + (n >> 8 & 255) + "," + (n & 255) + "," + a + ")"; }
+
+  /* ---------- Instruccion de sistema ---------- */
+  function sistema() {
+    return (window.LASALLE_KB || "") + "\n\n---\n\nINSTRUCCIONES DE RESPUESTA:\n" +
+      "- Responde en espanol colombiano, profesional, directo y claro. Sin guiones largos (em-dash).\n" +
+      "- Apoyate SOLO en la base de conocimiento anterior. Si un dato no esta, dilo con honestidad; no inventes cifras.\n" +
+      "- Usa formato de numeros en espanol (coma decimal, punto de miles). Cuando cites una cifra, menciona la fuente si aparece en la base.\n" +
+      "- Se conciso: respuestas de 2 a 5 frases salvo que pidan detalle. Puedes usar listas con guion cuando ayuden.\n" +
+      "- Cuando el usuario pida una grafica, un grafico, comparar visualmente o 'muestrame', incluye al final un bloque exactamente asi:\n" +
+      "```grafica\n{\"tipo\":\"barras|barras_h|doughnut|lineas|radar\",\"titulo\":\"...\",\"etiquetas\":[\"...\"],\"series\":[{\"nombre\":\"...\",\"datos\":[num,...]}],\"unidad\":\"%\" o \"\",\"fuente\":\"...\"}\n```\n" +
+      "  Reglas de la grafica: usa 'barras' para comparaciones verticales, 'barras_h' para rankings, 'doughnut' para participacion o composicion, 'lineas' para series de tiempo o tendencias, 'radar' para perfiles multivariable (max 3 series). Usa solo datos reales de la base. Antes o despues del bloque escribe 1 o 2 frases de lectura del dato. No expliques el JSON.\n" +
+      "- Si no piden grafica, no incluyas ningun bloque de codigo.";
+  }
+
+  /* ---------- Llamada a Gemini ---------- */
+  function llamarGemini(onOK, onErr) {
+    var key = get(LS.key, ""), model = get(LS.model, MODELO_DEF);
+    if (!key) { onErr("SINKEY"); return; }
+    var contents = historial.map(function (h) { return { role: h.role, parts: [{ text: h.text }] }; });
+    var payload = {
+      systemInstruction: { parts: [{ text: sistema() }] },
+      contents: contents,
+      generationConfig: { temperature: 0.4, maxOutputTokens: 1400 }
+    };
+    var url = "https://generativelanguage.googleapis.com/v1beta/models/" + encodeURIComponent(model) + ":generateContent?key=" + encodeURIComponent(key);
+    fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) })
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, status: r.status, j: j }; }); })
+      .then(function (res) {
+        if (!res.ok) {
+          var m = res.j && res.j.error && res.j.error.message ? res.j.error.message : ("Error " + res.status);
+          onErr(m); return;
+        }
+        var c = res.j.candidates && res.j.candidates[0];
+        var txt = c && c.content && c.content.parts ? c.content.parts.map(function (p) { return p.text || ""; }).join("") : "";
+        if (!txt) { onErr("La respuesta llego vacia. Intenta reformular la pregunta."); return; }
+        onOK(txt);
+      })
+      .catch(function (e) { onErr("No se pudo conectar con Gemini. Revisa tu conexion. " + (e && e.message ? e.message : "")); });
+  }
+
+  /* ---------- Parseo de la grafica en la respuesta ---------- */
+  function extraerGrafica(txt) {
+    var re = /```grafica\s*([\s\S]*?)```/i;
+    var m = re.exec(txt);
+    if (!m) return { texto: txt, spec: null };
+    var spec = null;
+    try { spec = JSON.parse(m[1].trim()); } catch (e) {
+      try { spec = JSON.parse(m[1].trim().replace(/,\s*}/g, "}").replace(/,\s*]/g, "]")); } catch (e2) { spec = null; }
+    }
+    var texto = txt.replace(m[0], "").trim();
+    return { texto: texto, spec: spec };
+  }
+
+  /* ---------- Envio ---------- */
+  var enviando = false;
+  function enviar() {
+    var el = $("als-in"), txt = el.value.trim();
+    if (!txt || enviando) return;
+    if (!get(LS.key, "")) { abrirCfg(true); return; }
+    callar();
+    msgUsuario(txt);
+    historial.push({ role: "user", text: txt });
+    el.value = ""; autosize(el);
+    enviando = true; typing(true);
+    llamarGemini(function (out) {
+      typing(false); enviando = false;
+      var p = extraerGrafica(out);
+      var fuente = null; // la fuente ya va dentro del texto/grafica
+      historial.push({ role: "model", text: out });
+      msgAsistente(p.texto, p.spec, fuente);
+      hablar(limpiarParaVoz(p.texto));
+    }, function (err) {
+      typing(false); enviando = false;
+      if (err === "SINKEY") { abrirCfg(true); return; }
+      var ayuda = "";
+      if (/API key not valid|API_KEY_INVALID|invalid/i.test(err)) ayuda = " Revisa la clave en Configuracion.";
+      else if (/not found|is not found|NOT_FOUND|404/i.test(err)) ayuda = " El modelo no existe para tu clave. Cambia el modelo en Configuracion (por ejemplo gemini-2.5-flash o gemini-flash-latest).";
+      else if (/quota|RESOURCE_EXHAUSTED|429/i.test(err)) ayuda = " Superaste la cuota de tu clave por ahora.";
+      msgAsistente("No pude responder. " + err + ayuda);
+    });
+  }
+  function limpiarParaVoz(t) {
+    return t.replace(/```[\s\S]*?```/g, "").replace(/\*\*/g, "").replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replace(/[-•]\s+/g, "").trim();
+  }
+
+  /* ---------- Bienvenida y chips ---------- */
+  var CHIPS = [
+    "Resume el diagnostico de La Salle en 3 puntos",
+    "Grafica la matricula de La Salle por plaza",
+    "Compara TIC de La Salle contra el pais",
+    "Grafica la supervivencia de programas por nivel",
+    "Que dice el tablero sobre el futuro del trabajo?"
+  ];
+  function bienvenida() {
+    if (body.childElementCount) return;
+    var d = document.createElement("div"); d.className = "als-msg a";
+    d.innerHTML = "<b>Hola, soy el asistente del tablero.</b><br>Pregunta lo que quieras sobre el entorno de la educacion superior, el mercado, los territorios o el portafolio de La Salle. Tambien puedo <b>armar graficas</b> con los datos del tablero. Puedes escribir o usar el microfono.";
+    body.appendChild(d);
+    var ch = document.createElement("div"); ch.className = "als-chips";
+    CHIPS.forEach(function (c) {
+      var b = document.createElement("button"); b.className = "als-chip"; b.textContent = c;
+      b.onclick = function () { $("als-in").value = c; enviar(); };
+      ch.appendChild(b);
+    });
+    body.appendChild(ch);
+    if (!get(LS.key, "")) {
+      var w = document.createElement("div"); w.className = "als-msg a";
+      w.innerHTML = "Para empezar, abre la <b>configuracion</b> (arriba) y pega tu clave de Google Gemini. Se guarda solo en este navegador.";
+      body.appendChild(w);
+    }
+    scrollAbajo();
+  }
+
+  /* ---------- Configuracion ---------- */
+  function abrirCfg(show) {
+    $("als-key").value = get(LS.key, "");
+    $("als-mdl").value = get(LS.model, MODELO_DEF);
+    $("als-cfgerr").textContent = "";
+    $("als-cfg").classList.toggle("show", show !== false);
+  }
+  function guardarCfg() {
+    var k = $("als-key").value.trim(), m = $("als-mdl").value.trim() || MODELO_DEF;
+    set(LS.key, k); set(LS.model, m);
+    $("als-cfg").classList.remove("show");
+    if (k && body.querySelectorAll(".als-msg").length) {
+      // quitar aviso de "pega tu clave" si estaba
+    }
+    if (!body.childElementCount) bienvenida();
+  }
+
+  /* ---------- Eventos ---------- */
+  function abrir() { panel.classList.add("open"); btn.style.display = "none"; bienvenida(); setTimeout(function () { $("als-in").focus(); }, 100); }
+  function cerrar() { panel.classList.remove("open"); btn.style.display = "flex"; callar(); if (recognizing) try { recog.stop(); } catch (e) {} }
+
+  btn.onclick = abrir;
+  $("als-x").onclick = cerrar;
+  $("als-send").onclick = enviar;
+  $("als-mic").onclick = toggleMic;
+  $("als-cfgbtn").onclick = function () { abrirCfg(true); };
+  $("als-savecfg").onclick = guardarCfg;
+  $("als-voz").onclick = function () { vozOut = !vozOut; set(LS.voz, vozOut ? "1" : "0"); pintarVoz(); if (!vozOut) callar(); };
+  var inp = $("als-in");
+  inp.addEventListener("input", function () { autosize(inp); });
+  inp.addEventListener("keydown", function (e) { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); enviar(); } });
+
+  // ocultar el mic si el navegador no lo soporta
+  if (!SR) { $("als-mic").style.display = "none"; }
+})();
