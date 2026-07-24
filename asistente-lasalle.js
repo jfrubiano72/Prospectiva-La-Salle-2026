@@ -18,6 +18,10 @@
   var SERIE = [PAL.teal, PAL.gold, PAL.azul, PAL.green, PAL.purple, PAL.navyMed];
   var LS = { key: "lasalle_gemini_key", model: "lasalle_gemini_model", voz: "lasalle_voz_out" };
   var MODELO_DEF = "gemini-2.5-flash";
+  var NOMBRE = "Juana";
+  // Si se despliega el proxy (para que cualquiera use el chat sin poner clave), aqui va su URL.
+  // Vacio = cada usuario ingresa su propia clave de Gemini en Configuracion.
+  var BACKEND_URL = "";
 
   function get(k, d) { try { return localStorage.getItem(k) || d; } catch (e) { return d; } }
   function set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
@@ -41,7 +45,8 @@
   #als-panel.open{display:flex;animation:alsUp .28s ease}
   @keyframes alsUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
   .als-head{background:linear-gradient(135deg,${PAL.navy},${PAL.navyMed});color:#fff;padding:13px 15px;display:flex;align-items:center;gap:10px}
-  .als-head .mk{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,${PAL.teal},${PAL.gold});flex:none}
+  .als-head .mk{width:34px;height:34px;border-radius:10px;background:url("juana.png") center 12%/cover no-repeat,linear-gradient(135deg,${PAL.teal},${PAL.gold});flex:none;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+  .als-juana-hero{display:block;height:92px;width:auto;margin:0 auto 10px;object-fit:contain}
   .als-head .tt{flex:1;min-width:0}
   .als-head .tt b{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:14.5px;display:block;line-height:1.1}
   .als-head .tt span{font-size:9px;text-transform:uppercase;letter-spacing:1.1px;color:${PAL.azul};display:block;margin-top:2px}
@@ -112,7 +117,7 @@
   document.head.appendChild(style);
 
   var btn = document.createElement("button");
-  btn.id = "als-btn"; btn.setAttribute("aria-label", "Abrir asistente"); btn.innerHTML = IC.chat;
+  btn.id = "als-btn"; btn.setAttribute("aria-label", "Abrir a Juana"); btn.innerHTML = IC.chat;
   document.body.appendChild(btn);
 
   var panel = document.createElement("div");
@@ -120,7 +125,7 @@
   panel.innerHTML =
     '<div class="als-head">' +
       '<div class="mk"></div>' +
-      '<div class="tt"><b>Asistente de Prospectiva</b><span>Universidad de La Salle</span></div>' +
+      '<div class="tt"><b>Juana</b><span>Asistente &middot; Universidad de La Salle</span></div>' +
       '<button class="als-icon" id="als-voz" title="Voz de respuesta"></button>' +
       '<button class="als-icon" id="als-cfgbtn" title="Configuracion">' + IC.cfg + '</button>' +
       '<button class="als-icon" id="als-x" title="Cerrar">' + IC.close + '</button>' +
@@ -128,7 +133,7 @@
     '<div class="als-body" id="als-body"></div>' +
     '<div class="als-foot">' +
       '<div class="als-inputrow">' +
-        '<textarea id="als-in" rows="1" placeholder="Pregunta o pide una grafica..."></textarea>' +
+        '<textarea id="als-in" rows="1" placeholder="Preguntale a Juana..."></textarea>' +
         '<button class="als-mic" id="als-mic" title="Hablar">' + IC.mic + '</button>' +
         '<button class="als-send" id="als-send" title="Enviar">' + IC.send + '</button>' +
       '</div>' +
@@ -330,11 +335,16 @@
 
   /* ---------- Instruccion de sistema ---------- */
   function sistema() {
-    return (window.LASALLE_KB || "") + "\n\n---\n\nINSTRUCCIONES DE RESPUESTA:\n" +
-      "- Responde en espanol colombiano, profesional, directo y claro. Sin guiones largos (em-dash).\n" +
-      "- Apoyate SOLO en la base de conocimiento anterior. Si un dato no esta, dilo con honestidad; no inventes cifras.\n" +
-      "- Usa formato de numeros en espanol (coma decimal, punto de miles). Cuando cites una cifra, menciona la fuente si aparece en la base.\n" +
-      "- Se conciso: respuestas de 2 a 5 frases salvo que pidan detalle. Puedes usar listas con guion cuando ayuden.\n" +
+    return (window.LASALLE_KB || "") + "\n\n---\n\nQUIEN ERES:\n" +
+      "Eres Juana, la asistente virtual de la Universidad de La Salle, inspirada en la mascota de la Universidad. Acompanas a quien consulta el Informe de Prospectiva de la Educacion Superior de la Universidad de La Salle. Tu tono es calido, cercano, amable y humano, fiel al espiritu lasallista de servicio y cercania, pero siempre profesional y claro. Hablas en primera persona como Juana.\n\n" +
+      "INSTRUCCIONES DE RESPUESTA:\n" +
+      "- Preséntate como Juana solo si te saludan o te preguntan quien eres; no repitas tu nombre en cada respuesta.\n" +
+      "- Responde en espanol colombiano, con calidez y sencillez, como alguien que de verdad quiere ayudar. Nunca suenes robotica ni acartonada.\n" +
+      "- Apoyate SOLO en la base de conocimiento anterior. Si un dato no esta, dilo con amabilidad y honestidad; nunca inventes cifras.\n" +
+      "- Escribe en frases limpias y naturales. Evita el formato cargado: nada de asteriscos, almohadillas (#), comillas invertidas ni vinetas con simbolos. Si necesitas resaltar algo, hazlo con palabras, no con signos. Recuerda que tu respuesta tambien se lee en voz alta, asi que debe sonar bien hablada.\n" +
+      "- Usa formato de numeros en espanol (coma decimal, punto de miles). Cuando cites una cifra, menciona la fuente si aparece en la base, de forma natural dentro de la frase.\n" +
+      "- Se breve y calida: 2 a 5 frases salvo que pidan detalle.\n" +
+      "- Sin guiones largos (em-dash).\n" +
       "- Cuando el usuario pida una grafica, un grafico, comparar visualmente o 'muestrame', incluye al final un bloque exactamente asi:\n" +
       "```grafica\n{\"tipo\":\"barras|barras_h|doughnut|lineas|radar\",\"titulo\":\"...\",\"etiquetas\":[\"...\"],\"series\":[{\"nombre\":\"...\",\"datos\":[num,...]}],\"unidad\":\"%\" o \"\",\"fuente\":\"...\"}\n```\n" +
       "  Reglas de la grafica: usa 'barras' para comparaciones verticales, 'barras_h' para rankings, 'doughnut' para participacion o composicion, 'lineas' para series de tiempo o tendencias, 'radar' para perfiles multivariable (max 3 series). Usa solo datos reales de la base. Antes o despues del bloque escribe 1 o 2 frases de lectura del dato. No expliques el JSON.\n" +
@@ -344,15 +354,23 @@
   /* ---------- Llamada a Gemini ---------- */
   function llamarGemini(onOK, onErr) {
     var key = get(LS.key, ""), model = get(LS.model, MODELO_DEF);
-    if (!key) { onErr("SINKEY"); return; }
+    if (!BACKEND_URL && !key) { onErr("SINKEY"); return; }
     var contents = historial.map(function (h) { return { role: h.role, parts: [{ text: h.text }] }; });
     var payload = {
       systemInstruction: { parts: [{ text: sistema() }] },
       contents: contents,
-      generationConfig: { temperature: 0.4, maxOutputTokens: 1400 }
+      generationConfig: { temperature: 0.55, maxOutputTokens: 1400 }
     };
-    var url = "https://generativelanguage.googleapis.com/v1beta/models/" + encodeURIComponent(model) + ":generateContent?key=" + encodeURIComponent(key);
-    fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) })
+    var url, opts;
+    if (BACKEND_URL) {
+      payload.model = model;
+      url = BACKEND_URL;
+      opts = { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) };
+    } else {
+      url = "https://generativelanguage.googleapis.com/v1beta/models/" + encodeURIComponent(model) + ":generateContent?key=" + encodeURIComponent(key);
+      opts = { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) };
+    }
+    fetch(url, opts)
       .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, status: r.status, j: j }; }); })
       .then(function (res) {
         if (!res.ok) {
@@ -385,7 +403,7 @@
   function enviar() {
     var el = $("als-in"), txt = el.value.trim();
     if (!txt || enviando) return;
-    if (!get(LS.key, "")) { abrirCfg(true); return; }
+    if (!BACKEND_URL && !get(LS.key, "")) { abrirCfg(true); return; }
     callar();
     msgUsuario(txt);
     historial.push({ role: "user", text: txt });
@@ -409,7 +427,15 @@
     });
   }
   function limpiarParaVoz(t) {
-    return t.replace(/```[\s\S]*?```/g, "").replace(/\*\*/g, "").replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replace(/[-•]\s+/g, "").trim();
+    return (t || "")
+      .replace(/```[\s\S]*?```/g, " ")        // bloques de codigo/grafica
+      .replace(/`([^`]*)`/g, "$1")            // codigo en linea
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1") // enlaces markdown -> texto
+      .replace(/https?:\/\/\S+/g, " ")        // urls sueltas
+      .replace(/[*_#>`~|]/g, " ")             // simbolos de markdown
+      .replace(/^\s*[-•]\s+/gm, "")           // vinetas al inicio de linea
+      .replace(/\s{2,}/g, " ")
+      .trim();
   }
 
   /* ---------- Bienvenida y chips ---------- */
@@ -423,7 +449,8 @@
   function bienvenida() {
     if (body.childElementCount) return;
     var d = document.createElement("div"); d.className = "als-msg a";
-    d.innerHTML = "<b>Hola, soy el asistente del tablero.</b><br>Pregunta lo que quieras sobre el entorno de la educacion superior, el mercado, los territorios o el portafolio de La Salle. Tambien puedo <b>armar graficas</b> con los datos del tablero. Puedes escribir o usar el microfono.";
+    d.innerHTML = '<img class="als-juana-hero" src="juana.png" alt="Juana" onerror="this.style.display=\'none\'">' +
+      "<b>Hola, soy Juana</b>, tu asistente para explorar el Informe de Prospectiva de la Universidad de La Salle. Pregúntame con confianza sobre el entorno de la educación superior, el mercado, los territorios o el portafolio de la Universidad. Si quieres, también te armo una gráfica con los datos del informe. Puedes escribirme o hablarme con el micrófono.";
     body.appendChild(d);
     var ch = document.createElement("div"); ch.className = "als-chips";
     CHIPS.forEach(function (c) {
@@ -432,9 +459,9 @@
       ch.appendChild(b);
     });
     body.appendChild(ch);
-    if (!get(LS.key, "")) {
+    if (!BACKEND_URL && !get(LS.key, "")) {
       var w = document.createElement("div"); w.className = "als-msg a";
-      w.innerHTML = "Para empezar, abre la <b>configuracion</b> (arriba) y pega tu clave de Google Gemini. Se guarda solo en este navegador.";
+      w.innerHTML = "Antes de empezar, abre la <b>configuración</b> (el engranaje de arriba) y pega tu clave de Google Gemini. Se guarda solo en este navegador.";
       body.appendChild(w);
     }
     scrollAbajo();
