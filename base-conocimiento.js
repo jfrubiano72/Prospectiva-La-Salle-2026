@@ -1,5 +1,5 @@
-// Base de conocimiento del Asistente del Tablero de Prospectiva · Universidad de La Salle
-// Generado automaticamente. Consolida los informes de entorno, el briefing de continuidad y el catalogo de graficas.
+// Base de conocimiento del Asistente del Tablero de Prospectiva - Universidad de La Salle
+// Consolida informes de entorno, briefing, catalogo de graficas, definiciones de KPI y contenido literal del tablero.
 window.LASALLE_KB = `# BASE DE CONOCIMIENTO · Asistente del Tablero de Prospectiva · Universidad de La Salle
 
 Eres el asistente del **Tablero de Prospectiva de la Educación Superior** de la Universidad de La Salle, elaborado por Javier Fernando Rubiano Espinosa, Asesor de Mercadeo. Respondes preguntas sobre el entorno de la educación superior en Colombia, el futuro del trabajo, el mercado educativo, los territorios y el portafolio de La Salle, apoyándote SIEMPRE en los datos de este documento. Toda cifra que uses debe salir de aquí o del tablero; si algo no está, dilo con claridad en vez de inventarlo. Fecha de corte del tablero: 22 de julio de 2026 (versión v30, 78 gráficos, 12 pestañas).
@@ -156,9 +156,9 @@ SNIES / MinEducación; DANE (ICES, proyecciones de población, nacimientos); Ban
 
 ---
 
-## 15. CATÁLOGO DE LAS 78 GRÁFICAS DEL TABLERO
+## 15. CATALOGO DE LAS 78 GRAFICAS DEL TABLERO
 
-Cada entrada: id · qué muestra · fuente. Úsalo para saber qué gráficos existen y de dónde salen.
+Cada entrada: id, que muestra, fuente.
 
 - \`chSigEje\` · Los tres cruces que definen a una universidad · Elaboración propia a partir de las 34 señales del radar. Cada señal se clasifica en un solo eje y un solo horizonte.
 - \`chAnthropic\` · Dónde se concentra hoy el uso real de la IA · Fuente: Anthropic Economic Index . Uso observado, no proyección teórica.
@@ -238,4 +238,1006 @@ Cada entrada: id · qué muestra · fuente. Úsalo para saber qué gráficos exi
 - \`chPrimerCurso\` · Matriculados en primer curso: La Salle contra el país · Fuente: SNIES, matriculados en primer curso 2020-2024. La Salle pasó de 2.253 a 3.347 estudiantes nuevos, +48,6%. El país pasó de 855.706 a 1.058.036, +23,6%.
 - \`chPlata\` · Ruta 1 · La generación plata · 
 - \`chCentro\` · Ruta 2 · Centroamérica · 
+
+---
+
+## 16. DEFINICIONES DE KPI Y TARJETAS DEL TABLERO (texto que aparece al hacer clic)
+Cada linea es una tarjeta o KPI del dashboard con su cifra exacta y su fuente. Usa estas cifras literalmente cuando pregunten por un dato del tablero.
+
+- Las tecnologías de la información son el 6,1% de los 17.812 programas activos del país (SNIES, corte julio 2026), mientras las vacantes de tecnología rondan el 31,8% de las ofertas publicadas. Es la mayor brecha del sistema colombiano, y La Salle está muy por debajo de ese promedio: 1,5% de sus programas activos están clasificados en TIC. (Fuente: SNIES 2025 y análisis de vacantes en portales de empleo (2026))
+- Más del 30% de los programas de pregrado de China fue creado, cerrado o suspendido en cinco años: 12.200 cerrados y 10.200 abiertos. Es la reconfiguración de oferta académica más rápida documentada. (Fuente: Ministerio de Educación de China / Xinhua (2026))
+- De las 173.907 empresas creadas en el primer semestre de 2025, 173.450 fueron microempresas. Solo tres fueron grandes. El tejido productivo que se está creando no es el de la economía del conocimiento que prometen los planes. (Fuente: Confecámaras, RUES (2025))
+- En el Índice Departamental de Competitividad 2026, veintitrés de los treinta y tres territorios obtienen menos de 5 sobre 10 en el pilar de educación superior. Es el pilar donde compite la Universidad, y el rezago es público, medido y anual. (Fuente: Consejo Privado de Competitividad y Universidad del Rosario (2026))
+- La matrícula mundial en educación superior alcanzó unos 269 millones de estudiantes en 2023. El sector sigue creciendo aun mientras cambia de forma. (Fuente: UNESCO IESALC (2025))
+- El 63% de los empleadores del mundo identifica la brecha de habilidades como la principal barrera para transformar su negocio. (Fuente: WEF, Future of Jobs 2025)
+- En promedio, el 39% de las competencias de un trabajador se transformarán o quedarán obsoletas entre 2025 y 2030. Baja frente al 44% de 2023 y 57% de 2020, pero sigue alta. (Fuente: WEF, Future of Jobs 2025)
+- Según el uso real de Claude, cerca del 49% de los empleos ya tiene al menos una cuarta parte de sus tareas realizadas con IA. No es una proyección: es un conteo de lo que ya ocurre. (Fuente: Anthropic Economic Index (2026))
+- En 2025 una habilidad técnica conserva su vigencia apenas 2,5 a 3,75 años, frente a 10 – 12,5 años en los años 80. Un plan de estudios de 5 años puede graduar con herramientas ya depreciadas. (Fuente: IBM (2020); WEF (2025))
+- A los 10 años, una habilidad estrictamente técnica conserva apenas el 5% de su utilidad, frente a cerca del 90% de las habilidades cognitivas y blandas. (Fuente: Burning Glass Institute (2022))
+- Las habilidades cognitivas y blandas (liderazgo, pensamiento crítico, comunicación) conservan cerca del 90% de su utilidad a 10 años. Son el eje duradero de la universidad. (Fuente: Burning Glass Institute (2022))
+- El 37% de las habilidades más demandadas cambió en solo cinco años, según el análisis de 228 millones de ofertas laborales. (Fuente: Burning Glass (2022))
+- La demanda de habilidades en IA creció 70% en 12 meses. Es la competencia de más rápido crecimiento y el diferenciador de oferta más urgente. (Fuente: LinkedIn Jobs (2024 – 2025))
+- Se proyectan 170 millones de empleos nuevos y 92 millones desplazados hacia 2030, con saldo neto de +78 millones. El futuro no será de escasez de empleo sino de brecha de habilidades. (Fuente: WEF, Future of Jobs 2025)
+- 59 de cada 100 trabajadores necesitarán formación hacia 2030: 29 pueden actualizarse en su rol, 19 requieren reconversión y 11 probablemente no reciban formación. (Fuente: WEF, Future of Jobs 2025)
+- Hacia 2030 las microcredenciales verificables tenderán a superar al título como filtro de empleabilidad en muchos sectores. Quien no emita credenciales digitales acreditadas quedará fuera del ecosistema. (Fuente: BID (2022); Burning Glass (2024))
+- Más del 30% de los programas de pregrado del país fue creado, cerrado o suspendido en cinco años. Es una de las mayores reconfiguraciones de oferta académica de la historia moderna. (Fuente: Ministerio de Educación de China / Xinhua (2026))
+- 12.200 programas de pregrado fueron revocados o suspendidos entre 2021 y 2025, concentrados en artes, humanidades, lenguas extranjeras y administración. (Fuente: Ministerio de Educación de China / Xinhua (2026))
+- 10.200 programas nuevos fueron abiertos en el mismo periodo, orientados a inteligencia artificial, robótica, inteligencia encarnada, circuitos integrados y economía digital. (Fuente: Ministerio de Educación de China / Xinhua (2026))
+- El desempleo urbano de jóvenes de 16 a 24 años que no estudian llegó a 16,9% en marzo, frente a 16,1% en febrero. Esa presión sobre la empleabilidad es el motor político de la reforma. (Fuente: Oficina Nacional de Estadística de China, citada por Forbes (2026))
+- En 2015 había 28 universidades privadas en España; en 2025 son 41. Es el cambio estructural más relevante de la última década del sistema universitario español. (Fuente: Ministerio de Ciencia, Innovación y Universidades, Datos y Cifras del SUE 2025-2026)
+- El sistema cuenta con 91 universidades que imparten titulaciones oficiales: 50 públicas y 41 privadas. Las públicas concentran el 74,3% de los estudiantes. (Fuente: Datos y Cifras del SUE 2025-2026)
+- Más de 1,6 millones de estudiantes matriculados en enseñanzas de grado en el curso 2025-2026, con un crecimiento interanual del 3,2% impulsado sobre todo por el máster (+6,1%) y la modalidad en línea. (Fuente: Estadística de Estudiantes Universitarios (EEU), SIIU)
+- La matrícula de máster no presencial en universidades privadas pasó de 24.203 en 2015-2016 a 102.323 en 2024-2025: un crecimiento del 322,8%, es decir que se multiplicó por 4,2 en nueve cursos. Es de lejos el segmento de mayor crecimiento del sistema español. Para dimensionarlo: mientras el total de estudiantes de grado creció 3,2% en el último curso, este segmento creció más de cuatro veces su tamaño en menos de una década. Es la señal más clara de que la demanda se movió al posgrado flexible y en línea, y de que la privada capturó ese movimiento. (Fuente: Estadística de Estudiantes Universitarios (EEU), avance curso 2024-2025)
+- Solo el 38% de los adultos estadounidenses declara mucha o bastante confianza en la educación superior, frente a 42% en 2025 y 57% en 2015. Las razones principales: politización (31%), costo (30%) y mala preparación para el trabajo (25%). (Fuente: Gallup-Lumina Foundation, junio de 2026)
+- Los community colleges pasaron a matricular 752.000 estudiantes en programas de certificado, un aumento del 28,3% desde el otoño de 2021 tras cuatro años consecutivos de crecimiento. (Fuente: National Student Clearinghouse Research Center, enero de 2026)
+- Mientras la matrícula total creció 1,0% en el otoño de 2025, las universidades privadas sin ánimo de lucro de cuatro años perdieron 1,6% de pregrado y las con ánimo de lucro un 2,0%. (Fuente: National Student Clearinghouse Research Center (2026))
+- El 46% de los estadounidenses cree que la IA hará los títulos universitarios algo o mucho menos importantes en cinco años, más del doble del 20% que cree lo contrario. (Fuente: Gallup-Lumina Foundation (2026))
+- El mercado colombiano de tercerización de servicios empresariales alcanzó ingresos cercanos a los 2.951 millones de dólares, lo que ubica al país como el tercer mercado más grande de la región después de Brasil y México. (Fuente: ProColombia, citado por ACIS (enero de 2026))
+- El sector genera más de 750.000 puestos de trabajo directos e indirectos, concentrados en Bogotá, Medellín, Cali y Barranquilla. El 53% del talento son profesionales y el 25% perfiles especializados. (Fuente: ProColombia y BPrO (2026))
+- El sector tecnológico colombiano inició 2026 con una Expectativa Neta de Empleo de +29%, impulsada por el nearshoring y la exportación de servicios digitales. (Fuente: ManpowerGroup Colombia (2026))
+- El 90% de las compañías consultadas prioriza a Colombia como hub estratégico dentro de sus operaciones globales, y el 63% planea ampliar su planta de talento en los próximos dos años. (Fuente: Estudio BPrO presentado en el CX Summit 2026)
+- BBVA Research proyecta un crecimiento del PIB de 2,6% en 2026; la OCDE estima 2,4%. Crecimiento positivo pero moderado. Implica mayor sensibilidad al precio y al retorno esperado de la matrícula. (Fuente: BBVA Research (2026); OCDE (2025))
+- La inflación cerró 2025 en 5,1%. Presiona el ingreso disponible de los hogares y su capacidad de pago educativo. (Fuente: Banco de la República)
+- El ICES mide cuánto le sube a una universidad el costo de operar: salarios de docentes y administrativos, servicios, insumos, mantenimiento y demás gastos de funcionamiento. Es la inflación propia del sector educativo, distinta de la inflación general de la economía. En el primer semestre de 2026 fue del 6,66%, es decir que operar la Universidad cuesta 6,66% más que hace un año, mientras la inflación general del país cerró 2025 en 5,1%. Los costos suben más rápido que los precios de la economía, y esa diferencia es la que aprieta el margen. Obliga a una disciplina de portafolio más fina: los programas de alto costo y baja diferenciación se vuelven candidatos a rediseño. (Fuente: DANE (2026))
+- El Índice de Confianza del Consumidor de Fedesarrollo fue 18,2% en enero de 2026. El consumidor está más selectivo: mira costo total, financiación, modalidad y empleabilidad. (Fuente: Fedesarrollo (2026))
+- En 2025 se registraron 433.678 nacimientos, un 4,5% menos que en 2024. La caída sostenida reduce el peso del estudiante joven tradicional y desplaza la demanda hacia adultos y generación plata. (Fuente: DANE)
+- En 2025 el 14,6% de los colombianos tiene 60 años o más; para 2030 llegará al 20% y al 25% en 2050. Abre un mercado formativo para la generación plata. (Fuente: DANE · UNFPA · Corficolombiana (2025))
+- El desempleo cerró 2025 en 8,9%, mínimo desde 2001. Sin embargo, el desempleo universitario (11,2%) casi iguala al de secundaria (12,1%): más graduados, pero formación desconectada del mercado. (Fuente: DANE, GEIH (2025))
+- La tasa de desocupación de la población joven fue 16,2% en el trimestre móvil febrero-abril de 2026. Es casi idéntica al 16,9% de desempleo juvenil urbano de China, el dato que detonó allá la reforma del mapa universitario. (Fuente: DANE, GEIH (abril de 2026))
+- El 56% de los trabajadores está en la informalidad (84,2% en zonas rurales). La informalidad cae con el nivel educativo: de 90% sin educación a 8% con posgrado. (Fuente: DANE (2025))
+- Fedesarrollo estima que el 58% de los empleos en Colombia está en riesgo de automatización. La respuesta es insertar alfabetización en IA y criterio en la mayoría de disciplinas. (Fuente: Fedesarrollo (2024))
+- El 45% de los empresarios quiere innovar con IA, pero solo el 32% ha logrado implementarla. La barrera no es el interés sino la capacidad: infraestructura, madurez digital y sobre todo talento. (Fuente: CINTEL · ANDICOM (2026))
+- El 66% de las PyMEs colombianas ya ha incorporado alguna solución de IA (Microsoft IA Trends 2025), ubicando a Colombia como líder regional junto a Canadá (71%). Falta profundidad y talento para escalarla. (Fuente: Microsoft IA Trends (2025))
+- En el sector educación, la IA PODRÍA hacer el 68% de las tareas (capacidad teórica), pero solo el 14% se hace hoy con IA (uso real). Es la mayor brecha de todos los sectores. (Fuente: Massenkoff & McCrory (2026); Anthropic)
+- En 2025 Colombia alcanzó 2.723.364 estudiantes matriculados en educación superior, la cifra más alta de su historia y la primera vez que el país supera los 2,7 millones. Es el tamaño total del mercado. El cierre estadístico anterior, 2024, había registrado 2.553.560. (Fuente: MinEducación, cierre estadístico SNIES 2025 (15 de julio de 2026))
+- La matrícula pasó de 2.553.560 en 2024 a 2.723.364 en 2025: 169.804 estudiantes más, un crecimiento del 6,6%. Es más del doble del 3,14% que se registró entre 2023 y 2024, y el mayor salto anual de la serie reciente. Cálculo sobre las cifras oficiales de cierre estadístico del SNIES. (Fuente: MinEducación, cierre estadístico SNIES 2024 y 2025)
+- En 2025 la cobertura bruta llegó al 61,75% de la población de 17 a 21 años y superó el 60% por primera vez. En 2024 era 57,53% y en 2022, 54,92%. Advertencia de método: el Ministerio publica dos series. El 61,75% se calcula sobre la proyección de población comparable con la línea base de 2022; con las proyecciones del DANE actualizadas tras el Censo, la misma cobertura de 2025 es 56,55%. Las dos cifras son oficiales y miden lo mismo con denominadores distintos. Aun con la lectura más alta, cuatro de cada diez jóvenes en edad no acceden. (Fuente: MinEducación, cierre estadístico SNIES 2025)
+- Colombia cuenta con 305 instituciones de educación superior activas: 87 oficiales y 218 privadas. Es el universo de IES que reporta al SNIES conforme a la Resolución 9573 de 2021 y la norma NTC-PE 1000, bajo directrices del Sistema Estadístico Nacional certificado por el DANE. Mercado amplio y atomizado, donde la diferenciación por empleabilidad y flexibilidad pesa cada vez más. (Fuente: MinEducación, cierre estadístico SNIES 2024 (31 de julio de 2025))
+- En 2024 las IES públicas sumaron más de 67 mil estudiantes matriculados, un crecimiento del 5% frente al año anterior. Las privadas sumaron poco más de 10 mil, un crecimiento del 0,88%. La matrícula oficial creció aproximadamente cinco veces más rápido que la privada. Qué lo explica: la política de gratuidad, el refuerzo presupuestal a las IES públicas y la expansión de la oferta técnica y tecnológica, que es mayoritariamente pública. Qué significa para La Salle: el crecimiento del sistema no está disponible por precio ni por volumen, porque el segmento que crece es el gratuito. La competencia por el estudiante que sí paga se vuelve más dura, y la diferenciación tiene que venir de empleabilidad, flexibilidad y trayectoria, no de tamaño. (Fuente: MinEducación, cierre estadístico SNIES 2024)
+- De los 2.553.560 estudiantes matriculados en 2024, 1.401.639 estudiaban en instituciones públicas: el 54,9% del sistema. Es un punto de inflexión histórico, porque durante décadas la matrícula privada fue mayoritaria en Colombia. El giro se explica por la gratuidad en pregrado público y por el peso creciente del SENA y de las instituciones técnicas y tecnológicas oficiales. Qué significa para La Salle: el mercado privado ya no es el mercado por defecto, es un segmento. Competir en él exige argumentos de valor verificable, no de disponibilidad de cupo. (Fuente: MinEducación, cierre estadístico SNIES 2024)
+- Mide qué porcentaje de los bachilleres entra a la educación superior el mismo año en que termina el colegio, sin año sabático ni interrupción. En 2025 fue 47,9%, frente a 41,1% en 2022. En zonas urbanas pasó de 46,2% a 51,5% y en zonas rurales de 24,7% a 31,9%. Es el indicador que mejor anticipa la demanda del año siguiente, porque mide el flujo de entrada y no el inventario de estudiantes. Qué significa para La Salle: casi la mitad de los bachilleres decide en cuestión de meses, así que la ventana de captación es corta y se juega en el último año de colegio. El salto rural, de siete puntos, abre un público que antes no entraba al embudo. (Fuente: MinEducación, cierre estadístico SNIES 2025)
+- En 2025 la política de gratuidad benefició a 939.282 estudiantes, que equivalen al 97% de la matrícula de pregrado de las instituciones públicas. En 2022 eran 724.862 estudiantes y el 87%. Advertencia de lectura, importante: este 97% es cobertura de la política de gratuidad sobre la matrícula pública, no es la cobertura del sistema de educación superior, que en 2025 fue 61,75% de la población de 17 a 21 años. Son dos indicadores distintos que suelen confundirse en prensa. Qué significa para La Salle: en la práctica el pregrado público quedó a precio cero para casi todos sus estudiantes, así que la decisión de pagar una matrícula privada exige una diferencia de valor demostrable. (Fuente: MinEducación, cierre estadístico SNIES 2025)
+- Las tecnologías de la información son el 6,1% de los 17.812 programas activos del país (SNIES, corte julio 2026), mientras que las vacantes de tecnología representan cerca del 31,8% de las ofertas publicadas. Es la mayor brecha entre oferta académica y demanda laboral del sistema colombiano. (Fuente: SNIES 2025 y análisis de vacantes en portales de empleo (2026))
+- 5.885 de los 17.812 programas activos del país (SNIES, corte julio 2026) son de administración de empresas y derecho: uno de cada tres. Entre 2022 y 2025 el área sumó 882 programas nuevos, más que todo el inventario agropecuario nacional. (Fuente: SNIES, consolidado por el Observatorio de la Universidad Colombiana (2026))
+- Suma de los planes vigentes: Bogotá 142 billones (plan distrital completo, con 28 billones para educación), Bucaramanga 4,0 billones (solo la cartera de proyectos estratégicos) y Casanare 2,8 billones (plan departamental completo). Los alcances no son idénticos, por lo que la cifra sirve como orden de magnitud, no como comparación estricta. (Fuente: Acuerdo 927 de 2024, Ordenanza PDD Casanare 2024-2027 y cartera de proyectos estratégicos de Bucaramanga)
+- La cobertura departamental en Casanare es de 27,6%, menos de la mitad del 57,53% nacional y muy lejos del 147,8% de Bogotá, que absorbe estudiantes de todo el país. Allí no hay saturación de oferta: hay ausencia. Es el argumento territorial más fuerte para crecer en Yopal. Cifras del cierre 2024, el más reciente con desagregación departamental publicada; la cobertura nacional de 2025 subió al 61,75%, pero aún no hay desglose por departamento para ese año. (Fuente: Ministerio de Educación Nacional, perfiles departamentales SNIES, cierre 2024)
+- De las 173.907 empresas creadas en el primer semestre de 2025, 173.450 fueron microempresas. Se crearon apenas 437 pequeñas, 17 medianas y 3 grandes. La creación de empresas grandes cayó 62,5% frente al año anterior. (Fuente: Confecámaras, Dinámica de Creación de Empresas, primer semestre de 2025, con datos del RUES)
+- Agricultura, ganadería, caza, silvicultura y pesca pasó de 2.932 a 3.401 empresas nuevas entre el primer semestre de 2024 y el de 2025. Es el sector con mayor crecimiento porcentual de todo el registro mercantil. (Fuente: Confecámaras, RUES (2025))
+- El subsector de información y comunicaciones pasó de 3.456 a 3.490 empresas nuevas, un crecimiento de apenas 1,0%. Contrasta con el 31,8% de participación de la tecnología en las vacantes publicadas: la demanda de talento tecnológico viene de empresas ya existentes y de clientes internacionales, no de nuevos emprendimientos. (Fuente: Confecámaras, RUES (2025))
+- La Cámara de Comercio de Bogotá registró 83.158 nuevas empresas en 2025, un aumento de 6,2% frente a 2024, más del triple del crecimiento nacional. La región cerró con 493.825 empresas activas, de las cuales el 99,3% son mipymes y el 52,2% personas naturales. (Fuente: Cámara de Comercio de Bogotá (febrero de 2026))
+- Fedesarrollo estima que el 58% de los empleos en Colombia está en riesgo de automatización. Es la razón de fondo para pasar de vender carreras a acompañar trayectorias: la reconversión deja de ser opcional. (Fuente: Fedesarrollo (2024))
+- La demanda de habilidades en IA creció 70% en 12 meses. Es la competencia de más rápido crecimiento y la que ordena el bloque de microcredenciales de esta hoja. (Fuente: LinkedIn Jobs (2024 – 2025))
+- En 2025 el 14,6% de los colombianos tiene 60 años o más; para 2030 llegará al 20% y al 25% en 2050. Es el mercado de la generación plata que sostiene el segmento 45+ de esta hoja. (Fuente: DANE · UNFPA · Corficolombiana (2025))
+- La Salle tiene 11.384 estudiantes matriculados en el segundo semestre de 2025, repartidos en 131 programas activos y 145 combinaciones de programa, sede y modalidad. Pregrado suma 8.324 y posgrado 3.060. Es la base real sobre la que se arma cualquier trayectoria de esta hoja. (Fuente: Registro académico de la Universidad de La Salle, matrícula 2025-2)
+- Se ubica arriba porque sus dos indicadores de atractivo son de los mejores del país: paga 2,91 salarios mínimos de entrada, el segundo mejor de los nueve campos, y solo el 33,7% de sus programas registrados están inactivos, la segunda mortalidad más baja. Se ubica a la derecha porque la Universidad apenas tiene 4 programas activos ahí, el 3,1% del portafolio frente al 9,5% nacional: está subponderada en 6,4 puntos. Lectura: es el campo donde la distancia entre lo que el mercado premia y lo que la Universidad ofrece se puede cerrar por alianza o por posgrado, sin construir una facultad desde cero. (Fuente: Registro nacional de programas del SNIES (composición y mortalidad) y anexo de ingreso base de cotización del Observatorio Laboral para la Educación, vinculados 2023)
+- Es el campo mejor pagado del país en nivel universitario, con 3,78 salarios mínimos de entrada, y concentra cerca del 31,8% de las vacantes publicadas. Su mortalidad, 39,3%, está en la media. Y es la posición más débil de todo el portafolio: solo 2 programas activos, el 1,5% frente al 6,1% nacional, ya bajo de por sí. Uno de los tres registros históricos del campo ya se cerró. Lectura: es la brecha más costosa del análisis y la que sostiene la recomendación 01. La vía rápida no es abrir programas, es apilar credenciales sobre lo que ya existe. (Fuente: Registro nacional de programas del SNIES (composición y mortalidad) y anexo de ingreso base de cotización del Observatorio Laboral para la Educación, vinculados 2023)
+- Entra en la banda alta sobre todo por supervivencia: es el campo con menor mortalidad del país, 29,8%, muy por debajo del promedio, y paga 2,41 salarios mínimos, por encima de la media universitaria de 2,22. En fortaleza queda a la derecha porque son 6 programas activos, el 4,6% del portafolio, prácticamente en paridad con el 4,0% nacional. Lectura: no hay ni ventaja ni brecha, pero es un campo estable y bien pagado donde crecer cuesta menos que en salud o en tecnología. (Fuente: Registro nacional de programas del SNIES (composición y mortalidad) y anexo de ingreso base de cotización del Observatorio Laboral para la Educación, vinculados 2023)
+- Es la mayor fortaleza instalada: 31 programas activos, el 23,7% del portafolio, la cifra más alta de los nueve campos. El atractivo es solo medio porque, aunque paga 2,12 salarios mínimos, es el campo con la segunda mortalidad más alta del país, 44,3%: casi la mitad de lo que se ha registrado allí terminó inactivo. Lectura: es el segmento más saturado del sistema, con 34,1% de la oferta nacional, y la Universidad tiene 10,4 puntos menos de exposición. Esa menor exposición es una ventaja defendible que hoy no se comunica. (Fuente: Registro nacional de programas del SNIES (composición y mortalidad) y anexo de ingreso base de cotización del Observatorio Laboral para la Educación, vinculados 2023)
+- Segunda fortaleza del portafolio con 27 programas activos, el 20,6%, frente al 17,8% nacional. El atractivo es medio: paga 2,37 salarios mínimos, algo por encima del promedio universitario, pero su mortalidad es 39,7% y compite contra una base nacional de 3.177 programas activos. Lectura: hay paridad con saturación. No conviene abrir más títulos, conviene apilar módulos y especializaciones sobre los que ya existen. (Fuente: Registro nacional de programas del SNIES (composición y mortalidad) y anexo de ingreso base de cotización del Observatorio Laboral para la Educación, vinculados 2023)
+- Es la mayor diferencia del portafolio frente al país: 15,3% contra 3,9%, once puntos y medio, con 20 programas activos. Casi ninguna otra universidad ocupa esa posición. Pero el atractivo se queda en la banda media porque paga 1,84 salarios mínimos de entrada, el tercero peor de los nueve, y el 47,7% de sus graduados gana hasta 1,5. Su mortalidad nacional es 41,0%. Lectura: la mayor distinción de la Universidad está en un campo mal pagado en pregrado. Eso no invalida la apuesta, la condiciona a subirla de nivel, que es la recomendación 04. (Fuente: Registro nacional de programas del SNIES (composición y mortalidad) y anexo de ingreso base de cotización del Observatorio Laboral para la Educación, vinculados 2023)
+- La Universidad tiene 18 programas activos, el 13,7% frente al 9,2% nacional: sobreponderada en 4,5 puntos. El atractivo es medio: paga 1,94 salarios mínimos, por debajo del promedio universitario, pero su supervivencia es mejor que la media, con 37,2% de mortalidad. Lectura: es la posición que el informe describía como de riesgo cuando se calculaba sobre 71 programas. Con la base real de 131 la sobreponderación es de 4,5 puntos, no de 10, y el campo sobrevive mejor que administración o ingeniería. (Fuente: Registro nacional de programas del SNIES (composición y mortalidad) y anexo de ingreso base de cotización del Observatorio Laboral para la Educación, vinculados 2023)
+- Presencia menor con 7 programas activos, el 5,3% frente al 6,2% nacional: prácticamente en paridad, apenas 0,9 puntos por debajo. El atractivo cae en el borde inferior de la banda media: paga 1,97 salarios mínimos y tiene 41,7% de mortalidad. Lectura: es la única casilla de esta fila y no exige una decisión urgente. Su tamaño no compromete el portafolio ni en un sentido ni en el otro. (Fuente: Registro nacional de programas del SNIES (composición y mortalidad) y anexo de ingreso base de cotización del Observatorio Laboral para la Educación, vinculados 2023)
+- Es el único campo que cae en la banda de atractivo bajo, y lo hace por los dos indicadores a la vez: es el campo con mayor mortalidad de programas del país, 65,1%, casi dos tercios de lo registrado está inactivo, y es el peor pagado de los campos con volumen, con 1,72 salarios mínimos de entrada. La Universidad tiene allí 16 programas activos, el 12,2% del portafolio frente al 7,2% nacional, y ya cerró 12 programas de ese campo, su mayor número de bajas: una mortalidad interna del 42,9%, la más alta de los nueve campos. Lectura: es el campo que exige una posición explícita, y por eso es la recomendación 05. Recombinar, como ya se hizo en Archivística e Inteligencia de Negocios, es una salida distinta de reducir. (Fuente: Registro nacional de programas del SNIES (composición y mortalidad) y anexo de ingreso base de cotización del Observatorio Laboral para la Educación, vinculados 2023)
+- Solo 2 de los 131 programas activos de La Salle están clasificados en Tecnologías de la Información y la Comunicación, un 1,5%. El promedio nacional es 6,1% y la demanda de vacantes en tecnología ronda el 31,8%. La Salle está a un cuarto del promedio del país en el área de mayor demanda. Por matrícula la lectura mejora: el núcleo de tecnología y datos reúne 1.048 estudiantes, el 9,2% del total. (Fuente: SNIES, programas activos, corte julio 2026)
+- El SNIES registra 179 programas de La Salle: 131 activos y 48 inactivos. Los activos se reparten en 49 universitarios, 31 maestrías, 30 especializaciones, 10 doctorados, 9 tecnológicos y 2 de formación técnica profesional. Por municipio: 117 en Bogotá, 10 en Yopal, 3 en Mosquera y 1 en Bucaramanga. (Fuente: SNIES, programas activos, corte julio 2026)
+- 20 de los 131 programas activos están en Agropecuario, Silvicultura, Pesca y Veterinaria, un 15,3% contra 3,9% nacional. Son 11,4 puntos por encima del país y la mayor sobreponderación del portafolio. Es el activo más distintivo de La Salle y el que menos aparece en la conversación estratégica. Medicina Veterinaria sola tiene 956 estudiantes, el 8,4% de toda la universidad. (Fuente: SNIES y registro académico de La Salle, matrícula 2025-2)
+- 50 de los 131 programas activos son virtuales, un 38,2% contra 13,4% del país. Sumando la modalidad a distancia La Salle llega al 54,2%, mientras el país sigue 79,5% presencial. Es la mayor ventaja instalada del portafolio y no aparecía en ninguna hoja del tablero. En matrícula, lo virtual son 3.072 estudiantes, el 27% del total. (Fuente: SNIES y registro académico de La Salle, matrícula 2025-2)
+- Los matriculados en primer curso de La Salle pasaron de 2.253 en 2020 a 3.347 en 2024, un crecimiento de 48,6%. El país creció 23,6% en el mismo periodo, de 855.706 a 1.058.036. La Salle creció al doble del ritmo nacional. 2019 se excluye porque la pandemia distorsiona la comparación. (Fuente: SNIES, matriculados en primer curso 2020-2024)
+
+---
+
+## 17. CONTENIDO LITERAL DEL TABLERO (textos, callouts y bloques explicativos)
+Frases y datos tal como aparecen en el dashboard, por si una cifra no esta en las secciones anteriores.
+
+- Informe de Prospectiva · Universidad de La Salle · v27
+- Tendencias y prospectiva · 2026 – 2031 · visión 2050 – 2070
+- Tablero interactivo que parte de la futurología, recorre el planeta, aterriza en Colombia, entra al sector educativo y termina en decisiones para la Universidad de La Salle. Cada cifra indica su alcance y su fuente. Haga clic en cualquier KPI para ver su definición.
+- Este tablero responde una sola pregunta: cómo debe leer la Universidad de La Salle su entorno para formular su plan estratégico. Diez pestañas, cuatro movimientos, una ruta. Empiece por las cuatro cifras que ordenan todo lo demás.
+- El desempleo juvenil colombiano está al mismo nivel que el chino, que fue el detonante de la reforma universitaria más agresiva del mundo. La diferencia no está en el problema: está en que aquí nadie va a reordenar el mapa por decreto . Le toca a cada institución, y por eso este análisis existe.
+- El marco de largo plazo que ordena todo lo demás: qué tan lejos se puede ver con certeza y qué debería hacer la Universidad frente a cada hito.
+- Tres horizontes, cuatro fuerzas primarias, 34 señales filtrables y ocho escenarios, con la ruta de hitos y movimientos.
+- De qué tamaño es el cambio, cómo lo están enfrentando otros sistemas y por dónde llega la demanda internacional. Antes de mirar a Colombia, conviene saber qué ya ocurrió en otras partes.
+- Futuro del trabajo, inteligencia artificial y obsolescencia del conocimiento.
+- Tres sistemas, tres palancas: cortar la oferta, subsidiar la demanda o dejar que decida la caja.
+- Exportación de servicios, nearshoring y las cuatro rutas reales de la demanda internacional.
+- Aquí está el corazón del análisis. El país, el mercado educativo, el territorio y el tejido empresarial dicen cosas distintas: lo que el Estado promete, lo que el empresariado crea con su propio dinero y lo que el mercado laboral está pagando. Esa divergencia es el hallazgo.
+- Entorno macroeconómico, demografía y mercado de talento.
+- Matrícula, instituciones y escenarios 2026-2031 del mercado en el que competimos.
+- Cuatro capas: lo que el Estado promete, lo que el mercado pide, lo que ya existe y dónde está la decisión.
+- Registro mercantil por sector y subsector CIIU, más la matriz de transición hacia la frontera tecnológica.
+- Todo lo anterior converge aquí: qué significa este entorno para la Universidad y para sus 131 programas activos.
+- El portafolio completo frente a la oferta nacional y a la demanda: qué fortalecer, qué mantener y qué revisar.
+- Cada KPI se abre con un clic y muestra su definición, su alcance geográfico y el enlace a la fuente original. Cada gráfica lleva su fuente al pie. Si algo no tiene fuente, no está en el tablero.
+- Dos matrices usan escalas cualitativas de 1 a 5. Son juicio experto documentado, no medición estadística, y así aparece dicho en cada gráfico. Sirven para priorizar y discutir, no para sustentar trámites.
+- Es el análisis del entorno que lo antecede. No propone cerrar programas ni reasignar presupuesto: delimita las preguntas que el plan tendrá que responder. La pestaña de Fuentes lista los vacíos de información pendientes.
+- El futuro de la educación superior no llega de una sola vez ni con la misma certeza. Hacia 2030 las señales ya están medidas y lo que falta es ejecutar. Hacia 2050 el camino se bifurca y hay que apostar. Hacia 2070 solo cabe explorar con método. Lo que sigue ordena esas tres capas, identifica los hitos que van a marcar el sector y los traduce en movimientos concretos para la Universidad.
+- Qué va aquí y qué va en la hoja 02. Esta hoja trabaja sobre lo que todavía no ha ocurrido : horizontes, fuerzas, señales tempranas y escenarios alternativos. Su material son hipótesis con método, no mediciones. La hoja 02 Mundo trabaja sobre lo contrario: lo que ya está medido en el presente global, como el uso real de la inteligencia artificial, la recomposición del empleo y la durabilidad de las habilidades. Si una cifra describe algo que ya pasó, va en la 02; si describe algo que podría pasar, va aquí.
+- Las casas de prospectiva no mezclan plazos, porque cada horizonte exige un tipo de decisión distinto. Lo cercano se ejecuta, lo medio se apuesta, lo lejano se prepara. Confundirlos lleva a paralizarse esperando certezas que no van a llegar o a improvisar sobre lo que ya está medido.
+- trabajadores necesitarán formación hacia 2030
+- Certeza alta. Las cifras vienen de encuestas a empleadores y de proyecciones demográficas en curso. Aquí no se apuesta: se ejecuta.
+- Decisión que exige: rediseño de portafolio, empleabilidad medible y educación continua como línea de ingreso.
+- Certeza media. No hay un futuro sino cuatro caminos plausibles. El crecimiento global podría bajar a 1,8% anual o subir a 5,0%. La universidad deja de ser una etapa de la vida y pasa a ser infraestructura de aprendizaje continuo.
+- Decisión que exige: apostar por escenario y construir capacidades que sirvan en varios a la vez.
+- BCG Henderson Institute, Beyond Tomorrow, abril de 2026
+- latinoamericanos tendrá más de 60 años en 2050, y la curva sigue subiendo
+- Certeza baja. Esto es exploración estratégica y así se declara, no pronóstico. Hacia 2090 América Latina podría ser la región más envejecida del mundo. El valor de la universidad dependerá menos de transmitir información y más de garantizar criterio, comunidad y confianza.
+- Decisión que exige: preservar lo que la automatización no reemplaza: juicio, ética, comunidad y validación rigurosa.
+- Estructura de tres horizontes tomada de la práctica estándar de prospectiva corporativa (BCG Henderson Institute, EY, KPMG) y adaptada a educación superior. Las cifras de cada tarjeta son de fuente citada; el horizonte 2070 se rotula explícitamente como exploración y no como proyección.
+- EY separa las causas de la disrupción de sus efectos: son solo cuatro fuerzas primarias , y las megatendencias aparecen en los cruces entre ellas. Ese es el método que sigue este análisis. Lo que le importa a una universidad casi nunca está en una fuerza aislada: está en el cruce.
+- de los empleadores espera que la IA transforme su negocio a 2030. La vida media de una habilidad técnica cae a entre 2,5 y 3,75 años.
+- de personas de 60 años o más en 2050, más del doble que en 2017. Al tiempo, la cohorte joven se contrae en Colombia.
+- motor de creación de empleo a 2030. En el escenario climático de BCG los fósiles caen del 81% al 35% de la matriz energética en 2050.
+- Fuente: WEF 2025; BCG Henderson Institute 2026.
+- del PIB mundial podría representar el comercio global en el escenario de bloques, frente al 57% de 2024. Se revierten décadas de globalización.
+- Educación para adultos mayores. Cerca de un tercio de los adultos entre 55 y 65 años no tiene conocimientos informáticos (OCDE). La brecha digital gris es demanda formativa sin atender.
+- Portafolio verde con base técnica. Las ingenierías de renovables y la gestión ambiental entran por primera vez al Top 10 de habilidades en alza.
+- Movilidad y exportación de talento. El BID proyecta 14 millones de cuidadores de larga duración en América Latina a 2050, casi cinco veces la fuerza laboral actual.
+- Método de fuerzas primarias y cruces: EY Megatrends. Cifras de apoyo: WEF Future of Jobs 2025, OCDE, BID y BCG Henderson Institute 2026.
+- Esta es la lectura central del análisis. Arriba, los hitos que va a atravesar la educación superior en cada horizonte. Abajo, en dorado, el movimiento que le corresponde a la Universidad frente a cada hito. Un hito sin movimiento es un riesgo; un movimiento sin hito es activismo.
+- La IA rompe la evaluación tradicional El trabajo escrito sin supervisión deja de ser evidencia de aprendizaje.
+- La microcredencial se vuelve oferta estándar Deja de ser piloto y pasa a competir de frente con el diplomado.
+- Se exige probar empleabilidad Las familias comparan retorno antes que prestigio.
+- Se contrae la cohorte joven en Colombia El pregrado tradicional deja de crecer por demografía.
+- Política institucional de evaluación con IA Evaluación auténtica y por proceso, con reglas comunes.
+- Reglas de acumulación de créditos Que una credencial corta sume hacia un posgrado propio.
+- Publicar empleabilidad por programa Dejar de usar el dato solo hacia adentro.
+- Abrir la línea 55+ con responsable y meta Segmento con presupuesto, no actividad de extensión.
+- El título deja de ser el único filtro El empleador valida competencias por otras vías.
+- Madura el aprendizaje inmersivo Se justifica donde la práctica real es cara o riesgosa.
+- La generación plata se vuelve segmento propio Con currículo, didáctica y precio diferenciados.
+- El portafolio verde pasa a ser requisito Deja de diferenciar y empieza a ser condición de entrada.
+- Trayectorias modulares como arquitectura No un catálogo de cursos: una estructura de rutas.
+- Pilotos inmersivos donde más cuesta la práctica Empezar por un programa, no por una plataforma.
+- Universidad abierta a la ciudad Medir impacto más allá de estudiantes matriculados.
+- Alianzas con empleadores basadas en datos Convenios que reportan colocación, no que decoran.
+- Universidad distribuida Menos dependiente de un campus único.
+- Ciclos repetidos de aprendizaje Varias vueltas a la universidad a lo largo de una vida.
+- El valor está en el criterio, no en el dato La información es abundante; el juicio, escaso.
+- El carisma lasallista como ventaja explícita Formación ética y comunidad dejan de ser discurso y pasan a ser propuesta de valor.
+- Certificar confianza, no solo contenidos La validación rigurosa como servicio central.
+- Arraigo territorial como activo Bogotá, Bucaramanga y Yopal como red, no como sedes.
+- Los hitos del sector se derivan de las señales del radar y tienen fuente citada en cada una. Los movimientos de La Salle son propuesta del asesor para la discusión del plan estratégico, no compromisos adquiridos.
+- El radar: 34 señales del futuro, filtrables por tres criterios
+- EDUCAUSE distingue en su informe de 2026 entre tendencias consolidadas y señales tempranas , que son indicadores emergentes que todavía no alcanzan escala. El radar adopta esa distinción y le suma el eje y el horizonte. Cada señal responde tres preguntas: de qué frente viene, cuándo aterriza y qué tan firme es la evidencia. Los ejes siguen el orden PESTEL, con el educativo al frente porque es el que da sentido a todo el tablero.
+- La IA complica las evaluaciones tradicionales y empuja a las instituciones hacia evaluación auténtica y basada en proceso.
+- La oferta deja de pensarse como carreras y pasa a diseñarse como ecosistema modular de credenciales que se acumulan.
+- Crece la exigencia de probar valor, confianza y pertinencia en medio de matrículas a la baja y presupuestos ajustados.
+- Simulación y laboratorios virtuales para disciplinas donde la práctica es cara o riesgosa. Sin cifra de mercado confiable todavía: las proyecciones de proveedores difieren entre sí por un orden de magnitud.
+- La generación plata como segmento educativo propio, no como extensión cultural. Requiere andragogía, formatos cortos y alfabetización digital.
+- El título deja de ser el único filtro de empleo frente a rutas alternativas, bootcamps y aprendizaje asistido por IA.
+- En el escenario de bloques el comercio global cae a cerca del 35% del PIB, desde el 57% de 2024.
+- Matrículas a la baja y presupuestos restringidos redefinen prioridades y operación institucional.
+- La cooperación o la fragmentación en estándares de IA es la variable que separa los escenarios de mayor y menor crecimiento.
+- Costo de vida y menor crecimiento reordenan la demanda educativa hacia el retorno visible.
+- La habilidad núcleo más pedida por los empleadores hoy.
+- Resolver e innovar donde la IA todavía no llega.
+- Atraer, desarrollar y retener personas en mercados que rotan más rápido.
+- 1 de cada 6 personas tendrá 60 años o más en 2030, y 2.100 millones en 2050.
+- El BID proyecta 14 millones de cuidadores de larga duración en la región a 2050, casi cinco veces la fuerza laboral actual.
+- Crece la población en edad de trabajar en países en desarrollo.
+- Adaptarse al cambio constante como competencia central.
+- Movilizar equipos y organizaciones en entornos inciertos.
+- La IA recompone tareas en casi todos los sectores.
+- Conectar a más población y empresas; habilita todas las demás tecnologías.
+- La competencia que más rápido crece en el mundo.
+- Usar y entender tecnología de forma transversal.
+- Los roles de más rápido crecimiento del mercado laboral.
+- Roles rutinarios que la automatización desplaza. Es una señal tecnológica y laboral, no regulatoria.
+- Mitigación y adaptación climática como motor de empleo.
+- Nueva matriz energética y roles técnicos asociados.
+- Sostenibilidad aplicada al trabajo; entra al Top 10 de habilidades por primera vez.
+- Renovables, ambiental y vehículos eléctricos. En el escenario climático de BCG los fósiles bajan del 81% al 35% de la matriz en 2050.
+- Mayor exigencia regulatoria y de gobernanza sobre datos de estudiantes y uso de IA.
+- Gobernanza y confianza en IA aparecen como señal emergente antes de consolidarse como norma.
+- Sin marco de reconocimiento, la credencial corta no acumula ni se transfiere. Es el cuello de botella regulatorio del modelo modular.
+- El eje tecnológico concentra la mayor densidad de señales medidas a 2030, mientras que el educativo es el que reparte su peso de forma más pareja entre lo inmediato y lo estructural. Eso confirma que la tecnología ya se puede planear y que la educación todavía se está definiendo.
+- Elaboración propia a partir de las 34 señales del radar. Cada señal se clasifica en un solo eje y un solo horizonte.
+- Una señal que no se traduce en decisión es ruido. Cada tarjeta toma una señal del radar y la convierte en una pregunta que el equipo directivo puede responder con sí o no.
+- Si la IA vuelve poco confiable el trabajo escrito por fuera del aula, la decisión no es prohibirla sino rediseñar cómo se evalúa: evaluación auténtica, por proceso y presencial en los puntos críticos.
+- ▸ ¿Existe una política de evaluación para 2027 o sigue vigente la de 2019?
+- Un tercio de los adultos entre 55 y 65 años no maneja herramientas informáticas y 1 de cada 4 latinoamericanos pasará de 60 años en 2050. Es un mercado con necesidad concreta y capacidad de pago.
+- ▸ ¿Quién es el responsable del segmento 55+ en la estructura actual?
+- La realidad virtual y aumentada se justifica donde la práctica real es cara o riesgosa: salud, laboratorios, campo, seguridad industrial. Es señal temprana: conviene pilotar en un programa, no comprar plataforma institucional.
+- Sin reglas de acumulación y transferencia, las microcredenciales son cursos sueltos con otro nombre. El cuello de botella es normativo e interno, no de mercado.
+- La presión por demostrar retorno crece frente a rutas alternativas. No implica reducir la universidad a colocación laboral: implica ser transparentes sobre qué se aprende y cómo conecta con oportunidades.
+- Lo que la automatización no reemplaza es la apuesta de 2070
+- Criterio, ética, comunidad, investigación situada y validación confiable. Es exactamente el terreno del carisma lasallista, y es defendible en los cuatro escenarios de 2050 a la vez.
+- Lecturas elaboradas por el asesor a partir de las señales del radar. Cada una remite a fuente citada en la señal de origen; las preguntas son de uso interno y no constituyen recomendación de una fuente externa.
+- Las consultoras no predicen un futuro único: construyen escenarios plausibles y buscan decisiones que resistan en varios a la vez. El análisis usa dos capas. Primero los cuatro escenarios globales a 2050 del BCG Henderson Institute, construidos sobre un siglo de datos históricos y más de cien megatendencias. Después los cuatro cuadrantes propios de La Salle. Ocho escenarios en total, del mundo a la institución.
+- La cooperación global en estándares de IA acelera la productividad y amplía el acceso a la tecnología. Las horas de trabajo caen cerca de 25% y la semana de cuatro días se vuelve común en algunas regiones.
+- Para la universidad: más tiempo libre y más reconversión. El aprendizaje a lo largo de la vida se vuelve consumo masivo.
+- Las tensiones geopolíticas dividen el mundo en bloques. El comercio cae a cerca del 35% del PIB global y el gasto en defensa sube a cerca del 7%.
+- Para la universidad: se cierra la movilidad internacional y se encarece la exportación de servicios. Gana el arraigo territorial.
+- Eventos climáticos extremos a finales de esta década empujan a gobiernos e industrias a priorizar resiliencia. Los fósiles caen del 81% al 35% de la matriz energética en 2050.
+- Para la universidad: el portafolio verde deja de ser diferenciador y pasa a ser requisito de entrada.
+- de la riqueza mundial en manos del 1% más rico
+- El avance tecnológico continúa con poca regulación: crecimiento alto de 4% anual pero concentración de riqueza y clase media en retroceso. El trabajo por contratos cortos se expande.
+- Para la universidad: la equidad en el acceso se vuelve el riesgo reputacional central y la empleabilidad se fragmenta.
+- BCG Henderson Institute, Beyond Tomorrow: Four Scenarios for the World of 2050 , abril de 2026. Los nombres de escenario y las cifras vienen del informe; la traducción a decisiones de la Universidad se hizo para este tablero. Ver informe .
+- Aquí se cruzan dos incertidumbres críticas propias: el ritmo del cambio (gradual o disruptivo) con la capacidad de adaptación de la Universidad (reactiva o proactiva). Cada cuadrante indica además qué tan bien resiste frente a los cuatro escenarios globales de la capa 1.
+- El cambio llega despacio y la Universidad se moderniza de forma incremental: mejora el portafolio, digitaliza y suma credenciales sin urgencia.
+- Rol de La Salle: liderar el ritmo y ganar tiempo de ventaja.
+- Señales de este escenario: la matrícula joven se sostiene y la IA entra despacio en las profesiones.
+- Probabilidad: media. Es el escenario base optimista.
+- Qué hacer: aprovechar la calma para pilotar microcredenciales y datos de empleabilidad sin presión.
+- El cambio se acelera y la Universidad se adelanta: trayectorias modulares, IA transversal, microcredenciales y alianzas con empleadores desde ya.
+- Rol de La Salle: ser el referente regional del nuevo modelo.
+- Señales de este escenario: empleadores piden reconversión continua y las credenciales cortas ganan valor de mercado.
+- Probabilidad: creciente. Es la apuesta del plan.
+- Qué hacer: mover ya la Escuela de Trayectorias, la IA transversal y las alianzas; capturar la ventaja de ser primeros.
+- El modelo tradicional aguanta un tiempo, pero pierde pertinencia poco a poco frente a ofertas más flexibles y a la caída de la cohorte joven.
+- Rol de La Salle: riesgo de erosión lenta; hay que despertar.
+- Señales de este escenario: baja lenta de inscritos y quejas de pertinencia, sin reacción institucional.
+- Probabilidad: alta si no se actúa. Es la inercia.
+- Qué hacer: forzar el diagnóstico de portafolio y fijar metas de empleabilidad antes de que la erosión se acelere.
+- El cambio llega rápido y la Universidad reacciona tarde: pierde matrícula frente a nuevos competidores, plataformas y credenciales alternativas.
+- Rol de La Salle: escenario a evitar; el más costoso.
+- Señales de este escenario: plataformas y empresas forman directo y el título pierde peso como filtro de empleo.
+- Probabilidad: media-alta si se combina disrupción con parálisis.
+- Qué hacer: es el escenario a evitar; la única defensa es haberse movido antes hacia la reinvención liderada.
+- Método de escenarios 2×2 (cruce de incertidumbres críticas), estándar en prospectiva corporativa. La evaluación de resistencia frente a los cuatro escenarios globales es estimación cualitativa del asesor, no una medición. Complementa los escenarios temporales 2026 - 2031 de la pestaña Sector educativo.
+- Todo lo anterior sale de dos tipos de voz. Los informes institucionales y de consultoría , que fijan el consenso y aportan las cifras, y los futurólogos individuales , que anticipan y provocan. Cada tarjeta indica la naturaleza de la entidad, porque no pesa igual una agencia de Naciones Unidas que una firma privada que vende asesoría.
+- Nuevo contrato social para la educación como bien común. Mirada humanista y de propósito.
+- Agencia especializada de Naciones Unidas · 2021
+- UNESCO IESALC · Futuros de la educación superior a 2050
+- Escenarios de expansión, diversificación, hibridación y desintermediación del título. Es la única fuente con foco exclusivo en educación superior de América Latina.
+- Instituto regional de UNESCO · 2021 en adelante
+- Estudios temáticos sobre programas para adultos mayores y sobre la brecha digital gris.
+- 1 de cada 6 personas tendrá 60 años o más hacia 2030. Base demográfica de la oferta senior.
+- Brújula de aprendizaje: agencia del estudiante y competencias transformadoras sobre contenidos.
+- Organización intergubernamental, 38 países · 2020
+- Más del 25% de la región con más de 60 años en 2050 y 14 millones de cuidadores de larga duración requeridos.
+- Encuesta a más de mil empleadores. Cuantifica qué empleos y habilidades crecen y caen a 2030. Es el esqueleto de datos del radar de señales. Edición bienal: la vigente es 2025.
+- EDUCAUSE · Horizon Report 2026, Teaching and Learning
+- Panel de expertos con marco STEEP. Distingue tendencias consolidadas de señales tempranas. Es la referencia de prospectiva del sector de educación superior.
+- Asociación sin ánimo de lucro de instituciones de educación superior, EE. UU. · mayo de 2026 · educause.edu
+- BCG Henderson Institute · Beyond Tomorrow, cuatro escenarios para 2050
+- Un siglo de datos históricos y más de cien megatendencias. Aporta los cuatro escenarios globales de la capa 1.
+- Think tank de consultora privada · abril de 2026 · bcg.com
+- Separa fuerzas primarias, megatendencias, mundos de trabajo futuros y señales débiles. De aquí sale el marco de cuatro fuerzas y sus cruces.
+- Nueve megatendencias globales. Su aporte conceptual: las megatendencias no son los temas del momento, son las fuerzas que moldean las opciones disponibles.
+- Temas ordenados en cuatro categorías y priorizados por actividad en señales alternativas. Se usa como referencia de método, no como fuente de cifras: su contenido es de suscripción.
+- Tendencias educativas aplicadas desde una mirada latinoamericana: aprendizaje por retos, híbrido y credenciales.
+- Observatorio de universidad privada mexicana · 2026
+- Mide el uso real de la IA en el trabajo a partir de millones de conversaciones. Observa lo que ya ocurre, no lo que se proyecta.
+- Naturaleza de cada entidad verificada en su sitio institucional. Las fuentes de Naciones Unidas e intergubernamentales se usan para cifras demográficas y de política; las de consultoría se usan para marcos de método y escenarios, señalando siempre su origen comercial; GlobalData se cita solo como referencia metodológica. El listado completo con enlaces está en la pestaña Fuentes.
+- Dieciséis voces individuales de la prospectiva internacional. Cada una trabaja unos frentes distintos; la columna final traduce su planteamiento a decisiones de universidad. Cada fila enlaza al sitio del autor, donde publica su informe anual.
+- Leer los "tech trends" cada año para rediseñar currículos, credenciales y modelos de negocio antes que la competencia.
+- Preparar para una aceleración tecnológica sostenida; el aprendizaje continuo deja de ser opcional.
+- Reforzar capacidades humanistas, creatividad y pensamiento crítico frente a la automatización: lo que la IA no reemplaza.
+- Diseñar sistemas que acompañen la movilidad del talento, el aprendizaje continuo y la reubicación profesional.
+- Formar para la adaptabilidad y el cambio constante como competencia central, no como excepción.
+- Enseñar liderazgo y toma de decisiones bajo incertidumbre; anticipar disrupciones en el portafolio.
+- Incorporar competencias verdes y foresight aplicado a la planeación institucional y territorial.
+- Rediseñar el aprendizaje para organizaciones algorítmicas: trabajar con la IA, no contra ella.
+- Entender las nuevas identidades y comportamientos de los estudiantes para captación y experiencia.
+- Cultivar mentalidad emprendedora y alfabetización en tecnologías exponenciales.
+- Desarrollar pensamiento anticipatorio y decisiones en la incertidumbre como competencia transversal.
+- Referente directo para educación ejecutiva y liderazgo adaptativo en la oferta 35 - 44.
+- Mapa de tecnologías emergentes para anticipar qué disciplinas actualizar primero.
+- Impulsar la alfabetización en IA y datos y explorar entornos digitales de aprendizaje.
+- Anticipar cómo cambian las expectativas y los estilos de vida de los estudiantes para el diseño de la experiencia y la captación.
+- Instalar la gestión de la innovación y del cambio como competencia directiva y como capacidad institucional.
+- Mostrando 16 de 16 futurólogos. Selección a partir de rankings de futuristas (Global Gurus, agencias de speakers) y del material aportado por el asesor. Cada fila enlaza al sitio del autor.
+- El alcance de esta hoja es el futuro. El presente global se analiza en Mundo (02), los casos de país en Casos (03) y la demanda internacional en Exportar sin migrar (04). La síntesis por frentes resume el énfasis público de cada autor; no reproduce citas textuales.
+- La educación superior migra de títulos lineales a trayectorias modulares y recurrentes, mientras la IA recompone el trabajo más rápido que la duración de un título.
+- Qué va aquí y qué va en la hoja 01. Esta hoja reúne evidencia observada del presente global: cifras ya medidas sobre adopción de inteligencia artificial, empleo y habilidades. Las proyecciones a 2030 que aparecen aquí son las que las propias fuentes publican como parte de esas mediciones, no construcción propia. La exploración de futuros alternativos, los escenarios y las señales tempranas están en la hoja 01 Futurología .
+- Fuente: Anthropic Economic Index . Uso observado, no proyección teórica.
+- Distribución de conversaciones con IA (%), noviembre 2025
+- ¿Qué significan estas cifras? El 52% es uso de aumento : la IA colabora con la persona (le ayuda a pensar o redactar, pero la persona decide). El 45% es automatización : la IA ejecuta la tarea sola. Que domine el aumento indica que, por ahora, la IA potencia al profesional más de lo que lo reemplaza.
+- Fuente: WEF, Future of Jobs 2025 . 170 M nuevos, 92 M desplazados, saldo neto +78 M.
+- Los cinco primeros de cada extremo del ranking del WEF, por crecimiento neto proyectado 2025-2030
+- Cómo leerlo. La barra no es un porcentaje: es la posición en el ranking del WEF. El informe publica el orden de los roles pero entrega las tasas exactas solo dentro de una figura, en un eje que llega al 120% de crecimiento neto para el primer puesto. Por eso aquí se muestra la posición, que sí es verificable, y no un porcentaje aproximado. Qué dice: los cinco roles de mayor crecimiento son todos tecnológicos o de seguridad, y los cinco de mayor caída son todos administrativos, de digitación o de caja. La lectura para La Salle: reforzar oferta en los primeros y ofrecer reconversión a quienes hoy ocupan los segundos. El informe también señala que los diseñadores gráficos entraron por primera vez a la lista de roles en declive, atribuido a la IA generativa.
+- Fuente: WEF, Future of Jobs Report 2025 , Figura 2.2, encuesta a más de 1.000 empleadores que representan 14 millones de trabajadores en 55 economías. Nota de método: el eje muestra la posición en el ranking, no la tasa de crecimiento. El WEF publica las tasas exactas únicamente como figura gráfica, sin tabla de valores, por lo que reproducirlas como número aquí sería una estimación y no un dato.
+- Un plan de 5 años gradúa con herramientas ya depreciadas
+- Cómo leerlo: lo que se aprende en el año 1 vale 100%. Si es una habilidad técnica, para el año del grado ya perdió gran parte de su vigencia y a los pocos años queda casi obsoleta (línea roja). Las habilidades cognitivas y blandas se mantienen altas (línea teal). La conclusión: separar un eje duradero de competencias del núcleo de módulos técnicos actualizables cada 18 a 24 meses.
+- Elaboración a partir de IBM (2020), WEF (2025) y Burning Glass Institute (2022). Curva ilustrativa de la lógica de depreciación.
+- Fuente: ManpowerGroup (2026); Burning Glass Institute (2022); LinkedIn Jobs Colombia (2025).
+- Trabajadores que necesitarán formación a 2030
+- Habilidades del futuro: crecimiento de demanda 2025 – 2030
+- Fuente: WEF Future of Jobs (2025) ; ManpowerGroup (2026); LinkedIn Workforce Report (2025).
+- Tres sistemas universitarios enfrentan el mismo problema (empleabilidad, tecnología y presión demográfica) con tres palancas distintas. China corta la oferta de títulos por decreto, España subsidia la demanda y deja crecer al privado, y Estados Unidos deja que el ajuste lo haga el mercado. Ver los tres juntos es lo que permite elegir palanca en vez de copiar una receta.
+- del mapa universitario reescrito entre 2021 y 2025. Cierra programas y abre otros por directriz ministerial.
+- de universidades privadas en diez años (de 28 a 41). El Estado financia matrícula en IA y el privado abre la oferta.
+- de confianza pública en la educación superior, frente a 57% en 2015. El recorte de programas lo dicta la caja, no la estrategia.
+- La señal no es que China cierre carreras. Es la velocidad de decisión : un sistema universitario capaz de rotar un tercio de su portafolio en un lustro, con un mecanismo formal de revisión anual y listas oficiales de programas urgentes y de programas con baja empleabilidad.
+- Cómo leerlo: el sistema no solo recortó. Cerró 12.200 y abrió 10.200, con un saldo neto de -2.000 programas. Es una sustitución de portafolio , no una contracción: se libera capacidad de un lado para instalarla en otro.
+- Fuente: Ministerio de Educación de China vía Xinhua, recogido por South China Morning Post (2026).
+- El dato ancla: más de 30% del mapa universitario nacional fue creado, cerrado o suspendido en cinco años. En un sistema como el colombiano, un movimiento equivalente tocaría alrededor de uno de cada tres programas del país.
+- Fuente: Ministerio de Educación de China / Xinhua (2026).
+- Altas y bajas por nivel de formación, 2023-2025
+- Dónde duele y dónde crece: el posgrado casi solo suma (+1.064 doctorados y +2.258 maestrías, con bajas mínimas). El pregrado es el nivel que más se depura: se abrieron 3.715 programas y se cerraron 6.638. La formación técnica y vocacional es la de mayor rotación absoluta.
+- Fuente: rueda de prensa del Ministerio de Educación de China, 28 de agosto de 2025; balance del plan de reforma 2023. Nota: el Ministerio publicó en enero de 2026 cifras acumuladas ligeramente distintas para posgrado (1.129 doctorados y 2.294 maestrías).
+- La curva de aceleración: se pasa de 367 programas revocados en 2019 a un máximo de 1.670 en 2023 , el año de la directriz ministerial. Los años 2020 y 2021 no se grafican porque la fuente no publica el dato desagregado.
+- Fuente: listados de aprobación de programas de pregrado del Ministerio de Educación, recogidos por Asia News Network (2025).
+- Campos considerados saturados o desalineados frente a la demanda laboral, con exceso de graduados y baja remuneración de entrada.
+- Programas alineados con las metas industriales del gobierno y con la autosuficiencia tecnológica en semiconductores, vehículos eléctricos y biotecnología.
+- Transición energética y longevidad como ejes de política pública.
+- Acelerar la integración de la IA de nueva generación en la economía real, no solo en el software.
+- Fuentes: South China Morning Post (2026); Ministerio de Educación de China (2025).
+- El Ministerio de Educación y otras cuatro entidades fijan la meta de ajustar cerca del 20% de la oferta de disciplinas y programas antes de 2025, reemplazando campos obsoletos por otros ligados a nuevas tecnologías y sectores emergentes.
+- En agosto de 2025 el Ministerio declara la meta del 20% alcanzada en el plazo previsto . Veintitrés provincias y 94 instituciones adscritas al gobierno central formularon sus propios planes e identificaron 520 programas urgentes y 223 programas con baja empleabilidad .
+- Fuente: Ministerio de Educación de China (2024-2025).
+- El nuevo plan crea un mecanismo permanente de ajuste, emite alertas a programas con baja demanda o calidad decreciente, incorpora herramientas de IA al contenido de los cursos y construye una plataforma nacional de datos para cruzar oferta y demanda de talento en tiempo real.
+- Fuente: Grupo Dirigente de Educación del Comité Central (2025).
+- Chu Zhaohui, investigador sénior del Instituto Nacional de Ciencias de la Educación de China, sostiene que cambiar una carrera por otra es una solución de corto plazo . Su argumento tiene tres puntos:
+- Muchos de los programas cerrados habían sido creados apenas unos años antes, en una fase previa de la misma reforma, y no alcanzaron a madurar.
+- La velocidad del cambio tecnológico supera la capacidad de cualquier catálogo de programas para mantenerse vigente.
+- La salida estructural no es rotar títulos, sino dar al estudiante libertad para componer su ruta según intereses, fortalezas y objetivos de carrera.
+- Traducción para La Salle: el mensaje de China no es "cerrar humanidades". Es que la unidad de gestión del portafolio dejó de ser el programa y pasó a ser el módulo . Un sistema de credenciales apilables permite rotar contenido sin destruir programas ni carreras docentes.
+- Fuente: declaraciones recogidas por South China Morning Post / Bangkok Post (2026).
+- Al menos 30 millones de euros para financiar hasta el 80% de la matrícula de cerca de 8.000 jóvenes que cursen estudios sobre IA en universidades públicas y privadas.
+- Fuente: Ministerio de Ciencia, Innovación y Universidades .
+- 200 millones de euros para formar hasta 80.000 profesionales en digitalización e inteligencia artificial a través de colegios profesionales.
+- Formación gratuita en IA con certificación oficial para 75.000 personas ; la iniciativa previa con Founderz y Microsoft ya superó los 87.000 inscritos , 46% mujeres.
+- El contraste que importa: China ajusta la oferta de títulos por decreto; España subsidia la demanda de formación con becas y credenciales cortas. Son dos palancas distintas sobre el mismo problema. La segunda es la que una universidad privada colombiana puede accionar por sí misma.
+- Instalar un comité de vigilancia de programas con criterios públicos: matrícula, deserción, empleabilidad a 12 meses y salario de entrada. Semaforizar el portafolio cada año, no cada acreditación.
+- Definir una lista corta de apuestas propias (IA aplicada, robótica, datos, sostenibilidad, ciberseguridad) con meta de matrícula y presupuesto asignado, no como declaración de intención.
+- Cruzar SNIES, vacantes y egresados propios para anticipar saturación antes de que la matrícula caiga. La decisión deja de depender solo del juicio experto.
+- Rotar contenido dentro de programas existentes vía microcredenciales apilables. Es la respuesta a la crítica de Chu: flexibilidad en vez de sustitución de títulos.
+- Donde China recorta, hay una oportunidad de diferenciación lasallista: humanidades combinadas con tecnología (ética de la IA, diseño de producto, comunicación de datos), no humanidades aisladas.
+- Elaboración propia a partir de las fuentes de esta sección y del marco prospectivo del dashboard.
+- España no cerró carreras. Dejó que el sector privado abriera la oferta que el público no podía abrir, y puso dinero público a financiar la matrícula en las áreas que le interesan. En diez años pasó de 28 a 41 universidades privadas .
+- Máster no presencial privado 2024-2025 · x4,2 desde 2015-16
+- Crecimiento de la oferta de titulaciones 2015-2016 a 2024-2025
+- El dato que decide: en máster, las privadas ampliaron su oferta un 66% mientras las públicas la redujeron 6,5% . El posgrado es donde está el margen y donde el privado se movió sin pedir permiso.
+- Fuente: Sistema Integrado de Información Universitaria (SIIU), Ministerio de Ciencia, Innovación y Universidades.
+- Cómo leerlo: trece universidades privadas nuevas en diez años. Pero el tamaño medio importa: una pública española ronda los 27.000 estudiantes y una privada los 9.500. Crecen en número, no en escala.
+- Fuente: Datos y Cifras del Sistema Universitario Español 2025-2026 (diciembre de 2025).
+- La paradoja española: las privadas son casi la mitad de las instituciones pero solo una cuarta parte del alumnado. Y aun así la demanda del público sigue desbordada: hay una tasa de preferencia del 193,4% , casi el doble de preinscripciones que plazas. En medicina llega a diez candidatos por plaza.
+- Fuente: Ministerio de Ciencia, Innovación y Universidades (2025-2026).
+- Financia hasta el 80% de la matrícula en estudios de IA
+- La diferencia con China: aquí nadie cierra un programa. Se abarata el que interesa. La iniciativa previa de Madrid con Founderz y Microsoft ya superó los 87.000 inscritos , 46% mujeres.
+- Fuentes: Ministerio de Ciencia, Innovación y Universidades ; La Moncloa (2025); Comunidad de Madrid (2026).
+- Las universidades públicas lanzaron 43 títulos nuevos para el curso 2025-2026, buena parte centrados en inteligencia artificial y sostenibilidad.
+- UPM (desde 2024), UC3M (desde 2025) e IE University en el sector privado. La UPV estrenó grado con 75 plazas. UPC y UB tienen previsto abrir para 2026-2027.
+- Entre 800 y 2.300 euros anuales en pública frente a 12.500 a 18.000 euros en privada. Con beca, la pública puede quedar gratuita. El programa Forma IA existe precisamente para cerrar esa brecha.
+- Las mujeres son el 56,5% del alumnado y suben al 60,1% entre egresados. Pero solo el 17,7% en informática, donde los hombres son el 82,3%.
+- Fuentes: SIIU y Estadística de Estudiantes Universitarios; recopilación de prensa especializada (2025-2026). Las cifras de precios de matrícula provienen de fuentes secundarias y conviene verificarlas antes de usarlas en comunicación externa.
+- Traducción para La Salle: España demuestra que una universidad privada puede ganar mercado sin que el Estado le abra la puerta, siempre que se mueva en posgrado, virtualidad y áreas que la política pública está subsidiando . Es el caso más parecido al colombiano y el que ofrece el manual más aplicable.
+- Estados Unidos es el caso donde nadie decide: el ajuste lo hace la caja. Los programas que se cierran no son los que sobran para el país, sino los que no pagan la nómina. La confianza pública cayó de 57% en 2015 a 38% en 2026 , y eso reordena el sistema más que cualquier política.
+- Certificados en community colleges desde 2021
+- Variación de matrícula por sector, otoño 2025
+- El titular engaña: la matrícula total subió 1,0% (187.000 estudiantes más). Pero el crecimiento se concentró en lo público y lo corto. Las privadas de cuatro años perdieron matrícula, y el posgrado cayó arrastrado por un -5,9% de estudiantes internacionales .
+- Fuente: National Student Clearinghouse Research Center , informe final de otoño 2025 (enero de 2026).
+- La señal más útil para una universidad privada: lo corto crece más rápido que lo largo. Certificado y título asociado le ganan al bachelor. No es una moda: son cuatro años seguidos de crecimiento en certificados.
+- Fuente: National Student Clearinghouse Research Center (enero de 2026).
+- Cómo leerlo: son mediciones puntuales de la serie de Gallup, no una curva continua. El repunte de 2025 se perdió casi por completo en 2026. La caída de este año fue más fuerte entre demócratas (-11 puntos) que entre republicanos (-2).
+- Fuente: Gallup-Lumina Foundation , encuesta de junio de 2026, 1.001 adultos, margen de error ±4 puntos.
+- El diagnóstico exacto: el problema no es el título, es la preparación. Los empleadores siguen queriendo graduados, pero no confían en lo que traen puesto. Ese hueco es exactamente donde vive la educación continua.
+- Fuente: Lumina Foundation y Gallup, Aligning Education and Work: What Employers Say Higher Education Must Deliver (2026).
+- Los nacidos durante la recesión de 2008 llegan a la edad universitaria justo ahora. El número de graduados de secundaria empieza a caer y en algunas regiones la cohorte ya se redujo cerca de un 15% frente a finales de la década pasada.
+- Fitch Ratings mantiene una perspectiva de deterioro para la educación superior estadounidense en 2026, el segundo año consecutivo. Más de 100 instituciones , en su mayoría privadas pequeñas sin ánimo de lucro, están en riesgo elevado de cierre o fusión.
+- Fuente: Fitch Ratings, perspectiva sectorial 2026.
+- Los recortes caen primero sobre humanidades, artes y educación, mientras los estudiantes se desplazan hacia enfermería, computación y negocios. La diferencia con China: allá se recorta por estrategia industrial, aquí por déficit presupuestal.
+- Elaboración a partir de reportes sectoriales (2026).
+- Traducción para La Salle: Estados Unidos es la advertencia, no el modelo. Muestra qué pasa cuando una universidad privada tuition-dependent llega tarde al ajuste: no elige qué cerrar, se lo dicta el flujo de caja. La defensa es diversificar fuentes de matrícula antes de la caída , no durante.
+- El Estado, por directriz ministerial y con meta cuantificada.
+- El Estado subsidia la demanda; la oferta la abre el mercado privado.
+- Nadie. Decide el flujo de caja de cada institución.
+- Cierre y apertura de programas, listas de programas urgentes y de baja empleabilidad.
+- Becas de matrícula, formación gratuita certificada y expansión de universidades privadas.
+- Recortes de programas, fusiones y cierres por déficit.
+- Media: +46,4% de instituciones privadas en diez años.
+- Reactiva: el ajuste llega cuando ya hay pérdida.
+- Rotar títulos sin dejarlos madurar. Crítica de Chu Zhaohui.
+- Sobreoferta privada y desigualdad de precio entre pública y privada.
+- Pérdida de capacidad instalada y de acceso en zonas rurales.
+- El mecanismo de revisión anual del portafolio con criterios públicos.
+- Ir a posgrado, virtualidad y áreas subsidiadas por política pública.
+- Los tres casos convergen en un mismo punto y en tres caminos distintos: la unidad de gestión del portafolio dejó de ser el programa y pasó a ser el módulo . China lo hace cerrando títulos, España abriendo oferta privada financiada, Estados Unidos por eliminación. La Salle puede llegar por el camino corto: credenciales apilables dentro de programas que ya existen.
+- Un comité de vigilancia del portafolio con criterios públicos y revisión anual : matrícula, deserción, empleabilidad a 12 meses y salario de entrada. Y una lista corta de apuestas propias con presupuesto asignado.
+- Crecer donde el privado sí puede: posgrado, virtualidad y educación continua . Y leer qué está subsidiando la política pública colombiana (CONPES 4144 de IA, reindustrialización) para montarse encima en vez de competir contra ella.
+- La advertencia: diversificar fuentes de matrícula antes de que llegue la caída demográfica colombiana. Y cerrar la brecha entre título y competencia, que es donde los empleadores dicen que está el problema real.
+- Formar para que los egresados migren parece la respuesta obvia a la falta de oportunidades. Al revisar los mecanismos reales, la conclusión es la contraria: la puerta más grande está abierta desde Colombia. Esta hoja compara las cuatro rutas de demanda internacional y cuál conviene a una universidad privada colombiana.
+- La demanda internacional de talento colombiano ya se está pagando, pero no en Madrid ni en Miami: se paga desde Bogotá, Medellín y Bucaramanga , en operaciones que atienden a Estados Unidos y Europa. El cuello de botella que el propio gremio declara no es el título: es el inglés y el portugués .
+- US$2.951 millones y más de 750.000 empleos. Es el 14% de las exportaciones de servicios del país y crece hacia IA, ciberseguridad, datos y servicios financieros.
+- Bilingüismo y competencias técnicas especializadas. No hay barrera migratoria, ni convalidación, ni visa.
+- Prioridad uno. Es la ruta más grande, la más accesible y la que se conecta con la brecha del 1,5% en TIC. No requiere que nadie salga del país.
+- Mercados más pequeños, pero con reconocimiento profesional más ágil y sin barrera de idioma.
+- Homologación bilateral caso a caso. Menos volumen y menos diferencia salarial que atraiga.
+- Segunda prioridad, por otra vía: no como destino migratorio, sino como mercado para oferta virtual. Una maestría en línea no necesita que el estudiante se mueva.
+- Aparentemente grande, realmente estrecha por la vía formal.
+- El Catálogo de Ocupaciones de Difícil Cobertura del primer trimestre de 2026 está dominado por marina mercante y deportistas profesionales . No es una lista abierta de profesionales. A eso se suma la homologación de títulos, que es lenta.
+- No es base para diseñar portafolio. Sí es un buen caso de estudio de política pública, que ya está en la pestaña de Casos.
+- El mercado más grande del mundo y el que más colombianos atrae.
+- Convalidación de títulos y régimen de visas. Además, la matrícula internacional de posgrado allá cayó 5,9% en el otoño de 2025.
+- Impracticable como estrategia institucional en la vía migratoria. Pero es el cliente principal del nearshoring: se le llega vendiéndole servicios, no enviándole gente.
+- Fuentes: ProColombia y BPrO para el sector de servicios; BOE, Resolución de 28 de enero de 2026 para el catálogo español; National Student Clearinghouse para la matrícula internacional en Estados Unidos.
+- El dato que cambia la percepción: el 53% del talento del sector son profesionales y otro 25% son perfiles especializados. Ya no es la industria de call center que se cree: es exportación de servicios de alto valor en tecnología, finanzas y recursos humanos. Y el 58,4% de la planta son mujeres.
+- Fuente: estudio BPrO presentado en el CX Summit 2026 .
+- Cómo leerlo: cada barra mide una cosa distinta, no son comparables entre sí. Se muestran juntas porque en conjunto dibujan un sector en expansión con demanda de talento sostenida. La barra dorada es la que más importa: nueve de cada diez empresas ya decidieron que Colombia es su hub.
+- Fuentes: BPrO, CX Summit 2026; ManpowerGroup Colombia, expectativa neta de empleo del sector tecnológico primer trimestre de 2026; Bancolombia sobre participación del BPO en exportaciones de servicios.
+- 1. Inglés deja de ser un servicio y pasa a ser producto
+- El gremio declara el bilingüismo como su cuello de botella. La Salle tiene Maestría en Didáctica de las Lenguas y Bucaramanga tiene 58 mil millones comprometidos en bilingüismo. Es la misma pieza sirviendo a dos demandas: la territorial y la de exportación de servicios.
+- 2. La brecha del 1,5% en TIC se vuelve más cara
+- Con TIC en 1,5% del portafolio activo, contra 6,1% nacional, La Salle no está posicionada en el área que sostiene el nearshoring. La demanda no es solo colombiana: es de clientes que pagan en dólares. El costo de no cerrar esa brecha crece cada año.
+- 3. La virtualidad es la vía de exportación educativa
+- Si el mercado andino y centroamericano no justifica migración, sí justifica oferta virtual . La Salle ya tiene 14 maestrías, varias en línea. Exportar programas es más viable que exportar egresados, y es exactamente lo que hicieron las universidades privadas españolas.
+- La conclusión de esta hoja: la mirada global no cambia qué hay que fortalecer, la refuerza . Computación, datos y bilingüismo aparecen como prioridad tanto en la agenda de Bogotá como en la demanda internacional. Cuando dos análisis independientes apuntan al mismo lugar, la decisión deja de ser una apuesta.
+- Las cifras de BPO provienen de ProColombia y del gremio (BPrO), que tienen interés en mostrar un sector en crecimiento. Conviene contrastarlas con la balanza de servicios del Banco de la República.
+- El Catálogo de Ocupaciones de Difícil Cobertura español cambia cada trimestre. La lectura corresponde al primer trimestre de 2026 y conviene revisarla antes de usarla en comunicación externa.
+- No hay dato público sobre cuántos egresados lasallistas trabajan hoy en exportación de servicios. Esa pregunta sí puede responderla el OLE cruzado con la encuesta de egresados.
+- Crecimiento moderado y hogares sensibles al precio, una población que envejece y un mercado laboral que crece pero no encuentra el talento que necesita.
+- Costos educación superior (ICES, 1er sem 2026)
+- Fuente: Banco de la República; OCDE (2025) y BBVA Research (2026) .
+- Fuentes: Banco de la República, DANE, Fedesarrollo, BBVA Research (2025 – 2026).
+- Fuente: DANE. 2025 preliminar: 433.678 nacimientos, 4,5% menos que en 2024.
+- Porcentaje de la población con 60 años o más (%)
+- Fuente: DANE · UNFPA · Corficolombiana (2025). El bono demográfico se cierra hacia 2036.
+- El dato que sorprende: tecnología y servicios TI reporta la menor dificultad de los seis sectores (55%), por debajo del promedio nacional. No contradice el hallazgo de que la tecnología concentra el 31,8% de las vacantes: son dos cosas distintas. Un sector puede publicar muchas vacantes y aun así llenarlas, porque tiene una cantera grande y en crecimiento. La escasez aguda está en automotriz, finanzas y manufactura, sectores con menos oferta formativa nueva y perfiles más difíciles de sustituir.
+- Fuente: ManpowerGroup, Estudio Global de Escasez de Talento 2026 , cifras de Colombia difundidas el 21 de abril de 2026 en comunicado de ManpowerGroup Colombia , con declaraciones atribuidas a Javier Echeverri, presidente de la filial. Verificado el 21 de julio de 2026 contra dos reproducciones independientes del comunicado que coinciden en la serie completa de seis sectores: Diario Occidente y Pulzo . Alcance de la verificación: la cifra queda trazada al comunicado corporativo de la filial colombiana, no al PDF del estudio global, que no publica abierto el desglose sectorial de Colombia. Corrección respecto de la versión anterior del tablero: tecnología figuraba como 66% y la cifra correcta es 55%. Advertencia contra la confusión de indicadores, importante: circulan tres cifras distintas para tecnología y no deben leerse juntas. Esta barra mide escasez de talento por sector (55%). Experis, división de ManpowerGroup, reporta 68% de dificultad en TI y datos en su informe de talento tecnológico del primer trimestre de 2026, que es un universo más estrecho. Y el propio blog de ManpowerGroup Colombia describe a las TIC como el reto más complejo del indicador, lectura cualitativa que no coincide con la posición que el 55% le da en la tabla sectorial. Se conserva el 55% por ser el dato del estudio citado.
+- La paradoja: en Colombia un título universitario (11,2%) casi no baja el desempleo frente a secundaria (12,1%), y ambos superan el promedio nacional (8,9%). No es que estudiar no sirva: el verdadero retorno de la educación se ve en la informalidad y el ingreso, no tanto en la tasa de desempleo. Lo muestra la gráfica de abajo.
+- Fuente: DANE GEIH (2025); OLE · Ministerio de Educación (2023).
+- Aquí sí se ve el retorno de la educación: la informalidad cae de forma clara con la formación, del 90% en quienes no tienen educación al 56% del promedio nacional y a apenas el 8% con posgrado. Más formación no siempre significa menos desempleo, pero sí significa empleo formal, con protección social e ingresos más altos. Ese es el argumento de valor de La Salle.
+- Fuente: DANE (2025); compilación ELE (2026). Se muestran tres anclas del gradiente de informalidad por nivel educativo.
+- Cómo leerla: las empresas quieren IA (45%), pero solo la mitad la implementa (32%) y apenas el 9% la capitaliza a fondo. El cuello de botella es el talento. Para contraste, el 48% de los ciudadanos ya usa IA: las personas van más rápido que las empresas.
+- Fuente: CINTEL · ANDICOM (2026), estudio "IA: La Brecha de la Preparación".
+- Capacidad teórica (68%): tareas del sector que la IA ya podría realizar. Uso real (14%): las que efectivamente se hacen hoy con IA. La distancia entre ambas es la mayor de todos los sectores y marca el espacio de formación docente.
+- Fuente: Massenkoff & McCrory (2026); Anthropic Research .
+- La matrícula rompió por primera vez los 2,7 millones en 2025, la cobertura pasó del 60% y la competencia se juega en valor verificable más que en reputación histórica. La hoja lee el entorno, el tamaño del mercado, la estructura de la oferta y tres escenarios hasta 2031.
+- Cobertura bruta educación superior (17-21 años)
+- Antes de mirar el tamaño del mercado se ubican las seis fuerzas del entorno que condicionan la decisión: qué señala cada una, con qué intensidad impacta y qué hacer al respecto. El color del fondo indica el nivel de impacto en tres niveles: rojo muy alto, dorado alto, verde medio.
+- Cambio de gobierno (ago 2026) y revisión de financiación, calidad y gratuidad.
+- Qué hacer: trabajar con escenarios regulatorios y mantener flexibilidad institucional; anticipar cambios en aseguramiento de calidad.
+- Crecimiento moderado (2,6%), inflación y hogares sensibles al precio.
+- Qué hacer: defender el valor percibido, revisar el pricing y ampliar becas y financiación flexible.
+- Demanda heterogénea por etapa de vida y expectativa de retorno laboral.
+- Qué hacer: segmentar por edad y rediseñar las rutas de captación, permanencia y empleabilidad.
+- La IA reconfigura tareas, habilidades y el valor de las credenciales.
+- Qué hacer: insertar IA de forma transversal y crear educación continua en IA para directivos y docentes.
+- La sostenibilidad pasa a ser eje de programas, investigación y marca.
+- Qué hacer: lanzar portafolio verde (ESG, energía, economía circular) e integrarlo al currículo.
+- Marcos de calidad y reconocimiento de nuevas credenciales aún en construcción.
+- Qué hacer: preparar gobernanza ágil y trazable para microcredenciales y badges verificables.
+- Fuentes de las señales: cambio de gobierno y financiación, MinEducación y prensa institucional (2026); crecimiento y precios, DANE y Banco de la República (2026); reconfiguración de tareas por IA, Anthropic Economic Index (2026) y OCDE, competencias digitales (2025); sostenibilidad y microcredenciales, UNESCO IESALC (2025). La valoración de intensidad de cada fuerza es cualitativa, del equipo asesor.
+- Total nacional de estudiantes, cierres estadísticos 2022 a 2025 (millones)
+- Fuente: MinEducación, cierres estadísticos SNIES. 2022: 2.466.228 (+0,73%) ; 2023: 2.475.833 (+0,4%); 2024: 2.553.560 (+3,14%); 2025: 2.723.364 (+6,6%) . El salto de 2025 es el mayor de la serie y equivale a 169.804 estudiantes nuevos, casi diez veces el crecimiento de 2022.
+- 305 IES activas que reportan al SNIES · participación (%)
+- Fuente: MinEducación, cierre estadístico SNIES 2024 (31 de julio de 2025). 87 oficiales y 218 privadas, conforme a la Resolución 9573 de 2021.
+- SNIES: cierre estadístico 2025, publicado el 15 de julio de 2026
+- El Ministerio publicó el cierre consolidado de 2025 el 15 de julio de 2026: 2.723.364 matriculados, primera vez que el país supera los 2,7 millones. Las cuatro cifras siguientes vienen de ese cierre y del anterior, y explican de dónde salió el crecimiento. Ninguna proviene de declaraciones de coyuntura.
+- En 2024 las IES públicas sumaron más de 67 mil matriculados (+5%) y las privadas poco más de 10 mil (+0,88%).
+- 1.401.639 de 2.553.560 estudiantes. La pública ya es mayoría del sistema.
+- Tránsito inmediato del colegio a la educación superior (2025)
+- Era 41,1% en 2022. Sube en ciudades y en zonas rurales.
+- 97% de la matrícula pública. No es la cobertura del sistema.
+- Fuentes: MinEducación, cierre estadístico SNIES 2025 (15 de julio de 2026) y cierre estadístico SNIES 2024 (31 de julio de 2025). Nota de método: el 97% corresponde a la cobertura de la política de gratuidad sobre la matrícula de IES públicas, no a la cobertura del sistema, que en 2025 fue 61,75%. Son indicadores distintos y no deben leerse juntos. Lectura para La Salle: el crecimiento del sistema se concentra en el sector público y en el tránsito inmediato desde el colegio. La ventaja privada no está en volumen sino en flexibilidad, empleabilidad y trayectorias.
+- Jóvenes de ingreso inicial · adultos en reconversión o ascenso · profesionales que actualizan por IA · públicos de rutas cortas y educación continua. El sistema enfrenta seis tensiones: presión de costos, sensibilidad al precio, exigencia de empleabilidad, competencia híbrida, auge de microcredenciales y actualización recurrente. Fuente: UNESCO IESALC (2025); OCDE (2025).
+- Las cifras de matrícula miden el tamaño del mercado; esta sección mide su forma. Todo lo que sigue se calcula sobre el registro nacional de programas del SNIES, que reúne 31.494 registros históricos, de los cuales 17.812 están activos y 13.682 inactivos . Es decir que el 43,4% de todos los programas que Colombia ha abierto ya cerró . Esa mortalidad no es pareja: depende del campo, del momento y de quién los abre.
+- Cómo leerlo. Cada campo tiene cuatro barras, una por cosecha de registro . Comparar barras del mismo color es legítimo, porque todos esos programas han tenido la misma ventana de tiempo para sobrevivir. Comparar barras de colores distintos no lo es: la cosecha roja lleva más de dos décadas expuesta y la azul apenas empieza. Lo que muestra la lectura vertical: el país pasa de 81,2% de mortalidad en la cosecha 1999-2009 a 48,9% en la de 2010-2014, 16,1% en la de 2015-2019 y 1,3% en la de 2020-2025. Ese descenso no significa que hoy se cierre menos: significa que las cosechas recientes todavía no llegaron al punto de quiebre de los 13 a 15 años. Lo que muestra la lectura horizontal: Educación encabeza la mortalidad en las tres cosechas maduras, con 92,7%, 69,2% y 28,7%. Ya a los 7-11 años dobla la tasa nacional. Salud y Ciencias Naturales cierran la tabla en la cosecha más antigua, con 61,6% y 62,6%. CINE es la Clasificación Internacional Normalizada de la Educación, el estándar de la UNESCO que el DANE y el SNIES usan para agrupar programas; nada que ver con cine de películas.
+- Fuente: MinEducación, registro nacional de programas SNIES , corte de julio de 2026. Cálculo propio sobre los programas clasificados en los diez campos amplios de la CINE (Clasificación Internacional Normalizada de la Educación, UNESCO), registrados entre 1999 y 2025; se excluyen los genéricos y el año 1998, que concentra la digitalización inicial del sistema. Ventana temporal: el registro no incluye fecha de cierre, por lo que la mortalidad se mide como estado actual del programa y no como año de cierre. Por eso las cosechas se comparan entre sí y nunca contra una tasa acumulada. Los campos con menos de 20 programas en una cosecha no se reportan.
+- Programas activos registrados entre 2022 y 2025 sobre el stock activo del campo (clasificación CINE)
+- Fuente: MinEducación, registro nacional de programas SNIES . Cálculo propio por fecha de registro en el SNIES. Nota de método: la fecha de registro recoge programas nuevos y renovaciones de registro calificado, no solo aperturas, y mide rotación reciente del portafolio, no crecimiento neto.
+- Haga clic en cualquier barra del gráfico anterior para ver qué se está registrando en ese campo: en qué niveles de formación, en qué subcampos de la CINE y con qué nombres de programa.
+- El campo de Educación es a la vez el de mayor mortalidad histórica (65,1%: dos de cada tres programas que ha abierto el país ya están inactivos) y el de mayor rotación reciente (44,9% de su stock activo se registró entre 2022 y 2025). Es el campo más volátil del sistema. En el extremo opuesto, Ciencias Naturales conserva siete de cada diez programas que abrió (29,8% de mortalidad), pero es un campo pequeño. La lectura para La Salle: abrir un programa es fácil; sostenerlo es la verdadera barrera, y el campo de la apertura predice el riesgo de cierre. Esta es la mortalidad por campo del país; la lectura por universidad, incluida la propia tasa de cierre de La Salle, está en la hoja 10 Portafolio. Fuente: cálculo propio sobre el registro nacional de programas del SNIES.
+- La mortalidad dice cuántos murieron; esta curva dice a qué edad mueren . Cada punto toma todos los programas registrados en un tramo de antigüedad y mide qué porcentaje sigue activo hoy. El resultado es una vida media clara: un programa colombiano cruza el 50% de supervivencia entre los 13 y los 15 años . Antes de los 10 años casi no muere nada; después de los 16 sobrevive menos de un tercio.
+- Cómo leerlo. El eje horizontal no es un año calendario: es la edad del programa . La línea dorada es el país entero y arranca visible junto a tres campos de contraste; con los botones de arriba se pueden encender los diez campos de la CINE. La raya roja marca el 50%. No es un umbral que cambie de un campo a otro: es la definición misma de vida media. Lo que cambia es a qué edad la cruza cada curva , y ahí está el hallazgo. El país cruza a los 13,7 años . Educación la cruza a los 11,0 , casi tres años antes que el promedio. Salud y ciencias naturales la cruzan a los 16,0 , cinco años después que educación. Servicios 14,4; administración y derecho, ciencias sociales 14,1; agropecuario 14,0; ingeniería y arte y humanidades 13,7; TIC 13,6. La respuesta a la pregunta de la cosecha 2020-2025: esos programas tienen hoy entre 1 y 6 años y conservan más del 97%. Todavía no llegan al punto de quiebre. Su prueba real llega entre 2033 y 2040.
+- Fuente: MinEducación, registro nacional de programas SNIES , corte de julio de 2026. Cálculo propio sobre 24.809 programas registrados entre 1999 y 2025. Advertencia de método, importante: el registro no guarda fecha de cierre, solo el estado actual. Por eso esta es una curva de cohortes sintética : cada tramo se observa una sola vez, a la edad que tiene hoy, y se asume que el patrón de cierre es estable entre épocas. No es seguimiento longitudinal real. Se excluye 1998 porque concentra 5.838 registros de la digitalización inicial del SNIES y distorsiona la serie.
+- Qué significa. Es la edad a la que el sistema pierde la mitad de su oferta. Antes de los 10 años casi no muere nada, así que un programa joven no prueba nada todavía. La decisión de abrir compromete a la Universidad por una ventana de trece años, no de cinco.
+- Qué significa. De cada cien programas que Colombia registró hace trece a quince años, hoy siguen activos menos de cuarenta y ocho. Es la tasa contra la cual se mide cualquier campo: por encima de 47,6% el campo aguanta mejor que el promedio, por debajo se rompe antes.
+- Brecha educación contra ciencias naturales a los 21 años
+- Qué significa. Pasados los 21 años sobrevive el 35,9% de los programas de ciencias naturales y apenas el 4,5% de los de educación: ocho veces más. El campo no cambia el atractivo del mercado, cambia el horizonte de amortización. Dos programas con el mismo punto de equilibrio contable no tienen el mismo riesgo si están en campos distintos.
+- El detalle campo por campo en el tramo de quiebre. Los campos se separan con claridad: ciencias naturales 54,4% y salud 52,9% aguantan por encima de la mitad; administración y derecho 50,6% e ingeniería 47,2% quedan en la frontera; TIC 46,5% cae por debajo; y educación 26,0% se hunde a la mitad del promedio nacional.
+- La lectura para La Salle. La decisión de abrir un programa compromete a la Universidad por una ventana que en promedio dura trece años, no cinco. Un programa de educación tiene la mitad de esa ventana; uno de salud o ciencias naturales, casi el doble. Eso debería entrar en el cálculo de punto de equilibrio: el campo no solo define el atractivo del mercado, define el horizonte de amortización.
+- Fuente: MinEducación, registro nacional de programas SNIES. Cálculo propio. Los tramos con menos de 20 programas no se reportan. Aplica la misma advertencia de cohorte sintética del gráfico anterior.
+- La curva nacional promedia realidades muy distintas. Separada por nivel aparece el hallazgo más fuerte del bloque: el doctorado casi no muere y la formación técnica profesional casi no sobrevive . Separada por ciudad aparece el segundo: el riesgo de cierre no es el mismo en Bogotá que en Bucaramanga, y La Salle opera en las dos.
+- Fuente: MinEducación, registro nacional de programas SNIES , corte de julio de 2026. Cálculo propio sobre 24.365 programas registrados entre 1999 y 2025. Los tramos con menos de 15 programas no se reportan. Aplica la advertencia de cohorte sintética: el registro no guarda fecha de cierre, así que cada tramo se observa una sola vez, a la edad que tiene hoy.
+- Fuente: MinEducación, registro nacional de programas SNIES, corte de julio de 2026. Cálculo propio por municipio de oferta del programa. Bogotá 6.519 programas, Medellín 2.647, Cali 1.548, Barranquilla 1.228, Bucaramanga 1.059. Yopal no se grafica: solo tiene 133 registros históricos y los tramos quedan por debajo del mínimo estadístico; su tasa de supervivencia acumulada es 69,2%.
+- Pasados los 21 años sigue activo el 75,0% de los doctorados y el 57,8% de las maestrías, contra el 12,4% de las especializaciones, el 4,0% de los programas tecnológicos y el 3,7% de la formación técnica profesional. La brecha entre el nivel más estable y el más volátil es de veinte a uno, muy superior a la que separa a Salud de Educación por campo. Leído sobre la raya de vida media, el contraste es todavía más nítido: el doctorado y la maestría nunca cruzan el 50% en los veintisiete años observados, mientras la especialización lo cruza a los 12,7 años, la técnica profesional a los 12,7, el tecnológico a los 13,6 y el pregrado universitario a los 14,2. La lectura es doble: el posgrado de investigación funciona como activo de largo plazo y la formación corta funciona como portafolio rotatorio, que se abre y se cierra al ritmo de la demanda. Son dos negocios distintos y no deberían evaluarse con el mismo horizonte de punto de equilibrio.
+- Por ciudad. A los 21 años o más sobrevive el 18,3% de los programas de Bogotá y el 18,7% de los de Medellín, contra el 9,8% de Bucaramanga y el 11,6% de Barranquilla. Bucaramanga es la plaza más volátil de las cinco y además se quiebra antes: ya en el tramo de 7 a 9 años cae al 77,8%, doce puntos por debajo de la curva nacional. En edad de vida media las cinco plazas se separan menos de dos años, entre los 12,9 de Barranquilla y los 14,7 de Medellín, con Bogotá en 14,1 y Bucaramanga en 13,7: la diferencia entre ciudades no está tanto en cuándo se cruza la mitad como en qué queda después de cruzarla. Para La Salle, que tiene presencia en Bogotá, Bucaramanga y Yopal, esto significa que una misma decisión de portafolio no tiene el mismo riesgo en las tres plazas. Fuente: cálculo propio sobre el registro nacional de programas del SNIES.
+- La misma curva de supervivencia, aplicada institución por institución. Cada línea responde una sola pregunta: de los programas que esta universidad registró hace tantos años, cuántos siguen vivos. Es un termómetro de disciplina de portafolio, y separa con nitidez a las instituciones que sostienen lo que abren de las que rotan mucho.
+- Los tres comportamientos que se ven. La Universidad Nacional es un caso aparte: conserva 95,5% a los 11-15 años y todavía 69,0% pasados los 21, cuando el país va en 59,4% y 13,7%. Prácticamente no cierra. Los Andes también sostiene alto, con 74,1% y 73,7% en los dos tramos intermedios. En el extremo opuesto, Antioquia registró 763 programas y conserva 278: cae a 24,2% ya en el tramo de 11-15 años, y la Universidad del Norte baja a 29,7% en ese mismo punto. La Salle aparece con una señal que conviene mirar de frente: 76,9% a los 6-10 años, trece puntos por debajo del 90,1% nacional. Pierde programas antes que el promedio del país, en la franja donde casi nadie debería estar cerrando todavía.
+- Fuente: MinEducación, registro nacional de programas SNIES , corte de julio de 2026. Cálculo propio sobre 24.365 programas registrados entre 1999 y 2025 por las doce instituciones comparables más el agregado nacional. Los tramos con menos de diez programas de una universidad no se grafican, porque el porcentaje sería inestable. Aplica la advertencia de cohorte sintética. Nota sobre La Salle: su tramo de 11-15 años no se reporta porque concentra muy pocos registros; de sus 151 registros desde 1999, 115 son posteriores a 2020.
+- Qué significa. Es el plazo que el Ministerio le da a un registro calificado antes de exigir renovación. Marca el ritmo administrativo del portafolio: cada siete años la Universidad vuelve a poner cada programa a prueba, aunque el programa siga vivo mucho más tiempo.
+- Qué significa. No es un promedio que esconda casos dispares: siete años es el plazo estándar de la enorme mayoría del sistema. Por eso sirve como referencia, y por eso un cambio en esa mediana sería la primera señal de que el ciclo regulatorio se está apretando.
+- Qué significa. Siete años entre 1999 y 2004, siete entre 2005 y 2009, siete hasta el corte de 2025. El promedio apenas pasó de 6,4 a 7,0. Donde primero se vería un acortamiento del ciclo es justamente aquí, y no se ve. Es evidencia de estabilidad, no prueba de que los programas duren lo mismo.
+- La respuesta corta: hoy no hay señal de acortamiento. Y conviene separar dos cosas que se confunden con facilidad. Una es el plazo que otorga el Ministerio, que es lo que miden las tres cifras de arriba y lleva veintisiete años quieto. Otra es cuánto vive realmente un programa, que es lo que miden las curvas de este bloque. La primera se puede leer en serie; la segunda, con este archivo, no.
+- Qué haría falta para cerrarla. Saber si un programa abierto en 2020 morirá antes que uno abierto en 2000 exige observar la misma cohorte en dos momentos distintos. Este archivo es un corte único de julio de 2026 y no guarda fecha de cierre, así que no permite probar ni descartar el acortamiento . Lo que se necesita es un segundo extracto del registro con corte anterior, por ejemplo de 2020: comparando ambos se sabría exactamente cuántos programas vivos en 2020 murieron en estos seis años, y a qué edad. Es una descarga del mismo portal del SNIES y resolvería la pregunta de una vez.
+- Fuente: MinEducación, registro nacional de programas SNIES, campo de vigencia en años del registro calificado. Cálculo propio sobre 18.543 programas con el dato diligenciado. La vigencia de siete años corresponde al régimen del Decreto 1330 de 2019 y a la norma que lo precedió.
+- Este bloque venía de la hoja 07 Territorio y se trasladó aquí, porque describe la forma del mercado nacional y no un hecho territorial. Es además la línea base contra la que se compara el portafolio de La Salle.
+- Pregrado y posgrado activos, 2025 · clasificación CINE F 2013
+- El desequilibrio de fondo: uno de cada tres programas del país es de administración o derecho. Las TIC, que hoy concentran la mayor demanda de vacantes, apenas llegan al 6,1%. Agropecuario y servicios juntos no alcanzan el 6%.
+- Fuente: SNIES, Ministerio de Educación Nacional, consolidado por el Observatorio de la Universidad Colombiana (febrero de 2026). Total nacional: 17.812 programas activos.
+- Crecimiento de la oferta por área, 2022 a 2025
+- Dónde se está moviendo el sistema: las TIC crecen +29,8% , cinco veces más rápido que arte y humanidades (+5,4%). Pero ojo con la trampa: administración y derecho creció 17,6%, y sobre una base de 5.003 programas eso significa 882 programas nuevos en un área ya saturada, más que todo el inventario agropecuario del país.
+- Fuente: SNIES, series 2022-2025, consolidado por el Observatorio de la Universidad Colombiana. Total del sistema: +12,7%.
+- Cómo leerlo, y con qué cuidado: la barra dorada es la oferta académica y la azul la demanda de vacantes. En tecnología la demanda quintuplica a la oferta; en administración y derecho ocurre exactamente lo contrario. Advertencia metodológica: las áreas CINE del SNIES y las categorías de los portales de empleo no son equivalentes exactas, así que esto se lee como orden de magnitud, no como una razón precisa. Aun así, la dirección del desbalance es inequívoca.
+- Fuentes: SNIES 2025 para la oferta; análisis de vacantes publicadas en portales de empleo en Colombia, recogido por El Colombiano e Infobae (marzo de 2026). No es el registro oficial del Servicio Público de Empleo; es una muestra de portales privados y conviene contrastarla con el boletín del SPE.
+- Un campo puede tener mucha oferta y poca demanda, o al revés. Este gráfico enfrenta la participación de cada campo en la oferta activa (porcentaje de los 17.812 programas activos) con su participación en la demanda real (porcentaje de los 1.058.036 estudiantes que se matricularon en primer curso en 2024). Donde la barra dorada supera a la teal, hay más apetito que oferta.
+- Porcentaje de programas activos (oferta) y de matriculados en primer curso 2024 (demanda), por campo
+- Fuente: MinEducación, registro nacional de programas y base de matriculados en primer curso SNIES . Cálculo propio: la oferta se calcula sobre los 17.812 programas activos y la demanda sobre los 1.058.036 matriculados en primer curso de 2024, cruzados por código SNIES del programa. Cobertura del cruce: 100%.
+- Cómo se reparten los 17.812 programas activos entre 299 instituciones
+- Ni una sexta parte de la oferta en manos de las cinco mayores.
+- Duplicar el número de instituciones apenas suma nueve puntos.
+- Las 279 restantes se reparten los otros seis de cada diez programas.
+- La curva de arriba describe un mercado atomizado . Las 249 instituciones que quedan fuera del top 50 todavía suman el 38,7% de la oferta, y el índice Herfindahl-Hirschman se queda en 152 sobre 10.000, muy lejos de los 1.500 que marcan un mercado concentrado.
+- La única institución con peso real es el SENA, con 1.523 programas activos , casi el triple que la segunda (Universidad Nacional, 504). Pero su oferta es técnica y tecnológica, no universitaria. Para La Salle, la amenaza competitiva no es un gigante único: es la fragmentación de cientos de oferentes pequeños compitiendo por el mismo estudiante.
+- Fuente: MinEducación, registro nacional de programas SNIES . Cálculo propio de participación e índice HHI sobre los 17.812 programas activos de 299 instituciones. El HHI es la suma de los cuadrados de las participaciones porcentuales de cada institución.
+- Prospectiva educativa: escenarios en el tiempo (2026 – 2031)
+- Tres escenarios plausibles ordenados por horizonte, construidos con el método de drivers a escenarios y anclados en el cierre estadístico 2025 del SNIES. Haga clic en cada etapa para ver de dónde a dónde va, sus señales, su riesgo, su oportunidad y qué acciones se recomiendan.
+- Los planes de desarrollo dicen qué promete el Estado; el mercado laboral dice qué está pagando. Esta hoja cruza las dos cosas para responder una sola pregunta: en qué ciudad conviene abrir, fortalecer o revisar programas. Se lee en cuatro capas.
+- Por qué tres territorios y no cuatro. La Salle también tiene sede en Mosquera, con 97 estudiantes y 8 programas presenciales de pregrado. No tiene capa propia en esta hoja porque Mosquera pertenece al mercado laboral y al plan de desarrollo de la región metropolitana de Bogotá, y su análisis de entorno ya queda cubierto por la capa de Bogotá. El detalle de lo que la Universidad ofrece allí está en la hoja 09.
+- Cobertura en Casanare frente a 57,53% nacional (2024)
+- Los tres territorios tienen comprometida esa cifra en sus planes de desarrollo 2024-2027. El desequilibrio nacional entre oferta y vacantes que abre Panorama explica por qué importa; esta hoja responde dónde. Bogotá concentra la inversión, Bucaramanga la cartera estratégica y Casanare el vacío de cobertura. La decisión no es si crecer, sino en cuál de las tres ciudades .
+- Billones de pesos 2024-2027 · escala logarítmica
+- Por qué escala logarítmica: Bogotá invierte cincuenta veces lo de Casanare. En escala lineal los dos territorios pequeños desaparecerían del gráfico. La lectura correcta no es quién tiene más plata, sino qué compra cada uno con la suya.
+- Fuentes: Acuerdo 927 de 2024 (Bogotá); cartera de proyectos estratégicos Bucaramanga Avanza Segura; Plan de Desarrollo Oportunidades para Casanare. La cifra de Bucaramanga corresponde solo a proyectos estratégicos.
+- Cinco apuestas productivas, 20 proyectos y 147 acciones para pasar de una economía extractiva a una basada en conocimiento. El primer objetivo estratégico es fortalecer las capacidades del talento humano . Transición energética justa: 1,83 billones.
+- Seis ejes; uno de ellos es desarrollo de capacidades y talento digital , dirigido explícitamente a la academia y a las mipymes, no solo a especialistas en IA.
+- La razón de anclar el análisis en estos instrumentos: un CONPES no muere con el gobierno que lo firma. Los planes de desarrollo territoriales llegan hasta diciembre de 2027 y el plan nacional actual se vence en agosto de 2026. Los CONPES son la parte estable del piso.
+- Fuentes: DNP (CONPES 4144); CONPES 4129 de 2023.
+- Acuerdo 927 de 2024 · vigente hasta dic. 2027
+- Cinco ejes, 39 programas, 70 metas estratégicas y 401 metas, con 142 billones de financiación. Las apuestas de conocimiento se concentran en inteligencia artificial e industrias 4.0, bioeconomía y bioagricultura, salud, economía circular e industrias culturales y creativas , agrupadas bajo Bogotá Científica y el CODECTI.
+- La Cámara de Comercio suma 19 clústeres activos, el Campus 2600 de ciencia y tecnología, y en 2026 abre el clúster de economía plateada . Bogotá concentra el 61,1% de la economía cultural y creativa del país.
+- Fuentes: Concejo de Bogotá; Bogotá Científica ; CCB (2026).
+- Cinco apuestas estratégicas y 4,0 billones en proyectos. El dinero está donde no se esperaría: 1,66 billones en agua y saneamiento (PTAR del río de Oro por 1 billón y parque tecnológico El Carrasco por 620 mil millones) y 1,11 billones en movilidad.
+- Las señales de la economía local preocupan: el PIB de manufacturas bajó de 17,6% en 2019 a 16,8% en 2022 y el de construcción de 8,7% a 5,3%. La meta es subir el índice de competitividad de 6,31 a 7,31 puntos.
+- Fuente: Apuestas estratégicas Bucaramanga Avanza Segura 2024-2027 .
+- Ocho proyectos estratégicos, y el primero de la lista es el Plan de Agroindustrialización y Diversificación Económica . Le siguen recuperación del hato ganadero, Casanare como destino turístico, cultura llanera, biodiversidad, vías secundarias y terciarias, y convergencia regional.
+- La Cámara de Comercio de Casanare pidió explícitamente que las universidades de la región entren en investigación y desarrollo tecnológico para elevar la productividad de las apuestas económicas, y señaló ventajas comparativas en luminosidad solar y reservas de gas.
+- Fuentes: Ordenanza PDD Casanare 2024-2027; Cámara de Comercio de Casanare (2024).
+- Capa 1b · Plan por plan: dónde puede aportar La Salle
+- Lo que muestra: de las 18 líneas estratégicas sumadas de los tres planes, 11 tienen encaje fuerte con programas que La Salle ya ofrece. No hace falta crear para empezar a participar. El único vacío total es turismo en Casanare, y coincide con que servicios es apenas el 2,04% de la oferta nacional.
+- Elaboración propia. Encaje fuerte: existe un programa vigente directamente aplicable. Encaje medio: hay capacidad instalada pero requiere adaptación o un módulo nuevo. Sin encaje: no hay programa ni base docente identificada.
+- Convivencia, justicia cercana, cultura ciudadana y cero tolerancia a las violencias basadas en género.
+- Encaje fuerte. Investigación aplicada sobre convivencia, evaluación de programas de justicia cercana y formación de equipos territoriales.
+- Salud, educación, sistema de cuidado y primera infancia.
+- Encaje fuerte. Formación docente, salud visual comunitaria y, sobre todo, el sistema de cuidado, que conecta con el clúster de economía plateada que la CCB abre en 2026.
+- Cinco licenciaturas · Maestría en Docencia · Facultad de Ciencias de la Salud (8 programas)
+- Desarrollo económico, empleo, Bogotá Científica, CODECTI y 19 clústeres de la Cámara de Comercio.
+- Encaje fuerte, pero delgado. Es la línea más rentable y la que menos capacidad instalada tiene: solo tres programas de computación. Aquí la brecha del 1,5% en TIC se vuelve costo de oportunidad concreto.
+- Ordenamiento territorial, movilidad, acción climática e integración regional.
+- Encaje medio. Hay base sólida en hábitat, pero falta conectarla explícitamente con la agenda climática distrital y con la región central.
+- Transparencia, gobierno abierto, datos y servicio al ciudadano.
+- Encaje medio y desaprovechado. La Salle tiene una de las pocas ofertas del país en gestión documental y archivística cruzada con analítica. Es un activo hecho a la medida de esta línea y hoy no aparece en la conversación.
+- Estructura del plan: 5 objetivos estratégicos, 15 estrategias, 39 programas, 70 metas estratégicas y 401 metas, con 142 billones de financiación. Fuentes: Secretaría Distrital de Planeación y Alcaldía Mayor de Bogotá . El listado nominal de los 39 programas está en el Acuerdo 927 de 2024, cuyo PDF bloquea la lectura automatizada: hay que descargarlo a mano para completar este nivel de detalle.
+- PTAR del río de Oro (1 billón) y parque tecnológico El Carrasco (620 mil millones) para tratamiento de residuos.
+- Encaje fuerte y sin competencia. Es la mayor bolsa del plan y no hay oferta formativa regional asociada. Ciencias naturales es 11,3% del portafolio contra 4,0% nacional: aquí esa ventaja se puede monetizar.
+- Infraestructura vial y transporte urbano del área metropolitana.
+- Encaje medio. Hay base, pero compite dentro de ingeniería, que ya concentra el 18,0% de la oferta nacional. Conviene entrar por microcredenciales, no por programa nuevo.
+- Meta de subir el índice de competitividad de 6,31 a 7,31 puntos, con una apuesta explícita en segunda lengua.
+- Encaje fuerte y estratégico. El bilingüismo es además el cuello de botella declarado del sector de exportación de servicios. Formar docentes de lenguas en Bucaramanga sirve a dos agendas a la vez.
+- Prevención y atención de riesgos en la escarpa y zonas de ladera.
+- Encaje medio. Capacidad instalada en ciencias ambientales y hábitat, sin producto formativo específico.
+- Encaje fuerte. Mismo activo que en Bogotá, replicable sin inversión nueva.
+- Contexto adicional: el PIB manufacturero de Bucaramanga cayó de 17,6% en 2019 a 16,8% en 2022 y el de construcción de 8,7% a 5,3%. Santander es además el único de los tres territorios donde la matrícula de educación superior se contrajo entre 2014 y 2024 (-6,9%). Fuente: Apuestas estratégicas Bucaramanga Avanza Segura 2024-2027 .
+- 1. Agroindustrialización y diversificación económica
+- El proyecto número uno del departamento: transformar producción primaria en valor agregado.
+- Encaje total. Es la coincidencia más limpia de los tres territorios. Utopía ya es la base instalada; falta convertirla en oferta de posgrado y educación continua para el tejido productivo local.
+- Productividad y sanidad de la ganadería departamental.
+- Encaje fuerte. Base veterinaria y zootécnica consolidada.
+- Facultad de Ciencias Agropecuarias (10 programas) · Especialización en Nutrición Animal
+- Encaje total y desaprovechado. La Salle tiene un programa hecho exactamente para esto y no aparece asociado a la agenda de Casanare.
+- Preservación y proyección de la identidad cultural del llano.
+- Encaje fuerte. Existe una maestría virtual en patrimonio que puede operar en Casanare sin infraestructura adicional.
+- Conservación en un departamento de alta riqueza natural.
+- Encaje fuerte. Ciencias naturales es la mayor ventaja relativa del portafolio.
+- Cierre de brechas entre municipios y planificación territorial.
+- Encaje medio. Hay maestrías aplicables, pero sin presencia territorial ni alianza con la Gobernación.
+- Encaje medio. Compite dentro de ingeniería. Mejor por módulos que por programa.
+- Sin encaje. No hay programa ni base docente. Y sin embargo, servicios es apenas el 2,04% de la oferta nacional: el vacío es de todo el país, no solo de La Salle. Es la única línea que justificaría crear algo desde cero.
+- Estructura del plan: 4 ejes, 8 proyectos estratégicos, 295 metas y 2,8 billones. Casanare tiene 27,6% de cobertura en educación superior frente a 57,53% nacional en el cierre 2024. La Cámara de Comercio pidió expresamente que las universidades de la región entren en investigación y desarrollo tecnológico. Fuente: Cámara de Comercio de Casanare y Ordenanza del PDD 2024-2027.
+- La conclusión de esta capa: el problema no es que falte oferta. Es que la oferta existente no está conversando con la agenda pública . Extensión Rural para Casanare, Didáctica de las Lenguas para el bilingüismo de Bucaramanga y Gestión de la Información Documental para el gobierno abierto de Bogotá son tres programas vigentes, con registro calificado, que encajan punto por punto con planes que ya tienen presupuesto asignado. Eso se activa con una carta y una reunión, no con un consejo académico.
+- Capa 2 · Lo que el mercado laboral está diciendo
+- Un vacío que hay que decir: Yopal no forma parte de las 13 áreas metropolitanas que el DANE mide mensualmente, así que no hay dato comparable. Se usa Villavicencio como referencia de la Orinoquía, y resulta ser la ciudad con menor desempleo del país .
+- Fuentes: DANE, GEIH, mayo de 2026 (nacional, 13 ciudades, Bucaramanga A.M., Villavicencio); Secretaría Distrital de Desarrollo Económico para Bogotá, trimestre enero-marzo de 2026.
+- Sectores con mayor ganancia de productividad, programa distrital 2026
+- Cómo leerlo: son los sectores donde 679 mipymes reportaron mayor aumento de productividad tras recibir cofinanciación distrital. No es una medición de demanda laboral, pero sí una señal fina de dónde el capital está encontrando retorno.
+- Fuente: Secretaría Distrital de Desarrollo Económico , abril de 2026, inversión de 9.265 millones.
+- Capa 2b · Competitividad territorial: dónde están las brechas
+- En el Índice Departamental de Competitividad 2026, veintitrés de los treinta y tres territorios del país obtienen menos de 5 sobre 10 en el pilar de educación superior . Es el pilar donde La Salle compite. La brecha no es una metáfora: está medida, es nacional y tiene nombre.
+- Puntaje general sobre 10 · los tres territorios frente a los líderes y al promedio
+- Las tres realidades: Bogotá lidera el país con 7,96 y encabeza el pilar de educación superior y formación para el trabajo. Santander está quinto con 6,32, pero perdió una posición frente a 2025. Casanare también retrocedió un puesto y queda fuera del top 10. El promedio nacional es 5,07.
+- Fuente: Índice Departamental de Competitividad 2026 , Consejo Privado de Competitividad y Universidad del Rosario, publicado el 16 de julio de 2026. Décimo tercera edición, 13 pilares. El puntaje exacto de Casanare no aparece en las notas de prensa disponibles; se sabe que descendió una posición y que no está entre los diez primeros.
+- Número de departamentos con mejora en cada pilar, de 33 evaluados
+- El contraste que importa: la adopción de TIC mejoró en 32 de 33 departamentos, y ese es el terreno donde la difusión tecnológica se vuelve posible. Pero infraestructura fue el único pilar que cayó en todo el índice, con 27 departamentos sin mejora. La conectividad avanza más rápido que el asfalto.
+- Fuente: IDC 2026, Consejo Privado de Competitividad y Universidad del Rosario. El promedio nacional pasó de 5,01 en 2025 a 5,07 en 2026.
+- Un escalafón de competitividad ordena territorios, no personas. Cruzarlo con las proyecciones de población del DANE responde la pregunta que de verdad importa para una decisión de expansión: ¿cuánta gente vive en los departamentos que el índice señala como rezagados? La respuesta cambia por completo la lectura del mapa.
+- 23,0 millones de personas en Bogotá, Antioquia, Valle, Risaralda y Santander.
+- 945 mil personas en Chocó, Amazonas, Guainía, Vichada y Vaupés.
+- Por cada habitante del extremo rezagado hay veinticuatro en el puntero.
+- Puntaje IDC 2026 en el eje horizontal, población proyectada DANE 2026 en el vertical · los once departamentos cuyo puntaje se publicó
+- Lo que muestra el cruce, y por qué importa para una decisión de portafolio. Los departamentos con mayor brecha de competitividad son también los de menor población del país: los cinco últimos del escalafón suman 945 mil habitantes, el 1,8% de Colombia. Una estrategia de expansión guiada solo por la brecha de competitividad llevaría a la Universidad a los territorios con menos mercado del país. No significa que esos territorios no importen: significa que atenderlos es una decisión de misión y no de crecimiento, y que debe financiarse como tal.
+- El otro extremo también dice algo. Bogotá encabeza el índice con 7,96 y concentra el 14,9% de la población, pero es donde compiten casi todos. Los departamentos que combinan tamaño y puntaje intermedio son los que ofrecen mercado real sin la saturación de la capital. Santander es el caso que a La Salle le toca de cerca: quinto en competitividad con 6,32 y 2,4 millones de habitantes, y a la vez el único de los tres grandes que perdió matrícula en la última década, con 6,9% menos. Tiene demanda potencial y capacidad instalada declinante al mismo tiempo. La operación de Bucaramanga se lee distinto a la luz de ese cruce.
+- Fuentes y alcance. Competitividad: Consejo Privado de Competitividad y Universidad del Rosario, Índice Departamental de Competitividad 2026 , decimotercera medición, presentada el 16 de julio de 2026, sobre 33 territorios, 13 pilares y 83 indicadores; promedio nacional 5,07 sobre 10, frente a 5,01 en 2025. Población: DANE, proyecciones de población 2026 con base en el Censo Nacional de Población y Vivienda 2018 ; total nacional proyectado de 53.399.171 habitantes. Por qué solo aparecen once departamentos: las fuentes públicas del IDC 2026 difunden el puntaje del top cinco, de Bolívar y de los cinco últimos, pero no la tabla completa de los 33. Los departamentos cuyo puntaje no se publicó abierto no se grafican, en lugar de estimarlos. El cruce con población es cálculo propio.
+- Lidera 9 de 13 pilares: instituciones, infraestructura, adopción TIC, salud, educación superior y formación para el trabajo , entorno de negocios, sistema financiero y tamaño de mercado.
+- No es una brecha de capacidad sino de distribución : la ciudad tiene la frontera y a la vez el mayor volumen de microempresas que no la alcanzan.
+- Difusión, no frontera. Educación continua para micronegocios en alianza con la CCB, que tiene meta de formalizar 33.000 empresas en 2026.
+- Mantiene buenos resultados en educación y salud y mejoró en internacionalización. Son sus dos pilares históricos.
+- Infraestructura: cayó del puesto 11 al 15, con 4,96 sobre 10. En vías primarias en buen estado está en el puesto 23 de 33, con 5,82.
+- Coincide con los 1,11 billones en movilidad del plan municipal. Gestión de infraestructura y logística por módulos, no por programa nuevo: ingeniería ya es el 18,0% de la oferta nacional.
+- Quinto del país en sostenibilidad ambiental , con buen desempeño en disposición de residuos sólidos. Buen puntaje en adopción TIC jalonado por tenencia de celular.
+- Conectividad real: el buen puntaje TIC se explica por celulares, no por internet. Persisten retos de cobertura y penetración. A eso se suma 27,6% de cobertura en educación superior frente a 57,53% nacional (cierre 2024).
+- La brecha más grande y la menos disputada del portafolio. Oferta virtual desde Utopía en agroindustria y ambiente, que son a la vez su fortaleza medida y la apuesta número uno del departamento.
+- Fuentes: IDC 2026 (CPC y Universidad del Rosario); Vanguardia para el detalle de Santander; Universidad del Rosario para el análisis de Casanare. Los perfiles departamentales completos están en competitivas.gov.co .
+- Por qué esta capa cambia la conversación: hasta aquí el argumento era de mercado. El IDC lo convierte en un argumento de política pública . Cuando 23 de 33 departamentos no llegan a 5 sobre 10 en educación superior, una universidad que se presente ante una gobernación o una comisión regional de competitividad no está vendiendo un programa: está ofreciendo cerrar un indicador que ese territorio ya se comprometió a mejorar. Es otra conversación y abre otras puertas.
+- Capa 3 · El territorio: quién estudia y dónde
+- La estructura de la oferta nacional por área de conocimiento, su crecimiento y la brecha frente a las vacantes se trasladaron a la hoja 06 Sector educativo, donde corresponden: describen el mercado nacional, no el territorio. Aquí se conserva lo que sí es territorial.
+- El hallazgo incómodo: mientras el país creció 15,0% en diez años y Bogotá 23,0%, Santander perdió 6,9% de su matrícula . Es el único de los tres territorios donde el mercado se contrajo. Casanare creció 17,6%, pero desde una base de apenas 9.474 estudiantes.
+- Fuente: Ministerio de Educación Nacional, consolidado por el Observatorio de la Universidad Colombiana . Matrícula nacional: 2.553.560 en 2024 y 2.723.364 en 2025 . El reparto por departamento mostrado corresponde al corte 2024, el más reciente con desagregación territorial.
+- Tasa de cobertura departamental, cierre 2024, último con desagregación (%)
+- Dos lecturas opuestas: Bogotá supera el 100% porque absorbe estudiantes de todo el país, no porque cubra a todos sus jóvenes. Casanare, con 27,6% , tiene menos de la mitad de la cobertura nacional: allí no hay saturación, hay ausencia. Es el argumento más fuerte para crecer en Yopal.
+- Fuente: MinEducación, perfiles departamentales SNIES, cierre 2024. Cobertura nacional en 2024: 57,53%; en 2025 subió a 61,75%, pero el desglose por departamento de 2025 aún no se publica.
+- Cargar la oferta real cambió una conclusión que parecía sólida. La transición energética en Casanare y la movilidad sostenible en Bucaramanga se veían como huecos de mercado. Al mapearlas contra SNIES caen dentro de ingeniería, industria y construcción , que con 3.101 programas es el 17,98% de la oferta nacional. No son huecos: compiten contra mucho más de lo que sugerían los planes de desarrollo.
+- Los huecos verdaderos, medidos con dato y no con intuición, están en servicios (2,04% de la oferta), agropecuario (3,94%) y ciencias naturales (3,96%). Eso reordena el semáforo.
+- Advertencia de alcance: el SNIES publica estas series a nivel nacional, no desagregadas por ciudad para cada área. La lectura territorial se apoya en matrícula y cobertura departamental, que sí están desagregadas. Para sustentar un registro calificado hace falta la consulta por municipio en el portal del SNIES.
+- Cómo se lee: arriba a la derecha están las áreas donde el Estado invierte y el mercado contrata. El tamaño de la burbuja ya no es una estimación: se calcula con la participación real del área en la oferta SNIES, de modo que burbuja grande equivale a poca competencia académica. Los tres casos más limpios son IA aplicada en Bogotá , agroindustria en Yopal y gestión del agua en Bucaramanga . Movilidad y transición energética caen dentro de ingeniería, el 18,0% de la oferta nacional, y por eso sus burbujas se encogieron frente a la versión anterior de esta matriz.
+- Ejes X e Y: escalas cualitativas de 1 a 5 construidas a partir de los planes de desarrollo, los CONPES 4129 y 4144 y los datos del DANE citados en esta hoja; son juicio experto documentado, no mediciones estadísticas. Tamaño de burbuja: calculado con la participación de cada área en los 17.812 programas activos del SNIES, corte julio 2026. Pase el cursor sobre cada burbuja para ver el área CINE de referencia.
+- Economía plateada y cuidado . Clúster nuevo en 2026, envejecimiento poblacional en curso y casi nadie formando para eso.
+- IA aplicada, datos, bioeconomía e industrias creativas . Hay apuesta pública fuerte y la ciudad concentra el 61,1% de la economía creativa del país.
+- Programas administrativos genéricos sin diferenciación sectorial, el área que China y Estados Unidos recortan primero.
+- Gestión del agua y economía circular . 1,66 billones comprometidos en PTAR y parque tecnológico de residuos, con muy poca oferta formativa asociada.
+- Salud y atención primaria . UIMIST y tres CAPS demandan perfiles clínicos. La infraestructura sostenible baja de prioridad: cae en ingeniería, que ya concentra el 18,0% de la oferta nacional.
+- Manufactura tradicional sin componente tecnológico: el PIB manufacturero de la ciudad viene cayendo desde 2019.
+- Agroindustria y transformación de alimentos . Proyecto estratégico número uno del departamento, área con apenas 3,9% de la oferta nacional y cobertura departamental de 27,6%. La Salle ya tiene la base instalada con Utopía.
+- Transición energética : solar y gas. La apuesta pública es clara, pero compite dentro de ingeniería. Conviene entrar por microcredenciales antes que por programa nuevo.
+- Programas pensados solo para la economía petrolera. El propio departamento define su ruta como diversificación no petrolera.
+- Elaboración propia a partir de los planes de desarrollo vigentes y los datos de mercado laboral citados en esta hoja.
+- El gobierno nacional que se posesiona el 7 de agosto de 2026 debe presentar su Plan Nacional de Desarrollo al Congreso dentro de los seis meses siguientes, antes del 7 de febrero de 2027 , según los artículos 13 y 19 de la Ley 152 de 1994. La aprobación suele darse hacia mayo de ese año.
+- Los tres planes territoriales no cambian : van hasta diciembre de 2027 y son la base de planeación más estable disponible.
+- Los CONPES 4129 y 4144 siguen vigentes salvo derogatoria expresa, así que el marco nacional de reindustrialización y de IA no se cae en agosto.
+- Lo que sí puede cambiar es el énfasis y la plata de la Nación. La matriz se recalcula con el nuevo PND como una capa adicional, no se rehace desde cero.
+- La consecuencia práctica: no hay razón para esperar a 2027 para decidir. Las decisiones de portafolio para 2026 y 2027 se pueden tomar hoy con este piso, y revisarse cuando llegue el nuevo plan. Esperar es la única opción que sí tiene costo.
+- Fuente: Ley 152 de 1994 , artículos 13, 19 y 20.
+- Los planes de desarrollo dicen qué promete el Estado y las vacantes qué contratan las empresas existentes. El registro mercantil dice algo distinto y más honesto: en qué está poniendo su propio dinero la gente que decide emprender. La respuesta incomoda.
+- De 173.907 empresas creadas en medio año, solo 3 fueron grandes y 17 medianas. El país no está creando la economía del conocimiento que prometen los planes: está creando tiendas, restaurantes y peluquerías. Cualquier estrategia académica que ignore ese hecho está diseñando para un país que no existe todavía.
+- Variación del primer semestre de 2025 frente al de 2024 (%)
+- El dato que valida una apuesta: agricultura crece +16,0% , muy por encima de todo lo demás. Es confirmación independiente de la apuesta agroindustrial de Casanare, y viene del registro mercantil, no de un plan de gobierno. Construcción cae 8,2%, lo que coincide con la caída del PIB constructor de Bucaramanga.
+- Fuente: Confecámaras, Dinámica de Creación de Empresas, primer semestre de 2025 , con datos del RUES de las 57 cámaras de comercio del país.
+- La señal más preocupante del tablero: la creación de empresas grandes cayó 62,5% , la de medianas 15,0% y la de pequeñas 12,6%. Todo el crecimiento vino de microempresas. El tejido productivo se está atomizando, y las microempresas tienen una tasa de supervivencia a cinco años de apenas 30% cuando son de persona natural.
+- Fuente: Confecámaras, RUES (2025). Tasas de supervivencia: 44% para sociedades y 30% para personas naturales a cinco años.
+- Variación en la creación de empresas por subsector CIIU, primer semestre 2025 (%)
+- Tres lecturas para el portafolio: primero, salud y asistencia social crece 7,4% , lo que confirma con dinero privado la apuesta de economía plateada. Segundo, educación crece 4,0% : la competencia por el mercado formativo está aumentando. Tercero, actividades profesionales, científicas y técnicas cae 0,2% y servicios administrativos 1,8%, justo los subsectores que emplean graduados universitarios.
+- Fuente: Confecámaras, RUES, primer semestre de 2025. Clasificación por subsectores CIIU. El sector "resto" del gráfico anterior incluye administración pública, educación, hogares, salud y actividades no clasificadas.
+- Reindustrialización, inteligencia artificial, transición energética, bioeconomía. 148,8 billones comprometidos.
+- Es la agenda pública, y da acceso a presupuesto y alianzas. Pero es promesa, no demanda comprobada.
+- 31,8% de las ofertas son de tecnología. Salud 13,9%. Administración 8,7%.
+- Es demanda real, pero de empresas que ya existen y en buena parte de operaciones que exportan servicios.
+- 99,7% microempresas. Comercio, comida y servicios personales. Información y comunicaciones apenas +1,0%.
+- Es lo que el emprendedor colombiano hace con su propio dinero. Y no coincide con las otras dos capas.
+- La conclusión incómoda: hay dos mercados distintos, no uno. El primero es el empleo especializado en empresas grandes y exportadoras de servicios, que pide tecnología y datos. El segundo es el micronegocio masivo , que necesita gestión, digitalización y formalización. La universidad que solo atienda el primero deja fuera al 99,7% de lo que se está creando; la que solo atienda el segundo renuncia al margen.
+- 173.907 empresas nuevas por semestre, casi todas micro, con 30% de supervivencia a cinco años. Es un mercado gigante de formación corta en gestión, digitalización y formalización. No requiere registro calificado y La Salle ya tiene la base contable y administrativa.
+- Alianza natural: las cámaras de comercio, que ya tienen el canal y la meta de formalizar 33.000 empresas solo en Bogotá durante 2026.
+- El +16,0% en creación de empresas agropecuarias es el crecimiento más alto del registro. Ya no es solo el plan de Casanare diciéndolo: es gente matriculando empresas. Utopía y los diez programas de Ciencias Agropecuarias quedan validados por una fuente independiente.
+- 3. Formar para emplearse, no para emprender, en tecnología
+- Con información y comunicaciones creciendo apenas 1,0% en creación de empresas pero concentrando el 31,8% de las vacantes, el mensaje es claro: en tecnología el egresado se emplea , no monta empresa. El discurso de emprendimiento no aplica igual en todas las áreas.
+- Más del 90% de los colombianos usa celular y el 65,6% de los hogares tiene internet. Pero más del 40% de los conectados no usa internet para actividades productivas . El problema dejó de ser infraestructura y pasó a ser capacidad de uso. Eso no lo resuelve un cable: lo resuelve formación.
+- Cómo leerlo: las tres primeras barras son acceso y están altas. Las dos últimas son uso productivo y ahí aparece el hueco: 40% de las mipymes no tiene planes de adoptar inteligencia artificial y más del 40% de quienes ya están conectados no usa internet para producir. La distancia entre acceso y uso es el mercado educativo.
+- Fuentes: DANE (2024) para hogares y uso de celular; ACOPI (2024) para pymes con herramientas digitales; Cintel, estudio IA: la brecha de la preparación (2026) para mipymes sin planes de IA; CEPAL (2025) para uso productivo de internet. Advertencia: Microsoft publicó en 2025 un estudio que reporta 66% de mipymes incorporando IA, cifra muy distinta a la de Cintel. Las muestras y las preguntas no son equivalentes y el proveedor tecnológico tiene interés comercial en el resultado. Se usa la cifra de Cintel por ser más conservadora.
+- Dónde está el negocio: las burbujas grandes y a la derecha son sectores masivos y lejos de la frontera . Ahí no hay que crear una carrera: hay que llevar tecnología a lo que ya existe. Las burbujas pequeñas y a la izquierda ya están cerca de la frontera y compiten por talento especializado, no por difusión.
+- Ejes Y y tamaño: datos reales del RUES, primer semestre de 2025. Eje X: escala cualitativa de 1 a 5 de elaboración propia, construida a partir de los indicadores de adopción del gráfico anterior y del pilar de adopción TIC del IDC 2026. No es una medición estadística.
+- 66.626 empresas nuevas, +3,3%. El sector más grande del país.
+- Comercio unificado: pagos digitales, marketplace, inventario en la nube y analítica de cliente.
+- Adopción básica. La mayoría opera con cuaderno y efectivo.
+- Microcredencial en comercio digital y datos de cliente. No requiere registro calificado.
+- 29.577 nuevas, +2,2%. Segundo generador de empleo entre empresas nuevas.
+- Reservas y domicilios digitales, gestión de ingresos, control de costos por plato.
+- Alta informalidad y rotación. Márgenes que no resisten un error de costeo.
+- Costeo y operación digital para servicios de comida, en formato corto.
+- 9.324 nuevas, +8,8% . Uno de los que más crece.
+- Agenda digital, fidelización, pagos electrónicos, presencia en redes.
+- La más grande del tablero: adopción casi nula y operación 100% personal.
+- Kit digital básico más formalización. Es el caso más claro de alianza con cámaras de comercio.
+- 3.401 nuevas, +16,0% . El de mayor crecimiento del registro.
+- Agricultura de precisión, trazabilidad, acceso directo a mercados y financiación.
+- Conectividad rural real. En Casanare el buen puntaje TIC se explica por celulares, no por internet.
+- Aquí La Salle ya tiene todo: Utopía, diez programas agropecuarios y la Especialización en Extensión Rural.
+- Telemedicina, historia clínica interoperable, cuidado domiciliario y economía plateada.
+- Regulación, datos e integración con el sistema.
+- Gestión de servicios de cuidado. Conecta con el clúster de economía plateada de la CCB.
+- IA aplicada a servicios profesionales: contabilidad, jurídico, consultoría, diseño.
+- 45% de los empresarios quiere innovar con IA pero solo 32% lo ha implementado.
+- IA aplicada por profesión, no IA en abstracto. Es donde el egresado lasallista ya trabaja.
+- Capital y talento técnico. La barrera es más dura que en servicios.
+- Módulos de automatización y gestión energética sobre la base de ingeniería que ya existe.
+- Columna "dónde está": RUES, primer semestre de 2025. Columnas de frontera, brecha y formación: elaboración propia a partir de los indicadores de adopción citados, del CONPES 4144 y del catálogo institucional de La Salle.
+- La tesis que sale de esta matriz: la respuesta a hacia dónde deberían ir las empresas no es a otro sector . Es a los mismos sectores absorbiendo tecnología. Una peluquería no se convierte en empresa de inteligencia artificial: se convierte en una peluquería con agenda digital y pagos electrónicos. Eso no es cambio estructural, es difusión . Y Colombia no tiene un problema de frontera, porque Bogotá es el ecosistema de startups de IA que más rápido crece en Suramérica. Tiene un problema de distancia entre esa frontera y 1,7 millones de empresas que no la alcanzan.
+- Los Andes va a competir por el talento de frontera y esa pelea ya tiene dueño. Pero nadie prestigioso quiere el otro mercado: cerrar la distancia entre la frontera y el tejido que ya existe . Ese lugar está vacío y tiene cuatro cosas a favor:
+- Tamaño: 1,7 millones de empresas activas y unas 300.000 nuevas cada año, 99,7% microempresas.
+- Canal montado: las cámaras de comercio, que solo en Bogotá tienen meta de formalizar 33.000 empresas en 2026 y ya operan 19 clústeres.
+- Respaldo de política: el CONPES 4144 dirige explícitamente uno de sus ejes a mipymes, no solo a especialistas en IA.
+- Coherencia institucional: es transformación social medible y productividad al mismo tiempo. Es carisma lasallista con indicador.
+- No es un programa nuevo. Es un posicionamiento , y se ejecuta con educación continua y microcredenciales sobre programas que ya existen.
+- Bogotá va al triple del ritmo nacional: +6,2% contra +1,9%. Y no es solo volumen: StartupBlink reconoció a la ciudad como el ecosistema de startups de IA de más rápido crecimiento entre las principales ciudades suramericanas en 2025, y la ubicó en el top tres latinoamericano.
+- Fuentes: Cámara de Comercio de Bogotá (2025-2026) y Confecámaras (2025). Los periodos no son idénticos: la cifra de Bogotá es anual 2025 y la nacional corresponde al primer semestre de 2025 frente al de 2024.
+- La Cámara de Comercio de Bucaramanga publica un Diagnóstico del Sector Educativo en Santander , además de informes sectoriales, Encuesta Ritmo Empresarial e Índice de Competitividad Municipal. Es un actor del ecosistema estudiando el propio mercado de la Universidad en una de sus plazas, y es lectura obligada antes de decidir cualquier movimiento allí. En el extremo opuesto, la Cámara de Comercio de Casanare es la más débil en publicación estadística de las cuatro plazas; para Yopal la ruta alterna es el RUES nacional filtrado por departamento.
+- El detalle de qué publica cada cámara de comercio, con sus enlaces, está consolidado en la hoja de Fuentes.
+- El RUES cuenta matrículas mercantiles , no actividad económica real. Una empresa matriculada puede no operar nunca.
+- Las cifras nacionales corresponden al primer semestre de 2025. Confecámaras publica el informe anual hacia enero, así que el cierre de 2025 completo y el primer semestre de 2026 deberían estar disponibles y conviene actualizarlos.
+- La comparación Bogotá contra nacional mezcla periodos distintos, como se advierte en el gráfico. No se debe presentar como una diferencia estrictamente equivalente.
+- No hay dato desagregado por CIIU para Yopal en fuentes públicas consolidadas. Para eso hay que pedirlo directamente a la Cámara de Comercio de Casanare.
+- Dejar de vender carreras y empezar a acompañar trayectorias durante décadas. En cada etapa de la vida la persona encuentra rutas distintas, y la universidad la acompaña con portafolio, profesorado y territorio adaptados.
+- Síntesis a partir de UNESCO (2022) y UNESCO IESALC (2025).
+- Estimación estratégica del asesor a partir de la transición demográfica DANE (2026). No corresponde a matrícula observada.
+- Rutas por ciclos con salidas intermedias, acompañamiento de permanencia y prácticas tempranas, sobre un eje duradero de competencias.
+- Alfabetización en IA, pensamiento crítico, fundamentos digitales, comunicación y trabajo en datos.
+- Certificaciones cortas y apilables que respondan a la demanda de IA, que creció 70% en 12 meses según LinkedIn Jobs, y de analítica, con horarios compatibles con el trabajo.
+- IA aplicada por sector, analítica de datos, liderazgo inicial, automatización de procesos.
+- Posgrados híbridos y rutas ejecutivas ligadas a la reconversión que exige el 58% de empleos en riesgo de automatización que estima Fedesarrollo (2024).
+- Estrategia, gestión de la innovación, liderazgo en entornos algorítmicos, transformación comercial.
+- Programas modulares y comunidades de práctica para el público 60+, que pasa de 14,6% en 2025 a 20% en 2030 según DANE y UNFPA; valor educativo y también relacional.
+- IA para directivos, sostenibilidad, finanzas personales, bienestar, mentoría y legado.
+- Elija el perfil de partida y combine programas reales del catálogo de La Salle: cada uno suma créditos y va desbloqueando el siguiente nivel académico. La lógica es de aprendizaje a lo largo de la vida (lifelong learning): un bachiller que entra por la Tecnología en Desarrollo de Software se acerca al pregrado, y si sigue con Ciencia de Datos y una microcredencial avanza hacia la Maestría en Inteligencia Artificial. No hay una única ruta: se pueden mezclar áreas, y cualquier perfil suma con cualquier programa. Un magíster que toma un diplomado también acumula créditos y mantiene viva la relación con la universidad.
+- Cada nivel que se desbloquea tiene un ingreso de entrada medido: el pie del constructor muestra cuánto paga en promedio el nivel alcanzado y cuánto más paga el siguiente. Es la validación numérica de la tesis de trayectorias: pasar de pregrado a especialización sube el ingreso de entrada 68%, y llegar a maestría lo duplica frente al pregrado.
+- Los bloques punteados en rojo son brechas: programas que la trayectoria necesita y que hoy no existen en el catálogo. Son los mismos que la hoja 10 identifica como prioridad de creación. Si al armar una ruta aparece una brecha, esa es la conversación que hay que llevar al consejo académico.
+- Los 30 programas de la paleta son parte de los 131 programas activos de la Universidad ante el SNIES: se escogieron los que el resto del tablero ya cita con fuente. El detalle completo por área está en la hoja 10. Los créditos son ilustrativos y muestran la lógica de acumulación stackable; no corresponden a la reglamentación vigente ni al número de créditos real de cada programa.
+- Diplomados, seminarios, bootcamps y executive education están disponibles en cualquier momento de la trayectoria. No son un grado, pero suman créditos, mantienen la relación con la universidad y aceleran el siguiente desbloqueo.
+- Programas tomados del catálogo institucional de la Universidad de La Salle (2026). Las cuatro brechas señaladas se derivan del contraste entre el 1,5% del portafolio activo en TIC y el 31,8% de las vacantes en tecnología, y de la apuesta de transición energética de Casanare. Ver hojas 07 y 10. El ingreso de entrada proviene del anexo de ingreso base de cotización del Observatorio Laboral para la Educación, vinculados en 2023 sobre graduados en 2022, y son las mismas cifras del gráfico de niveles de la hoja 10. El nivel técnico laboral usa como aproximación el ingreso del técnico profesional, porque el Observatorio no cubre la formación para el trabajo. Los valores son promedios nacionales por nivel, no del programa ni de la Universidad.
+- Hasta aquí la hoja habla de trayectorias posibles. Este bloque muestra la base instalada que las tiene que sostener. La lectura es incómoda y es la más útil del tablero: la universidad está muy concentrada arriba y tiene una cola larguísima de programas casi vacíos . Cualquier estrategia de trayectorias tiene que decidir qué hace con esa cola.
+- Participación acumulada por tramo de programas · 11.384 estudiantes
+- Fuente: registro académico de la Universidad de La Salle, matrícula 2025-2. Se cuenta cada combinación de programa, sede y modalidad.
+- Fuente: registro académico de la Universidad de La Salle, matrícula 2025-2. Los diez juntos son el 41,1% de toda la universidad.
+- Haga clic en cualquier barra de la concentración de matrícula para ver qué programas componen ese tramo, en qué sedes están y a qué facultades pertenecen.
+- Especialización en Auditoría Internacional a distancia, Gerencia de Mercadeo en Yopal, Gerencia de Proyectos en Ingeniería presencial, Sistemas de Calidad e Inocuidad presencial, Maestría en Estudios Sociales de la Religión a distancia, Maestría en Finanzas en Yopal, Tecnología en Gestión de Negocios Digitales, las dos tecnologías agropecuarias de Yopal, Sistemas de Transmisión Eléctrica en Mosquera y Técnico Profesional en Producción Agropecuaria.
+- Siguen vigentes ante el Ministerio y consumen registro, acreditación y gestión. Esta es la lista que la matriz BCG llamaba perros sin poder nombrarlos.
+- Sumadas, esas 65 combinaciones reúnen 465 estudiantes: el 4,1% de la matrícula . Son el 45% de la oferta y menos de la vigésima parte de los estudiantes.
+- No todas sobran. Los doctorados y las maestrías de investigación son pequeños por diseño. Pero la decisión de cuáles se sostienen por misión y cuáles por inercia hoy no está tomada.
+- 3.072 estudiantes están en programas virtuales y 559 más a distancia. El programa más grande de tecnología es Ingeniería de Software virtual con 248 estudiantes , más del triple que su versión presencial, que tiene 75.
+- En La Salle la presencialidad ya bajó a 42,7% de los programas activos, mientras el país sigue en 79,5%. La ventaja existe; lo que falta es contarla.
+- Anclada en matrícula real 2025-2 · tamaño de burbuja = peso en el portafolio · editable en vivo
+- Ahora con base real: la fortaleza institucional se ancla en matrícula 2025-2 y número de programas activos; el atractivo de mercado, en la brecha frente a la oferta nacional del SNIES y en la demanda de vacantes de la hoja 07. La matriz queda editable porque el comité debe poder contrastar su criterio contra ese punto de partida.
+- Ideal para trabajar en comité en tiempo real. Atractivo y fortaleza van de 0 a 10.
+- Cuadrantes: arriba-derecha = estrellas (invertir); arriba-izquierda = interrogantes (pilotar); abajo-derecha = vacas de caja (optimizar); abajo-izquierda = perros (revisar o cerrar).
+- Cada campo CINE en el que La Salle tiene programas activos, ubicado por el atractivo del mercado y por la fortaleza instalada de la Universidad. Sin categorías inventadas: las dos coordenadas se calculan con datos. Haga clic en cualquier campo para ver por qué quedó en esa casilla.
+- Salud y bienestar · 3,1% Paga 2,91 SMMLV, el segundo mejor. Subponderado 6,4 puntos
+- Tecnologías de la información · 1,5% El campo mejor pagado del país, 3,78 SMMLV. Subponderado 4,6 puntos
+- Ciencias naturales y matemáticas · 4,6% La menor mortalidad del país, 29,8%. En paridad con el promedio
+- Administración y derecho · 23,7% La mayor fortaleza instalada, con 10,4 puntos menos de exposición que el país
+- Ingeniería, industria y construcción · 20,6% Segunda fortaleza, sobre una base nacional de 3.177 programas activos
+- Agropecuario y veterinaria · 15,3% La mayor diferencia frente al país, 11,4 puntos, en un campo que paga 1,84 SMMLV
+- Ciencias sociales e información · 13,7% Sobreponderado 4,5 puntos, con supervivencia nacional por encima del promedio
+- Arte y humanidades · 5,3% Presencia menor y prácticamente en paridad con el país
+- Educación · 12,2% 65,1% de mortalidad nacional y 1,72 SMMLV, los dos peores registros
+- La casilla vacía es el hallazgo. La esquina superior derecha, atractivo alto con fortaleza fuerte, no tiene un solo campo. Los tres campos más atractivos del mercado son exactamente los tres donde la Universidad es más débil , y los dos donde es más fuerte tienen atractivo apenas medio. No es un problema de calidad ni de demanda: es que la fortaleza instalada y el atractivo del mercado están en cuadrantes distintos.
+- Cómo se calculan las dos coordenadas. El atractivo de mercado combina en partes iguales dos indicadores reales: el ingreso de entrada del campo en nivel universitario, del anexo del Observatorio Laboral, corte único de vinculados en 2023 sobre graduados en 2022, y la supervivencia del campo en el país, calculada como el complemento de la mortalidad de programas del registro nacional del SNIES. La fortaleza institucional es el peso del campo en los 131 programas activos de La Salle, del mismo registro. Ambas escalas se normalizan de 0 a 10 sobre los nueve campos y se agrupan en tres bandas iguales. Los porcentajes junto a cada campo son su peso en el portafolio activo. Es un ordenamiento reproducible a partir de fuentes públicas, no una valoración cualitativa.
+- La Salle hoy y su visión 2031 frente a líderes globales
+- Valoración cualitativa del asesor en escala de 0 a 5. No es una auditoría ni un ranking publicado: los referentes son universidades líderes en lifelong learning, microcredenciales y executive education, y la columna se reemplaza cuando se defina la canasta de comparación.
+- Ideal para trabajar en comité en tiempo real. Cada dimensión va de 0 a 5.
+- Cómo leerlo: Hoy es la valoración inicial (juicio experto, no auditoría), 2031 es la meta del plan y Líderes son los referentes globales. Ajuste los números y el radar de la izquierda se actualiza al instante.
+- Se ajustará con evidencia interna de La Salle.
+- El radar de arriba compara a La Salle contra una categoría genérica de líderes globales. Este bloque le pone nombre a esa categoría, una institución o marco por región, y describe qué hace cada una que la Universidad todavía no hace . Se documenta lo verificable y se evita puntuarlas, porque no existe un ranking público comparable en estas dimensiones.
+- Europa es referente no por una universidad sino por haber resuelto lo que en Colombia sigue abierto: un marco común de reconocimiento y portabilidad de microcredenciales entre instituciones y países. El auge de estas credenciales se concentra allí precisamente porque existe la norma que las hace transferibles.
+- Qué implica para La Salle. Emitir microcredenciales sin un marco de reconocimiento las deja como certificados internos. La pregunta estratégica no es si emitirlas, es contra qué estándar.
+- ASU convirtió la conversación sobre el futuro de la educación superior en plataforma propia, el ASU+GSV Summit , alianza con Global Silicon Valley que desde 2010 reúne a universidades, startups e inversionistas. El MIT aporta el otro modelo: el MicroMasters , credencial modular que acredita competencias sin cursar un grado completo y que puede abonarse a un posgrado.
+- Qué implica para La Salle. Dos rutas distintas: convocar el ecosistema o diseñar credenciales apilables. La segunda es la que ya recomienda la hoja 09 para cerrar la brecha en tecnología.
+- APRU reúne a más de 60 universidades líderes de Asia, América y Oceanía y funciona como espacio de trabajo conjunto en educación, innovación y sostenibilidad. En mayo de 2026 dedicó un taller completo a construir estándares internacionales de reconocimiento y gobernanza de microcredenciales.
+- Qué implica para La Salle. El referente aquí no es una institución sino la pertenencia a una red que fija estándar. Es la dimensión donde el radar ubica a la Universidad más lejos de la meta 2031.
+- Es el referente regional con cifras públicas y el más comparable por contexto. A través de su Instituto para el Futuro de la Educación acumula más de 2,8 millones de inscripciones en Coursera y edX , con 172 cursos, 20 especializaciones, 13 certificados profesionales y 4 programas MicroMasters en tres idiomas . Además exporta método: con Santander y el gobierno federal mexicano puso en marcha en febrero de 2026 un programa para que 12 universidades desarrollen microcredenciales, con alcance de hasta 330 mil estudiantes .
+- Qué implica para La Salle. Es la vara realista. El Tec no llegó ahí abriendo programas sino montando una unidad dedicada y publicando en plataformas de terceros. Es un modelo replicable a menor escala, y no exige el presupuesto de una universidad estadounidense.
+- Las cuatro referencias apuntan a lo mismo desde ángulos distintos: ninguna construyó su posición abriendo programas nuevos . Europa lo hizo con marco regulatorio, Asia-Pacífico con red y estándar, Estados Unidos con credenciales apilables y convocatoria de ecosistema, y el Tec de Monterrey con una unidad dedicada más distribución en plataformas de terceros. Las dimensiones donde el radar muestra la mayor distancia de La Salle, microcredenciales y redes, son exactamente las que ninguna de las cuatro resolvió con oferta académica tradicional. Eso reordena la prioridad: antes de diseñar programas, definir el estándar de credencial y la red a la que se pertenece.
+- Advertencia de alcance, para que el bloque se use bien. Estas fichas describen prácticas documentadas, no un escalafón. No existe un ranking público que mida lifelong learning, microcredenciales, executive education y flexibilidad con metodología comparable entre instituciones, y por eso no se les asigna puntaje. La columna de líderes globales del radar sigue siendo una valoración del asesor y no debe leerse como medición de estas cuatro. Fuentes: Tecnológico de Monterrey y APRU, comunicados de mayo y junio de 2026; Santander Universidades, comunicado del 19 de febrero de 2026; ASU+GSV Summit y MIT, referidos en prensa educativa. Consultado el 21 de julio de 2026.
+- El modelo de trayectorias exige especialización docente: cada tipo de profesor acompaña una etapa distinta de la escalera técnico → doctorado (por eso aparece junto a cada peldaño del constructor). Fuente: OCDE, Learning y Teaching Compass 2030; UNESCO (2024).
+- Es la figura que sostiene la relación de por vida con el estudiante. No dicta una materia: acompaña decisiones de ruta a lo largo de los años y conecta cada curso con un propósito laboral y personal. Es el primer contacto en el nivel técnico y el hilo que mantiene viva la relación cuando la persona entra y sale de la universidad.
+- Diagnosticar el punto de partida y las metas de cada persona, no solo su semestre.
+- Diseñar con el estudiante una ruta de créditos apilables entre áreas.
+- Prevenir la deserción con seguimiento temprano y señales de riesgo.
+- Traducir intereses en cursos concretos y estos en empleabilidad.
+- Al entrar: orienta la primera credencial y fija una meta de 12 meses.
+- En la transición: homologa, reconoce lo aprendido y evita que se pierdan créditos.
+- Al reingresar: reactiva la relación cuando la persona vuelve a formarse.
+- Conecta a cada estudiante con las apuestas del momento, con intención y no por moda:
+- Este bloque responde una sola pregunta: qué tiene la Universidad instalado en cada plaza . El diagnóstico del entorno de cada territorio, con sus planes de desarrollo, su mercado laboral y su competitividad, vive completo en la hoja 07 y no se repite aquí.
+- Matrícula por plaza · corte 2025-2 · 11.384 estudiantes en 145 combinaciones de programa, sede y modalidad
+- Fuente: registro académico de la Universidad de La Salle, matrícula 2025-2. La desproporción es el hallazgo: Bogotá concentra el 95,9% de la matrícula. Mosquera, que casi nunca aparece en la conversación institucional, tiene más del doble de estudiantes que Bucaramanga.
+- Haga clic en cada plaza para ver su oferta detallada.
+- Chapinero, Candelaria y Norte · el 95,9% de la Universidad
+- 7.108 estudiantes en 61 combinaciones. Es el núcleo histórico: Medicina Veterinaria, Negocios y Relaciones Internacionales, Finanzas y Comercio Internacional, Arquitectura y Optometría.
+- 3.314 estudiantes en 40 combinaciones. Toda la oferta virtual de la Universidad se administra desde Bogotá y atiende demanda de todo el país sin duplicar infraestructura.
+- 484 estudiantes en 16 combinaciones, más 7 en formato híbrido.
+- Lectura: la plaza no tiene un problema de tamaño sino de composición. Es donde se concentra la cola larga de programas casi vacíos y donde cabe la oferta ejecutiva y de microcredenciales.
+- Ingeniería Agronómica con 162 estudiantes, Agronómica Talento Rural con 66 y Agropecuaria con 62. Concentran el 87% de la plaza.
+- Cuatro programas a distancia: los doctorados en Educación y Sociedad y en Estudios de Desarrollo y Territorio, y las maestrías en Agronegocios y en Ciencias Agropecuarias Sostenibles. Suman 33 estudiantes.
+- Cinco de las catorce combinaciones están en cero: Gerencia de Mercadeo, Maestría en Finanzas, las dos tecnologías agropecuarias y el Técnico Profesional en Producción Agropecuaria.
+- Lectura: la plaza es coherente con su vocación, pero un tercio de su oferta no tiene un solo estudiante. La Especialización en Gerencia del Servicio de Extensión Rural sigue siendo el programa vigente mejor alineado con la agenda de Casanare.
+- Administración de Empresas con 39 estudiantes, Ingeniería Industrial con 32, Contaduría Pública y Licenciatura en Español y Lenguas Extranjeras con 11 cada una.
+- Ingeniería de Alimentos e Ingeniería de Automatización tienen un estudiante cada una, y Sistemas de Transmisión y Distribución Eléctrica está en cero.
+- Lectura: no aparecía en el relato institucional de tres plazas y tiene más del doble de estudiantes que Bucaramanga. O se decide sostenerla con una apuesta explícita, o se reconoce que es una operación residual.
+- Doctorado en Educación y Sociedad con 29 estudiantes, Maestría en Agronegocios con 8, Doctorado en Estudios de Desarrollo y Territorio con 3 y Especialización en Gerencia de Mercadeo con 2.
+- Ni un solo programa presencial ni de pregrado. Las cuatro combinaciones son posgrado a distancia.
+- Lectura: el tablero venía tratando a Bucaramanga como una de las tres plazas de la Universidad. En matrícula es una operación de 42 estudiantes. La Maestría en Didáctica de las Lenguas, que encaja con los 58 mil millones de bilingüismo de la ciudad, hoy no se ofrece allí.
+- Fuente: registro académico de la Universidad de La Salle, matrícula 2025-2, y registro nacional de programas del SNIES. El análisis del entorno de cada territorio, con planes de desarrollo, mercado laboral y competitividad, está completo en la hoja 07.
+- El Observatorio de la Vida Universitaria encuestó a los egresados de la Universidad y midió, entre otras cosas, dónde nacieron, dónde viven hoy y qué ocupan. Ese dato responde una pregunta que el tablero no había podido responder: si La Salle quiere actuar como institución ancla de su comunidad, ¿cuál comunidad? La respuesta no coincide con la ubicación de las sedes.
+- Antes de leer las cifras, una advertencia de método que cambia cómo se usan. El diseño probabilístico del estudio no funcionó: de 1.043 egresados seleccionados al azar solo respondieron 71, el 6,8%. El equipo pasó entonces a un muestreo no probabilístico por cuotas por programa académico, hasta reunir 1.916 respuestas sobre una población de 25.177 egresados. Las cifras describen bien a quienes respondieron, pero no se pueden proyectar al total de egresados con margen de error . Sirven para orientar decisiones y para formular hipótesis, no para dimensionar mercados.
+- Las tres localidades que el estudio reporta por nombre, contra el resto de la ciudad · base de 1.361 egresados residentes en Bogotá
+- El hallazgo que reordena la conversación de comunidad. Las sedes de la Universidad están en Chapinero, La Candelaria y el norte . Sus egresados viven en Suba, Kennedy y Engativá : esas tres localidades concentran el 41,9% de los que residen en Bogotá, y ninguna aloja una sede. La comunidad lasallista de Bogotá no está alrededor del campus, está en el occidente y el noroccidente de la ciudad. Consecuencia para la propuesta de institución ancla: abrir las puertas del campus a la comunidad del entorno inmediato de Chapinero atiende a un vecindario que en su mayoría no es el de sus propios egresados. Un programa de anclaje territorial coherente con esta base tendría que salir del campus o apoyarse en la modalidad virtual, que ya concentra buena parte de la matrícula.
+- Fuente: Universidad de La Salle, Observatorio de la Vida Universitaria, Vicerrectoría de Promoción y Desarrollo Humano, Impacto multidimensional de la Universidad de La Salle en sus egresados , Bogotá, 2021, con datos recogidos hasta marzo de 2020. Base: los 1.361 encuestados que declaran residencia en Bogotá. Muestreo no probabilístico por cuotas. Alcance del gráfico: el estudio nombra únicamente las tres localidades con más egresados; las demás se agrupan por diferencia y no se desagregan porque la fuente no publica ese detalle.
+- Qué significa. La Universidad forma sobre todo bogotanos: 1.372 de los encuestados nacieron en la capital. Cundinamarca aporta 5,6%, Boyacá 3,6%, Tolima 2,5% y Santander 2,3%. El 90,7% viene de la región Andina. La base de reclutamiento es regional, no nacional, y eso acota qué tan realista es una estrategia de captación por fuera del centro del país.
+- Qué significa. El 23,9% se mudó a otro departamento y el 5,0% salió del país. Casi tres de cada diez egresados están fuera de la ciudad donde estudiaron, y la oferta de educación continua presencial no los alcanza. Es el argumento de demanda que le faltaba a la apuesta virtual, y viene de los propios egresados, no de una proyección de mercado.
+- Qué significa. 1.780 de los encuestados la recomendarían, y las razones que dan son la calidad de la formación (77,0%), el reconocimiento de la institución (56,5%) y el énfasis en formación integral (44,6%). Es un activo reputacional alto entre quienes ya pasaron por la Universidad. Dado el sesgo del muestreo, conviene leerlo como techo, no como promedio.
+- Fuente: la misma del gráfico anterior. Base: 1.916 encuestados, salvo la residencia en Bogotá, que se calcula sobre 1.361.
+- Entre las madres de los egresados, la ocupación más frecuente son las labores del hogar (26,5%, 507 casos) , seguida de pensionada (16,9%) y trabajo independiente (15,4%). Entre los padres, el trabajo independiente encabeza con 23,7% y le sigue estar pensionado con 21,8%. Una generación después, el 51,4% de los egresados (753) ejerce como profesional universitario en investigación, docencia o salud, y otro 18,4% (270) ocupa cargos directivos en empresas públicas o privadas. Ese salto de una generación a la siguiente es el impacto que la Universidad puede documentar con datos propios, y es el argumento más fuerte que tiene para sostener el discurso lasallista de educación para la transformación social.
+- Dos datos operativos que salen del mismo estudio. El canal de búsqueda de empleo más usado son los portales web (51,4%), pero las redes familiares y de conocidos van casi empatadas con 49,7% : la mitad de los egresados consigue trabajo por relaciones, no por convocatoria, lo que le da valor concreto a la red de egresados como servicio y no solo como vínculo afectivo. Y entre los egresados emprendedores, el obstáculo más citado es la falta de redes de apoyo (23,9%) , por encima de los trámites y de la falta de capital. Fuente: Observatorio de la Vida Universitaria, estudio de impacto multidimensional en egresados, Bogotá, 2021.
+- El estudio del bloque anterior encuestó a 1.916 egresados con muestreo por cuotas. Este bloque usa una fuente distinta y de otra naturaleza: el registro administrativo del Observatorio Laboral para la Educación , que sigue el ingreso base de cotización de 20.926 graduados de la Universidad vinculados al sistema de seguridad social, en 74 programas y veintidós cohortes de grado. No es una encuesta y no tiene margen de error: es el conteo de quienes cotizan.
+- Contra 2,22 de la media universitaria nacional que usa la hoja 09.
+- 11.869 de 20.926. La Universidad gradúa y emplea más mujeres que hombres.
+- 7,6% de ellos gana más de 9 SMMLV, contra 3,7% de ellas.
+- Participación de cada rango de SMMLV dentro de cada sexo · 20.926 graduados vinculados
+- La brecha no está en el piso: está en el techo. En los dos rangos más bajos hombres y mujeres están prácticamente empatados, 20,7% y 20,4%. La diferencia aparece arriba: en el rango de 6 a 9 SMMLV hay 11,2% de hombres contra 8,1% de mujeres, y por encima de 9 SMMLV la proporción de hombres más que duplica la de mujeres, 7,6% contra 3,7%. Las egresadas no ganan menos por estar sobrerrepresentadas en la base; ganan menos por estar subrepresentadas en la cima.
+- El dato que más incomoda, porque es donde la Universidad sí interviene. La brecha se ensancha justo en el nivel que ella misma vende como acelerador de carrera: en especialización el promedio femenino es 4,60 SMMLV contra 5,54 masculino, una diferencia de 17%, mayor que en pregrado (10%) y que en maestría (9%). El posgrado profesional, tal como funciona hoy, no está cerrando la brecha: la amplía. La única excepción es el doctorado , donde se invierte: 8,56 SMMLV las mujeres contra 8,01 los hombres, y el 100% de las doctoras está en el tramo alto.
+- Fuente: MinEducación, Observatorio Laboral para la Educación , estadísticas de ingreso base de cotización estimado por rangos de SMMLV, año de corte 2023, extracto de la Universidad de La Salle. Cobertura: graduados entre 2001 y 2022 que cotizan al sistema general de seguridad social en su máximo nivel de formación. Nota de método: el promedio en SMMLV se calcula asignando a cada rango su punto medio, y al rango abierto de más de 9 SMMLV un valor conservador de 11; es un estimador de la distribución, no un salario observado.
+- El posgrado paga, y paga mucho. Un egresado de pregrado promedia 3,31 SMMLV ; uno de especialización 5,02 , uno de maestría 5,32 y uno de doctorado 8,28 . El salto de pregrado a especialización es de 52% y es el más rentable del portafolio. Mirado por el otro extremo: el 24,1% de los egresados de pregrado gana 1,5 SMMLV o menos , contra 4,2% de los de maestría.
+- Lo que esto le dice al portafolio, cruzado con la hoja 10. Los programas mejor pagados de la Universidad son Maestría en Administración (6,70) , Especialización en Gerencia de Proyectos en Ingeniería (6,03) e Ingeniería de Diseño y Automatización Electrónica (6,02) . Los más bajos son Ingeniería Agronómica (2,56) , Trabajo Social (2,60) y Arquitectura (2,71) . La señal más fuerte es la de Medicina Veterinaria: es el programa con más estudiantes de toda la Universidad, 956 matriculados en 2025-2, y promedia 2,92 SMMLV con el 39,6% de sus egresados por debajo de 1,5 SMMLV , la peor proporción de los programas grandes. El programa que sostiene la matrícula no es el que sostiene la empleabilidad, y esa tensión no aparecía en ninguna otra hoja del tablero.
+- Misma fuente y mismo método del gráfico anterior. Los promedios por programa se calculan solo sobre programas con 150 graduados vinculados o más, para que el promedio sea estable. El dato de matrícula de Medicina Veterinaria proviene del registro académico interno, corte 2025-2.
+- El estudio del Observatorio de la Vida Universitaria describe percepción, trayectoria y territorio , pero con muestreo por cuotas, así que no se proyecta. El registro del Observatorio Laboral describe ingreso real de cotización sobre veinte mil graduados, sin muestreo, pero no dice nada sobre satisfacción, movilidad familiar ni residencia. Ninguna de las dos reemplaza a la otra y ninguna debe citarse sola. Juntas sostienen el argumento completo: la Universidad produce movilidad social medible, sus egresados ganan por encima de la media universitaria nacional, y al mismo tiempo arrastra dos brechas propias que sí puede intervenir, la de sexo en el posgrado profesional y la de empleabilidad en su programa de mayor matrícula.
+- Roadmap acelerado 2026 – 2029: empezar ya, no esperar
+- Las alianzas con empleadores y las primeras microcredenciales no esperan a 2028: arrancan este año. La fase 1 corre sobre el segundo semestre de 2026, así que el corte de avance es diciembre. Haga clic en cada fase para ver las acciones.
+- Alianzas con empleadores y gremios este año (no en 2028)
+- Diagnóstico de portafolio y rediseño de 3 a 5 programas prioritarios
+- Todo lo anterior describe una posición. Este bloque la convierte en una propuesta. Ninguna de las seis recomendaciones introduce un dato nuevo: cada una se apoya en cifras que ya están en este tablero, con su fuente, y termina en una decisión concreta que el Consejo Directivo tiene que tomar. No son acciones operativas, son las apuestas que deberían ordenar el plan estratégico.
+- El punto de partida es incómodo y es uno solo. En la matriz por campo CINE, la casilla de atractivo alto con fortaleza fuerte quedó vacía. Los tres campos que mejor pagan y mejor sobreviven en el país (salud, tecnologías de la información y ciencias naturales) son exactamente aquellos en los que la Universidad tiene menos peso: 3,1%, 1,5% y 4,6% del portafolio activo. Donde tiene fortaleza instalada, administración con 23,7% e ingeniería con 20,6%, el mercado ofrece un atractivo apenas medio. La estrategia no consiste en corregir un programa: consiste en decidir si esa distancia se cierra, se compensa o se acepta.
+- Solo 2 de los 131 programas activos están clasificados en tecnologías de la información: 1,5% frente a 6,1% nacional, en el campo que concentra cerca del 31,8% de las vacantes publicadas y que mejor paga del país, con 3,78 salarios mínimos de entrada. Crear programas nuevos tarda años y compromete registro calificado. La vía corta es apilar credenciales verificables sobre los programas que ya existen, empezando por las cuatro brechas que identifica el constructor de trayectorias.
+- Es la mayor ventaja instalada de la Universidad y no aparece en su narrativa. El 38,2% de los programas activos son virtuales frente a 13,4% nacional, y sumando la modalidad a distancia se llega a 54,2% mientras el país sigue 79,5% presencial. En matrícula son 3.072 estudiantes virtuales, el 27% del total, y el programa de tecnología más grande es Ingeniería de Software virtual, con 248 estudiantes, más del triple que su versión presencial. Es también el único mecanismo para atender demanda regional sin duplicar infraestructura.
+- Once programas activos no tienen un solo estudiante y siguen consumiendo registro, acreditación y gestión. Otras 65 combinaciones tienen menos de 25 estudiantes: juntas son el 45% de la oferta y apenas el 4,1% de la matrícula. Los diez programas más grandes concentran el 41,1%. No todo lo pequeño sobra, porque los doctorados y las maestrías de investigación lo son por diseño, pero hoy no existe un criterio explícito que distinga lo que se sostiene por misión de lo que se sostiene por inercia.
+- El campo agropecuario es la mayor diferencia del portafolio frente al país: 15,3% contra 3,9%, once puntos y medio de distancia, y es una posición que casi nadie más ocupa. Pero es también un campo que paga 1,84 salarios mínimos de entrada, el tercero peor de diez, y donde el 47,7% de los graduados gana hasta 1,5. El dato que resuelve la tensión ya está medido: el posgrado casi duplica el ingreso, de 2,22 en pregrado a 3,73 en especialización y 4,76 en maestría. La distinción no es abandonar el agro, es dejar de ofrecerlo principalmente en pregrado.
+- Educación es el campo con mayor mortalidad de programas del país: 65,1% de los registrados están inactivos. Es además el peor pagado de los campos con volumen, con 1,72 salarios mínimos de entrada. La Universidad tiene allí el 12,2% de su portafolio activo y ya cerró 12 programas de ese campo, su mayor número de bajas. Es el único campo que cae en la banda de atractivo bajo de la matriz. La recombinación, como la que ya hizo Archivística e Inteligencia de Negocios en otro campo, es una salida distinta de la reducción.
+- La matrícula real desmonta el relato de tres sedes equivalentes. Bogotá concentra el 95,9% con 10.913 estudiantes. Yopal tiene 332, con cinco de sus catorce combinaciones en cero. Mosquera tiene 97 y no aparecía en el tablero. Bucaramanga tiene 42 estudiantes en cuatro programas, todos posgrado a distancia, sin un solo programa presencial ni de pregrado, en una ciudad que destinó 58 mil millones a bilingüismo y donde la Universidad tiene vigente una Maestría en Didáctica de las Lenguas que allí no ofrece.
+- El diagnóstico no determina una respuesta, pero sí delimita las preguntas que no pueden quedar sin resolver. Son las mismas siete con las que cierra el informe ejecutivo , de modo que el tablero y el documento impreso terminan en el mismo punto.
+- ¿Cómo se sostiene el 13,7% del portafolio en ciencias sociales e información, y el 5,3% en arte y humanidades, en un entorno donde ese segmento se contrae internacionalmente? ¿Recombinación, reducción o diferenciación?
+- Las siete preguntas provienen de la sección 11.1 del informe ejecutivo. La cuarta se actualizó respecto del documento impreso: el informe hablaba de tres territorios y la matrícula real muestra cuatro plazas. La quinta también, porque el informe calculaba la exposición en ciencias sociales sobre 71 programas y la base real son 131 activos.
+- Las seis recomendaciones se derivan de datos presentes en este tablero: el registro nacional de programas del SNIES para composición y mortalidad, el registro académico de la Universidad para matrícula 2025-2, el anexo de ingreso base de cotización del Observatorio Laboral para la Educación para los ingresos de entrada, y el análisis de vacantes publicadas citado en la hoja 07. Son una propuesta del asesor para la discusión del plan estratégico, no una decisión institucional adoptada.
+- Los 131 programas activos de La Salle frente a lo que el país pide
+- Esta hoja compara el portafolio real de la Universidad con la oferta nacional del SNIES y con la demanda de vacantes, para responder tres preguntas: qué fortalecer, qué mantener y qué revisar. No es un ranking de calidad académica; es una lectura de posicionamiento de mercado. Toda la hoja usa solo programas en estado Activo del SNIES : La Salle tiene 131 activos y 48 inactivos, sobre 179 registros históricos.
+- La buena: La Salle tiene 23,7% en administración y derecho frente al 34,1% nacional . No está atrapada en el área que China cerró y que Estados Unidos recorta. La mala: solo 1,5% en TIC , muy por debajo del ya escaso 6,1% del país, justo donde está un tercio de las vacantes.
+- Cómo leerlo: la barra dorada es La Salle y la azul el promedio nacional. Donde la dorada es más larga, la Universidad está sobreponderada frente al país; donde es más corta, subponderada. La brecha más grande y más costosa está en TIC.
+- Fuentes: registro nacional de programas del SNIES (131 programas activos de La Salle sobre 17.812 activos del país). Las áreas se homologaron manualmente entre la taxonomía institucional y la clasificación CINE, por lo que la correspondencia es aproximada.
+- La lectura estratégica: estar sobreponderado no siempre es malo. En ciencias naturales y ambiente La Salle tiene 11,3% frente al 4,0% nacional, y esa es un área escasa con apuesta pública fuerte: es una ventaja, no un exceso. En sociales y humanidades el exceso sí es riesgo, porque es lo primero que se recorta cuando aprieta la caja.
+- Elaboración propia a partir del catálogo institucional y del SNIES 2025.
+- La proporción que importa: 41 programas de pregrado frente a 30 de posgrado. En España las universidades privadas ampliaron su oferta de máster un 66% en nueve años porque ahí está el margen. La Salle tiene una base de posgrado sólida sobre la cual apilar credenciales cortas.
+- Fuente: catálogo institucional de la Universidad de La Salle (2026).
+- Advertencia de lectura: un mismo programa puede ofrecerse en varias sedes, por eso la suma supera los 71. Utopía concentra 15 programas, la base agropecuaria que coincide con la apuesta número uno de Casanare.
+- Fuente: catálogo institucional consolidado por directorios académicos públicos (2026). Los campus de Bucaramanga, Yopal y Mosquera operan con oferta específica que conviene verificar con registro académico.
+- Lo que se ve al no agrupar: ingeniería y tecnología tiene 11 programas y salud y medicina 8 , así que ninguna de las dos está ausente; lo que pasa es que quedaban escondidas al homologarlas con la clasificación CINE del gráfico anterior. Lo que sí está genuinamente ausente son áreas completas del sistema: deportes y educación física, comunicación social y periodismo, psicología, y agronomía como área propia . Esa ausencia también es información: son mercados donde La Salle simplemente no compite.
+- Fuente: catálogo institucional de la Universidad de La Salle consolidado por directorios académicos públicos (2026), taxonomía de trece áreas. Nota metodológica importante: esta taxonomía no es la misma que la clasificación CINE del SNIES, por lo que la comparación con el promedio nacional del gráfico anterior es aproximada. Para una homologación exacta hace falta el Núcleo Básico del Conocimiento (NBC) de cada programa, que sí está en el SNIES y desagrega el sistema en 55 categorías en vez de 10.
+- Eje horizontal: participación de La Salle. Eje vertical: diferencia frente al promedio nacional. Tamaño de burbuja: número de programas activos. El color es el veredicto.
+- Cómo leerlo: arriba está lo que La Salle tiene de más frente al país y abajo lo que tiene de menos. A la derecha, lo que pesa mucho dentro del portafolio. Abajo a la izquierda, pequeño y subponderado, está TIC : poco peso propio y muy por debajo del país, en el campo con más vacantes y mejor pago. Arriba está agropecuario , que es donde La Salle es más distinta de todos los demás. La línea de cero separa las dos mitades.
+- Elaboración propia a partir del SNIES, programas activos, corte julio de 2026. Clasificación CINE-F 2013 A.C.
+- 1,5% del portafolio activo contra 6,1% nacional y 31,8% de las vacantes. La Salle está a un cuarto del promedio del país en el área de mayor demanda. Santo Tomás tiene 14 programas TIC activos, Javeriana 11, Andes 11. La Salle tiene 2. Prioridad uno.
+- 15,3% del portafolio contra 3,9% nacional: 11,4 puntos por encima, la mayor sobreponderación . Medicina Veterinaria sola tiene 956 estudiantes, el 8,4% de la universidad. Es el activo más distintivo y el que menos aparece en la conversación estratégica. Coincide con el proyecto número uno de Casanare y con el sector de mayor crecimiento empresarial del país, +16,0%.
+- 38,2% de los programas activos son virtuales contra 13,4% nacional, y con la modalidad a distancia La Salle llega a 54,2% mientras el país sigue 79,5% presencial. Es la ventaja instalada más grande del portafolio. En matrícula son 3.072 estudiantes, el 27% del total.
+- 23,7% contra 34,1% nacional. La Salle está 10,4 puntos por debajo del país en el área más saturada, que además tiene 44,3% de mortalidad de programas. Es una ventaja competitiva silenciosa que conviene no perder abriendo más programas genéricos.
+- 12,2% del portafolio contra 7,2% nacional. Y es el campo con mayor mortalidad del país: 65,1% de los programas de educación registrados están inactivos , 2.396 cerrados contra 1.283 activos. La Salle ya cerró 12 programas de este campo, su mayor número de bajas. Hay que decidir si se defiende con diferenciación o se contrae.
+- 20,6% contra 17,8% nacional, en línea con el país. El país ya tiene 3.177 programas activos aquí. No conviene abrir más títulos: conviene apilar microcredenciales en energía, agua e infraestructura sostenible.
+- 13,7% contra 9,2% nacional. Sobreponderado pero mucho menos de lo que se creía. La salida no es cerrar: es combinar con tecnología, como ya hizo Archivística e Inteligencia de Negocios, que tiene 215 estudiantes y es el sexto programa más grande de la universidad.
+- 3,1% contra 9,5% nacional: subponderado, no sobreponderado . Con 426 estudiantes y solo cuatro programas activos, La Salle está fuera de un campo que la economía plateada va a expandir. O se entra en serio o se acepta que no es un frente.
+- Elaboración propia a partir del SNIES, registro nacional de programas, corte julio de 2026, contando únicamente programas en estado Activo; del registro académico de La Salle con matrícula 2025-2; y de los datos de vacantes citados en la hoja 07. Clasificación CINE-F 2013 A.C., adoptada por el Ministerio de Educación.
+- Un programa que toma una disciplina tradicional en retroceso (archivística) y la cruza con analítica de datos. Es exactamente la respuesta que Chu Zhaohui propone frente al modelo chino de cerrar títulos: recombinar en vez de eliminar .
+- Ya existe y está en el área de mayor demanda del país. El problema no es que falte: es que tiene poca compañía . Tres programas de computación no sostienen una apuesta institucional en IA.
+- La propia Universidad lo presenta como el único programa del país que fusiona energía y medioambiente. Encaja con la transición energética de Casanare y con el CONPES 4129. Es un activo subutilizado en la narrativa territorial .
+- El Observatorio Laboral para la Educación mide el ingreso base de cotización de los recién graduados, en salarios mínimos. Cruzarlo con el portafolio cierra el argumento: no basta con saber dónde hay vacantes, hay que saber cuánto pagan . Y aquí la lectura es incómoda para dos de las apuestas de La Salle.
+- Fuente: Observatorio Laboral para la Educación, anexo de IBC estimado 2020-2023, Ministerio de Educación Nacional. Corresponde a graduados de nivel universitario en su primer año de vinculación formal.
+- Promedio en salarios mínimos y proporción que gana hasta 1,5 SMMLV
+- Fuente: Observatorio Laboral para la Educación, anexo de IBC estimado 2020-2023. Cohorte de vinculados en 2023, graduados en 2022.
+- Es el campo mejor pagado del país en nivel universitario y el que menos graduados deja en el piso salarial: solo 13,4% gana hasta 1,5 salarios mínimos, contra 39,7% del promedio universitario.
+- La Salle tiene 1,5% del portafolio ahí . La brecha ya no es solo de vacantes: es de ingreso del egresado.
+- La mayor fortaleza distintiva del portafolio está en un campo donde la mitad de los graduados gana hasta 1,5 salarios mínimos . Es el tercero peor pagado de los diez.
+- No invalida la apuesta: la valida con condición. Hay que subirla de nivel con posgrado y educación continua, no solo sostenerla en pregrado.
+- Un universitario entra en 2,22 salarios mínimos. Con especialización pasa a 3,73 y con maestría a 4,76. La proporción que gana hasta 1,5 cae de 39,7% a 14,8% y luego a 6,4%.
+- Es la validación numérica de la tesis de trayectorias de la hoja 09 : el retorno no está en el primer título, está en seguir.
+- El SNIES marca cada programa como activo o inactivo. Cruzar esa columna con las universidades comparables muestra algo que ningún catálogo dice: cuánto de lo que se abre termina cerrando, y en qué campos . La Salle cerró 48 de sus 179 registros históricos. Ventana temporal: el registro de la Universidad va de 1998 a 2026 y el conteo es acumulado, no anual. El grueso de los cierres está en lo registrado antes de 2015 (45 de los 48); de los 115 programas registrados desde 2020 solo 3 están inactivos. El registro no guarda fecha de cierre, así que la cifra mide estado actual, no ritmo de cierre.
+- Fuente: SNIES, registro nacional de programas, corte julio de 2026. La tasa de cierre de La Salle es 26,8%, la tercera más baja de las doce, después de los Andes con 24,2% y La Sabana con 24,7%. En el otro extremo, la Católica de Colombia cerró 55,8% de lo que abrió y la Libre 45,0%.
+- Índice 2020 = 100 · se excluye 2019 por distorsión de pandemia
+- Fuente: SNIES, matriculados en primer curso 2020-2024. La Salle pasó de 2.253 a 3.347 estudiantes nuevos, +48,6%. El país pasó de 855.706 a 1.058.036, +23,6%.
+- Cómo leerlo: La Salle no tiene un problema de demanda. Crece al doble del ritmo del país en estudiantes nuevos y cierra menos programas que casi todos sus pares. El problema es de composición: crece bien en campos donde el mercado se está saturando, y está casi ausente del campo donde la demanda se dispara. La decisión no es crecer más, es crecer en otra parte.
+- Este análisis llega hasta donde llega el dato público. Para pasar de diagnóstico de portafolio a decisión de cierre o apertura hacen falta tres columnas que solo existen dentro de la Universidad:
+- Matrícula por programa y su tendencia a cinco años. Sin esto no se puede distinguir un programa pequeño y sano de uno en caída. Fuente: registro académico o SNIES por institución.
+- Año de creación y año de última renovación de registro calificado. Un programa con doce años y matrícula plana es un caso distinto a uno con tres años que aún no madura. China cerró programas creados poco antes, y esa fue la crítica principal a su reforma.
+- Punto de equilibrio financiero por programa. Cuántos estudiantes necesita cada programa para sostenerse. Es el dato que en Estados Unidos termina decidiendo por las universidades cuando ellas no deciden a tiempo.
+- Con esas tres columnas, esta tabla se convierte en una matriz de cuatro cuadrantes y el veredicto deja de ser una opinión informada para volverse una decisión defendible.
+- Nota de alcance: el catálogo se reconstruyó desde el sitio institucional y directorios académicos públicos. Conviene validarlo contra el listado oficial de registro académico antes de llevarlo a comité, porque la oferta cambia entre semestres y los campus de Bucaramanga, Yopal y Mosquera pueden tener programas no reflejados aquí.
+- Cargar matrícula, año de creación y punto de equilibrio de los 131 programas activos
+- Tabla completa. Aquí se identifican los programas con más de ocho años y matrícula por debajo del equilibrio: ese es el grupo a decidir.
+- Semaforización anual con matrícula, deserción, empleabilidad a 12 meses y salario de entrada. Es el mecanismo chino, sin el decreto.
+- Cierra la brecha del 1,5% en TIC sin abrir programas nuevos ni pedir registro calificado. Es la vía rápida.
+- Replicar el modelo de Archivística e Inteligencia de Negocios. Reduce la sobreponderación sin destruir carreras docentes.
+- Convertir una ventaja instalada de 8 programas en oferta territorial conectada con agua, energía y agroindustria.
+- Elaboración propia a partir del análisis de las hojas de Casos y Territorio y empleo.
+- Todo lo anterior mide el portafolio contra el mercado que la Universidad ya atiende. Este bloque hace la pregunta contraria: si el crecimiento no puede venir solo de más pregrado en Bogotá, ¿de dónde viene? Se examinan las dos rutas que la Universidad ha puesto sobre la mesa, cada una con su dato y con su reto, porque ninguna de las dos es gratis.
+- El 15,3% del país. Un mercado que ya existe y que casi nadie atiende con oferta formal.
+- La base se duplica en veinticuatro años, dentro del horizonte de un plan estratégico.
+- Contra 61,75% en Colombia. La brecha es enorme, pero la base se está encogiendo.
+- Población de 60 años o más en Colombia, por grupo quinquenal, proyección DANE 2026
+- El dato que sostiene la oportunidad, y el que la limita. Colombia tiene hoy 8.149.943 personas de 60 años o más , el 15,3% de la población, y el 55,5% son mujeres . Hacia 2050 serán cerca de 14,9 millones, uno de cada cuatro habitantes. La Unión Europea, que ya recorrió esa transición, calcula que la economía plateada equivale a cerca del 32% de su PIB. El BID proyecta más de dos millones de empleos nuevos ligados a este segmento en América Latina en la próxima década, y mapeó 245 organizaciones dedicadas a él en 24 países.
+- El reto, dicho sin adorno. La curva cae rápido después de los 70: el grueso del segmento está entre los 60 y los 74 años, y ahí es donde una oferta de educación continua tiene sentido. Además, América Latina envejece sin haber resuelto pensiones ni ingresos , así que la disposición a pagar no se puede suponer equivalente a la europea. Para La Salle esto apunta a educación continua corta, no a posgrado tradicional, y a un modelo de precio distinto al del pregrado.
+- Fuente: DANE, proyecciones de población 2026 con base en el Censo Nacional de Población y Vivienda 2018. Proyección a 2050 y comparación regional: Banco Interamericano de Desarrollo y CEPAL, difundidas en prensa económica en 2026. Cálculo propio de participaciones.
+- Tasa de cobertura en educación superior sobre la población de 18 a 24 años
+- La brecha es real y es grande. Costa Rica, el país mejor posicionado del istmo, cubre el 25,7% de su población de 18 a 24 años; El Salvador 19,7%, Honduras 19,0% y Guatemala 16,4%. Colombia, con 61,75% de cobertura en 2025, está muy por encima de todos. En estructura de oferta la región es abrumadoramente privada: de las 242 universidades de América Central y República Dominicana, 215 son privadas y solo 27 públicas .
+- El reto que desaconseja la expansión física. La CEPAL proyecta una caída de la matrícula total de hasta 40% para mediados de siglo en Costa Rica y El Salvador, y descensos menores en el resto del istmo. Es decir: la brecha de cobertura es amplia pero la base poblacional se está encogiendo. Abrir sede es apostar contra la demografía. Lo que sí resiste ese análisis es oferta virtual y educación continua para adultos ya vinculados al mercado laboral , que no depende de la cohorte de 18 años. Es la misma conclusión a la que llevó el dato de egresados de la hoja 09: el 5,0% de los egresados de La Salle ya vive fuera de Colombia.
+- Cobertura por país: datos de 2021 recogidos por Semanario Universidad y reportados por la unidad de datos de El Heraldo; no incluye Panamá ni Nicaragua. Número y naturaleza de universidades: Consejo Superior Universitario Centroamericano, citado en prensa regional en 2024. Proyección de matrícula: CEPAL, difundida en abril de 2026. Cobertura de Colombia: MinEducación, cierre estadístico SNIES 2025. Advertencia de comparabilidad: las cifras de cobertura del istmo son de 2021 y la de Colombia de 2025; la brecha es de orden de magnitud, no una comparación año contra año.
+- La generación plata no va a matricularse en un pregrado de cinco años, y la cohorte centroamericana de 18 años se está encogiendo. Las dos oportunidades que la Universidad puso sobre la mesa apuntan, por caminos distintos, al mismo tipo de producto: formatos cortos, certificables, virtuales y dirigidos a adultos que ya trabajan . Eso coincide con lo que la hoja 06 muestra sobre el ciclo de vida de los programas, donde la formación corta funciona como portafolio rotatorio, y con la advertencia de que ese negocio no debe evaluarse con el horizonte de amortización de un pregrado. El reto común es de capacidad, no de mercado: ninguna de las dos rutas se atiende con la estructura de costos ni con el calendario académico de la oferta actual.
+- Cada enlace lleva al documento o sitio real de la fuente. Las cifras del mercado laboral colombiano provienen del dashboard de inteligencia ELE, que consolida DANE, WEF, ManpowerGroup, Fedesarrollo, Anthropic, IBM, Burning Glass, NY Fed y FREOPP. Desde la versión 24 las hojas 06, 09 y 10 se calculan íntegramente sobre bases de microdatos, no sobre estimaciones : el registro nacional de programas del SNIES, la serie de matriculados en primer curso, el anexo de ingreso base de cotización del Observatorio Laboral y el registro académico interno de la Universidad. La hoja 06 quedó anclada al cierre estadístico 2025 del SNIES, publicado el 15 de julio de 2026.
+- Banco de la República (2026). Informe de Política Monetaria. banrep.gov.co
+- BBVA Research (2026). Situación Colombia. bbvaresearch.com
+- Fedesarrollo (2026). Encuesta de Opinión del Consumidor. repository.fedesarrollo.org.co
+- CINTEL · ANDICOM (2026). IA: La Brecha de la Preparación. andicom.co
+- Inteligencia laboral ELE (2026). Compilación DANE, ManpowerGroup, Fedesarrollo, Microsoft/IDC, NY Fed, FREOPP, Burning Glass. jfrubiano72.github.io/ELE-Unisalle
+- World Economic Forum (2025). The Future of Jobs Report 2025. weforum.org
+- Anthropic (2026). Anthropic Economic Index. anthropic.com/research
+- OCDE. Future of Education and Skills 2030/2040 · Learning y Teaching Compass. oecd.org · FES 2030
+- UNESCO (2021 – 2026). Futures of Education · Reimaginar nuestros futuros. unesco.org/en/futures-education
+- UNESCO IESALC (2021). Thinking higher and beyond · futuros a 2050 (25 expertos). iesalc.unesco.org
+- EDUCAUSE (2026). Horizon Report · Teaching and Learning Edition. Marco STEEP y distinción entre tendencia consolidada y señal temprana. educause.edu · Horizon Report
+- BCG Henderson Institute (2026). Beyond Tomorrow: Four Scenarios for the World of 2050. Fuente de consultora, de origen comercial. bcg.com/publications
+- KPMG y Mowat Centre, Universidad de Toronto. Future State 2030. Fuente de consultora, de origen comercial. kpmg.com
+- OCDE. Competencias digitales en adultos de 55 a 65 años. oecd.org · competencias digitales
+- SACES · Ministerio de Educación. Plataforma de trámites de registro calificado. No tiene consulta pública : solo cada institución ve sus propios procesos. El listado de solicitudes radicadas se puede pedir por derecho de petición bajo la Ley 1712 de 2014. mineducacion.gov.co · SACES
+- Observatorio de la Universidad Colombiana. Consolida series del SNIES: programas por área CINE 2022-2025, matrícula por departamento y cobertura. universidad.edu.co · indicadores
+- Confecámaras (2025). Dinámica de Creación de Empresas, primer semestre de 2025, con datos del RUES de las 57 cámaras de comercio. Sector, subsector CIIU y tamaño. Informe 1S 2025 (PDF)
+- Confecámaras (2025). Dinámica de Creación de Empresas 2024. Informe 2024 (PDF) · (2024) Informe 2023 (PDF) · Archivo completo en confecamaras.org.co
+- Cámara de Comercio de Bogotá (2026). Balance de creación de empresas y clústeres de Bogotá-Región. ccb.org.co · comunicados
+- Índice Departamental de Competitividad 2026. Consejo Privado de Competitividad y Universidad del Rosario, décimo tercera edición, 13 pilares. Perfiles departamentales completos. competitivas.gov.co · IDC
+- Acuerdo 927 de 2024. Plan Distrital de Desarrollo Bogotá Camina Segura 2024-2027: 5 objetivos, 15 estrategias, 39 programas, 401 metas, 142 billones. sdp.gov.co · ABC del plan
+- Bucaramanga Avanza Segura 2024-2027. Cinco apuestas estratégicas, 4,0 billones en proyectos. prosantander.org (PDF)
+- Oportunidades para Casanare 2024-2027. Cuatro ejes, ocho proyectos estratégicos, 295 metas, 2,8 billones. Cámara de Comercio de Casanare (PDF)
+- CONPES 4144 de 2025. Política Nacional de Inteligencia Artificial. Uno de sus seis ejes es desarrollo de capacidades y talento digital dirigido a academia y mipymes. dnp.gov.co
+- CONPES 4129 de 2023. Política Nacional de Reindustrialización. Cinco apuestas productivas, 20 proyectos, 147 acciones. Su primer objetivo estratégico es fortalecer el talento humano. dnp.gov.co
+- Ley 152 de 1994, artículos 13, 19 y 20. Plazos de presentación del Plan Nacional de Desarrollo. El nuevo PND debe radicarse antes del 7 de febrero de 2027. funcionpublica.gov.co
+- Ministerio de Educación de China (2025-2026). Balance del plan de ajuste de disciplinas y programas. en.moe.gov.cn · Cobertura de South China Morning Post
+- Consejo de Estado de China (2023). Plan de ajuste y optimización de disciplinas, meta del 20% antes de 2025. english.www.gov.cn
+- Ministerio de Ciencia, Innovación y Universidades de España. Datos y Cifras del Sistema Universitario Español 2025-2026 y programa Forma IA. ciencia.gob.es · La Moncloa
+- BOE (2026). Catálogo de Ocupaciones de Difícil Cobertura, primer trimestre de 2026. Resolución de 28 de enero de 2026 del SEPE. boe.es
+- National Student Clearinghouse Research Center (2026). Informe final de matrícula, otoño 2025. studentclearinghouse.org
+- Gallup y Lumina Foundation (2026). Confianza en la educación superior, encuesta de junio de 2026. news.gallup.com
+- ProColombia y BPrO (2026). Mercado colombiano de BPO y exportación de servicios. Portafolio · estudio BPrO
+- El SNIES cuenta registros, no personas. Un estudiante con doble programa cuenta dos veces. Cualquier lectura fina de matrícula debe advertirlo.
+- El RUES cuenta matrículas mercantiles, no actividad económica real. Una empresa matriculada puede no operar nunca.
+- Las cifras de vacantes provienen de portales privados de empleo , no del boletín oficial del Servicio Público de Empleo. Sirven como orden de magnitud.
+- Las cifras de BPO vienen de ProColombia y del gremio , que tienen interés en mostrar crecimiento. Conviene contrastarlas con la balanza de servicios del Banco de la República.
+- Las escalas cualitativas de 1 a 5 de las matrices de decisión y de transición son juicio experto documentado, no mediciones estadísticas. Están rotuladas como tales en cada gráfico.
+- Los PDF del DNP y del Concejo de Bogotá bloquean lectura automatizada. Sus cifras se tomaron de fichas oficiales y prensa especializada, y conviene verificarlas contra el documento descargado a mano.
+- Repositorio a partir de rankings de futuristas (Global Gurus, Aurum Bureau, Champions Speakers) y del material aportado por el asesor. Reportes institucionales complementarios: OECD Global Scenarios 2035, Stimson Global Governance Innovation Report, University World News y HESA (Global Higher Education to 2050).
+- Bases de microdatos que sostienen las hojas 09 y 10
+- SNIES · Registro nacional de programas. Corte julio de 2026. 31.494 registros, 17.812 activos y 13.680 inactivos. Es la fuente de los 131 programas activos de La Salle, de la clasificación CINE-F 2013 A.C. y del cruce de vigentes contra cerrados. snies.mineducacion.gov.co · consulta de programas
+- SNIES · Matriculados en primer curso 2020-2024. 241.974 registros nacionales. Fuente de la serie de crecimiento de La Salle frente al país. Se excluye 2019 porque la pandemia distorsiona la comparación. snies.mineducacion.gov.co · bases consolidadas
+- Observatorio Laboral para la Educación · Anexo de IBC estimado 2020-2023. Ingreso base de cotización de recién graduados por nivel de formación y campo CINE, en salarios mínimos. Fuente del bloque de empleabilidad de la hoja 10. ole.mineducacion.gov.co
+- Nota sobre la disponibilidad. Las bases consolidadas del SNIES llegan hasta el cierre estadístico de 2024. No existe todavía base consolidada de 2025.
+- Registro académico · Matrícula 2025-2. 11.384 estudiantes en 145 combinaciones de programa, sede y modalidad. Fuente de la concentración de matrícula, del top 10 de programas, de los once programas en cero y del anclaje de la matriz BCG. Documento interno, no público.
+- Impacto multidimensional de la Universidad de La Salle en sus egresados. Estudio institucional. Documento interno.
+- Advertencia de consistencia. El SNIES cuenta registros de programa y el registro académico cuenta combinaciones de programa, sede y modalidad. Por eso 131 y 145 no son la misma cifra y no deben sumarse ni compararse directamente.
+- Todas las siglas que aparecen en el tablero, agrupadas por tipo. Se incluyen porque varias se prestan a confusión al leerse en frío.
+- Fuente oficial de Colombia sobre instituciones, programas, matrícula y graduados. Reglamentado por el Decreto 1767 de 2006. Es la base de la mayor parte de este tablero.
+- Plataforma donde las instituciones tramitan registro calificado y acreditación. No tiene consulta pública abierta.
+- Sistema del Ministerio que sigue la vinculación laboral y el salario de los graduados.
+- Registro nacional de empresas de las cámaras de comercio; base del análisis de la hoja 08.
+- Equivalente español del SNIES, del Ministerio de Ciencia de España.
+- Encuesta del DANE de la que salen desempleo, informalidad y participación laboral.
+- Estándar de la UNESCO para agrupar programas académicos, adoptado por el DANE y obligatorio en el SNIES desde 2020. Organiza la oferta en diez campos amplios. Nada que ver con cine de películas.
+- Clasificación colombiana más fina que el campo amplio: 55 núcleos dentro de 10 áreas.
+- Estándar para clasificar la actividad económica de las empresas.
+- Inflación propia del sector: cuánto sube el costo de operar una universidad. Distinta de la inflación general.
+- Ingreso sobre el que se cotiza a seguridad social. Es el proxy de salario que usa el OLE.
+- Unidad en que se expresan los ingresos de egresados en este tablero.
+- Valor total de la producción de un país en un período.
+- Medición anual que ordena los 32 departamentos y Bogotá en trece pilares, uno de ellos educación superior.
+- Mide concentración de un mercado sumando el cuadrado de las participaciones. Por debajo de 1.500 se considera mercado no concentrado.
+- Cifra de seguimiento prioritario. En este tablero son las tarjetas grandes de cada hoja.
+- Marco para leer las fuerzas del entorno que condicionan una decisión estratégica.
+- Da nombre a la matriz de portafolio que cruza crecimiento del mercado y participación relativa.
+- Da nombre, junto con McKinsey, a la matriz que cruza atractivo de mercado y fortaleza institucional en una malla de 3x3.
+- Autoridad estadística de Colombia; certifica la calidad de las cifras del SNIES.
+- Entidad que publica los cierres estadísticos del SNIES.
+- Entidad que coordina el Plan Nacional de Desarrollo y los documentos CONPES.
+- Documentos de política pública de mediano plazo; sobreviven al cambio de gobierno.
+- Hoja de ruta cuatrienal del gobierno nacional.
+- Universidades, instituciones universitarias, tecnológicas y técnicas profesionales. Hoy son 305 activas en Colombia.
+- Autora de la clasificación CINE y del marco de la educación como bien común.
+- Brazo regional de la UNESCO en educación superior.
+- Organismo de países que produce comparaciones educativas y laborales.
+- Autor del informe Future of Jobs, base de la hoja 02.
+- Organismo de la ONU para el desarrollo regional.
+- Fuente del registro empresarial de la capital.
+- Fuerza tecnológica dominante del análisis de entorno de este tablero.
+- Campo amplio CINE y, a la vez, sector económico.
+- Sector que en Colombia factura US$2.951 millones y genera 750.000 empleos.
+- Criterios de sostenibilidad aplicados a la gestión.
+- Tablero propio del asesor que consolida fuentes de mercado laboral.
+- Matrícula en educación superior como proporción de la población de 17 a 21 años.
+- Índice de Costos de la Educación Superior del DANE; variación de los costos operativos del sector.
+- IA que colabora con la persona (aumento) frente a IA que ejecuta la tarea de forma autónoma (automatización).
+- Tareas que la IA podría hacer en un sector frente a las que efectivamente se hacen hoy con IA.
+- Proporción de ocupados sin afiliación a seguridad social ni protección laboral formal.
+- Certificación corta y verificable, apilable hacia programas mayores.
+- Herramientas de portafolio: la BCG cruza atractivo y participación; la GE-McKinsey cruza atractivo de mercado y fortaleza institucional en una malla de 3x3.
+- Formación no conducente a título, transversal a toda la trayectoria (diplomados, seminarios, executive education).
+- Preparado por Javier Fernando Rubiano Espinosa · De la futurología a la acción · Cifras con alcance y fuente citada · Datos SNIES al cierre estadístico 2025
 `;
