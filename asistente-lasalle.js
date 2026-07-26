@@ -341,6 +341,7 @@
       "- Preséntate como Juana solo si te saludan o te preguntan quien eres; no repitas tu nombre en cada respuesta.\n" +
       "- Responde en espanol colombiano, con calidez y sencillez, como alguien que de verdad quiere ayudar. Nunca suenes robotica ni acartonada.\n" +
       "- Apoyate SOLO en la base de conocimiento anterior. Si un dato no esta, dilo con amabilidad y honestidad; nunca inventes cifras.\n" +
+      "- Si en la pregunta del usuario aparece un bloque marcado como [DATOS SNIES RELEVANTES PARA ESTA PREGUNTA], tratalo como fuente oficial valida (Registro Nacional SNIES, cierre 2025) y responde con esas cifras; con ese bloque puedes hablar de los programas de cualquier universidad del pais.\n" +
       "- Escribe en frases limpias y naturales. Evita el formato cargado: nada de asteriscos, almohadillas (#), comillas invertidas ni vinetas con simbolos. Si necesitas resaltar algo, hazlo con palabras, no con signos. Recuerda que tu respuesta tambien se lee en voz alta, asi que debe sonar bien hablada.\n" +
       "- Usa formato de numeros en espanol (coma decimal, punto de miles). Cuando cites una cifra, menciona la fuente si aparece en la base, de forma natural dentro de la frase.\n" +
       "- Se breve y calida: 2 a 5 frases salvo que pidan detalle.\n" +
@@ -351,11 +352,50 @@
       "- Si no piden grafica, no incluyas ningun bloque de codigo.";
   }
 
+  /* ---------- Consulta selectiva al registro SNIES (envia solo la universidad relevante) ---------- */
+  function snNorm(s){ return (s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9ñ ]/g, " "); }
+  var SNIES_KW = ["programa","oferta","carrera","pregrado","posgrado","maestria","doctorado","especializacion","tecnologico","tecnologia","tecnico","universidad","facultad","matricula","activos","acreditad","snies"];
+  function contextoSNIES(preg){
+    if (!window.SNIES_INST || !window.SNIES_INST.length) return "";
+    var q = snNorm(preg), pal = {};
+    q.split(/\s+/).forEach(function(w){ if (w.length >= 4) pal[w] = 1; });
+    var matches = [];
+    window.SNIES_INST.forEach(function(inst){
+      var score = 0, dist = false;
+      (inst.k || []).forEach(function(t){ if (pal[t]) { score++; if (t.length >= 4) dist = true; } });
+      if (score > 0) matches.push({ t: inst.t, score: score, dist: dist });
+    });
+    matches.sort(function(a, b){ return b.score - a.score; });
+    var buenos = matches.filter(function(m){ return m.dist || m.score >= 2; });
+    var esProg = SNIES_KW.some(function(k){ return q.indexOf(k) >= 0; });
+    if (buenos.length){
+      var out = "", n = 0;
+      for (var i = 0; i < buenos.length && n < 4; i++){
+        if (out.length + buenos[i].t.length > 60000) break;
+        out += (out ? "\n\n" : "") + buenos[i].t; n++;
+      }
+      return out + "\n\n(Fuente: Registro Nacional de Programas SNIES, cierre 2025.)";
+    }
+    if (esProg && window.SNIES_RESUMEN){
+      return window.SNIES_RESUMEN + "\n\n(Si necesitas el detalle de una universidad puntual, pregunta por su nombre. Fuente: SNIES, cierre 2025.)";
+    }
+    return "";
+  }
+
   /* ---------- Llamada a Gemini ---------- */
   function llamarGemini(onOK, onErr) {
     var key = get(LS.key, ""), model = get(LS.model, MODELO_DEF);
     if (!BACKEND_URL && !key) { onErr("SINKEY"); return; }
     var contents = historial.map(function (h) { return { role: h.role, parts: [{ text: h.text }] }; });
+    try {
+      for (var _i = contents.length - 1; _i >= 0; _i--) {
+        if (contents[_i].role === "user") {
+          var _ctx = contextoSNIES(contents[_i].parts[0].text);
+          if (_ctx) contents[_i].parts.push({ text: "\n\n[DATOS SNIES RELEVANTES PARA ESTA PREGUNTA]\n" + _ctx });
+          break;
+        }
+      }
+    } catch (e) {}
     var payload = {
       systemInstruction: { parts: [{ text: sistema() }] },
       contents: contents,
