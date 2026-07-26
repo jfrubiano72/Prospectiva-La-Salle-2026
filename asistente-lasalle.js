@@ -354,7 +354,7 @@
 
   /* ---------- Consulta selectiva al registro SNIES (envia solo la universidad relevante) ---------- */
   function snNorm(s){ return (s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9ñ ]/g, " "); }
-  var SNIES_KW = ["programa","oferta","carrera","pregrado","posgrado","maestria","doctorado","especializacion","tecnologico","tecnologia","tecnico","universidad","facultad","matricula","activos","acreditad","snies"];
+  var SNIES_KW = ["programa","oferta","carrera","pregrado","posgrado","maestria","doctorado","especializacion","tecnologico","tecnologia","tecnico","universidad","facultad","matricula","matriculados","ingreso","cerrado","inactivo","activos","acreditad","snies"];
   function contextoSNIES(preg){
     if (!window.SNIES_INST || !window.SNIES_INST.length) return "";
     var q = snNorm(preg), pal = {};
@@ -363,7 +363,7 @@
     window.SNIES_INST.forEach(function(inst){
       var score = 0, dist = false;
       (inst.k || []).forEach(function(t){ if (pal[t]) { score++; if (t.length >= 4) dist = true; } });
-      if (score > 0) matches.push({ t: inst.t, score: score, dist: dist });
+      if (score > 0) matches.push({ t: inst.t, nn: inst.nn, score: score, dist: dist });
     });
     matches.sort(function(a, b){ return b.score - a.score; });
     var buenos = matches.filter(function(m){ return m.dist || m.score >= 2; });
@@ -371,10 +371,12 @@
     if (buenos.length){
       var out = "", n = 0;
       for (var i = 0; i < buenos.length && n < 4; i++){
-        if (out.length + buenos[i].t.length > 60000) break;
-        out += (out ? "\n\n" : "") + buenos[i].t; n++;
+        var blk = buenos[i].t;
+        if (window.SNIES_MATRICULADOS && buenos[i].nn && window.SNIES_MATRICULADOS[buenos[i].nn]) blk += "\n" + window.SNIES_MATRICULADOS[buenos[i].nn];
+        if (out.length + blk.length > 60000) break;
+        out += (out ? "\n\n" : "") + blk; n++;
       }
-      return out + "\n\n(Fuente: Registro Nacional de Programas SNIES, cierre 2025.)";
+      return out + "\n\n(Fuente: Registro Nacional de Programas y Matriculados SNIES, cierre 2025.)";
     }
     if (esProg && window.SNIES_RESUMEN){
       return window.SNIES_RESUMEN + "\n\n(Si necesitas el detalle de una universidad puntual, pregunta por su nombre. Fuente: SNIES, cierre 2025.)";
