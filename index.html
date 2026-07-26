@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Informe de Prospectiva · Universidad de La Salle · v31</title>
+<title>Informe de Prospectiva · Universidad de La Salle · v32</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -737,7 +737,7 @@ footer b{color:var(--white)}
 </head>
 <body>
 <style id="gate-style">
-#gate{position:fixed; inset:0; z-index:100000; color:#F8F5EE;
+#gate{position:fixed; inset:0; z-index:2147483000; color:#F8F5EE;
   font-family:"Source Sans 3","Segoe UI",Helvetica,Arial,sans-serif;
   background:radial-gradient(1200px 700px at 50% 8%, #16304d 0%, #0B1B2B 62%), #0B1B2B; overflow:auto;}
 #gate *{box-sizing:border-box}
@@ -3227,7 +3227,7 @@ footer b{color:var(--white)}
 <footer>
   <div class="wrap">Dashboard de prospectiva de la educación superior en Colombia · <b>Universidad de La Salle</b><br>
     Preparado por Javier Fernando Rubiano Espinosa · De la futurología a la acción · Cifras con alcance y fuente citada · Datos SNIES al cierre estadístico 2025</div>
-  <div style="margin-top:12px;font-size:11px;color:#6c86a0;letter-spacing:.04em">Versión 31 · 25 de julio de 2026, 10:02 p. m. (hora de Colombia)</div>
+  <div style="margin-top:12px;font-size:11px;color:#6c86a0;letter-spacing:.04em">Versión 32 · 25 de julio de 2026, 10:28 p. m. (hora de Colombia)</div>
 </footer>
 
 <script>
@@ -4762,6 +4762,10 @@ initFns.lasalle=()=>{
   buildPalette(); renderLadder(); setPerfil('bachiller');
 };
 </script>
+<!-- Asistente de Prospectiva · Juana (chat con voz + graficas) -->
+<script src="base-conocimiento.js"></script>
+<script src="datos-snies-competencia.js"></script>
+<script src="asistente-lasalle.js"></script>
 <script>
 (function(){
   var LOG_BACKEND="https://acceso-lasalle.jfrubiano.workers.dev";
