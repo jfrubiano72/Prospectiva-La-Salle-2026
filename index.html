@@ -3006,6 +3006,16 @@ footer b{color:var(--white)}
 <section class="panel" id="fuentes">
   <div class="sec-head"><div class="kicker">Anexo</div><h2>Fuentes, futurólogos y glosario</h2>
     <p>Cada enlace lleva al documento o sitio real de la fuente. Las cifras del mercado laboral colombiano provienen del dashboard de inteligencia ELE, que consolida DANE, WEF, ManpowerGroup, Fedesarrollo, Anthropic, IBM, Burning Glass, NY Fed y FREOPP. <b style="color:#fff">Desde la versión 24 las hojas 06, 09 y 10 se calculan íntegramente sobre bases de microdatos, no sobre estimaciones</b>: el registro nacional de programas del SNIES, la serie de matriculados en primer curso, el anexo de ingreso base de cotización del Observatorio Laboral y el registro académico interno de la Universidad. La hoja 06 quedó anclada al cierre estadístico 2025 del SNIES, publicado el 15 de julio de 2026.</p></div>
+  <div class="card" style="margin-bottom:18px">
+    <h3>Archivo SNIES · Registro Nacional de Programas</h3>
+    <p style="margin-top:8px">Base oficial del Ministerio de Educación con todos los programas de educación superior del país, al cierre estadístico 2025. Contiene 31.494 registros, de los cuales 17.812 están activos y 13.680 inactivos, correspondientes a 299 instituciones. Es la fuente de las hojas 06, 09 y 10, y también alimenta al asistente Juana, que con ella responde sobre la oferta de cualquier universidad. Cada fila es un programa, descrito por estas variables:</p>
+    <p><b>Institución:</b> código y nombre de la institución, estado, carácter académico (universidad, institución universitaria, técnica o tecnológica) y sector (oficial o privada).</p>
+    <p><b>Programa:</b> código SNIES, nombre del programa, título otorgado y estado del programa (activo o inactivo).</p>
+    <p><b>Registro y vigencia:</b> reconocimiento del ministerio (registro calificado o acreditación de alta calidad), resolución de aprobación, fechas de resolución y ejecutoria, y vigencia en años.</p>
+    <p><b>Clasificación del conocimiento:</b> clasificación CINE 2013 en tres niveles (campo amplio, específico y detallado), área de conocimiento, núcleo básico del conocimiento (NBC), nivel académico (pregrado o posgrado), nivel de formación (técnica profesional, tecnológico, universitario, especialización, maestría o doctorado) y modalidad (presencial, virtual, a distancia o híbrida).</p>
+    <p><b>Operación académica:</b> número de créditos, número de periodos de duración, periodicidad, oferta por ciclos propedéuticos, periodicidad de admisiones y si el programa se ofrece en convenio.</p>
+    <p><b>Ubicación y costo:</b> departamento y municipio donde se ofrece el programa, y valor de matrícula para estudiantes nuevos.</p>
+  </div>
   <div class="grid g2">
     <div class="card"><h3>Fuentes de Colombia</h3>
       <div style="margin-top:10px">
@@ -3227,7 +3237,7 @@ footer b{color:var(--white)}
 <footer>
   <div class="wrap">Dashboard de prospectiva de la educación superior en Colombia · <b>Universidad de La Salle</b><br>
     Preparado por Javier Fernando Rubiano Espinosa · De la futurología a la acción · Cifras con alcance y fuente citada · Datos SNIES al cierre estadístico 2025</div>
-  <div style="margin-top:12px;font-size:11px;color:#6c86a0;letter-spacing:.04em">Versión 32 · 25 de julio de 2026, 10:28 p. m. (hora de Colombia)</div>
+  <div style="margin-top:12px;font-size:11px;color:#6c86a0;letter-spacing:.04em">Versión 32 · 25 de julio de 2026, 10:35 p. m. (hora de Colombia)</div>
 </footer>
 
 <script>
@@ -4764,7 +4774,7 @@ initFns.lasalle=()=>{
 </script>
 <!-- Asistente de Prospectiva · Juana (chat con voz + graficas) -->
 <script src="base-conocimiento.js"></script>
-<script src="datos-snies-competencia.js"></script>
+<script src="datos-snies-programas.js"></script>
 <script src="asistente-lasalle.js"></script>
 <script>
 (function(){
