@@ -1,0 +1,10 @@
+name = "voz-lasalle"
+main = "src/index.js"
+compatibility_date = "2026-08-01"
+
+# La voz se fija aqui para poder cambiarla sin tocar el codigo.
+# Se define despues de escuchar el catalogo en /voces.
+[vars]
+VOZ_ID = ""
+
+# ELEVENLABS_API_KEY va como secreto, nunca en este archivo.
