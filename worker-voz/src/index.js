@@ -26,6 +26,17 @@ const MODELO = "eleven_flash_v2_5";
 const FORMATO = "mp3_22050_32";
 const TOPE_CARACTERES = 700;   /* el mismo tope que ya aplica el asistente */
 
+/*  Las voces se fijan aqui y no en la configuracion del despliegue: asi se
+    puede comparar una contra otra en el momento, sin volver a publicar, y sin
+    que nadie de afuera pueda pedir una voz que no esta en esta lista.
+    La primera es la que usa Juana si no se pide otra.  */
+const VOCES = {
+  karly:     "sM4f2a6lmttmqTug8V7W",   /* colombiana, joven, registro profesional */
+  lina:      "SnspHxfVcWQjJgnp6SL3",   /* colombiana, mas madura, tono calmado    */
+  catalina:  "6Gr4AVmTax1pMJO0lHRK"    /* chilena, joven, la mas usada del catalogo */
+};
+const VOZ_POR_DEFECTO = "karly";
+
 function cors(origen) {
   const permitido = ORIGENES.includes(origen) ? origen : ORIGENES[0];
   return {
@@ -67,7 +78,8 @@ export default {
         ok: true,
         servicio: "voz-lasalle",
         modelo: MODELO,
-        voz: entorno.VOZ_ID || "(sin definir)",
+        voz: VOZ_POR_DEFECTO,
+        vocesDisponibles: Object.keys(VOCES),
         clave: entorno.ELEVENLABS_API_KEY ? "configurada" : "FALTA",
         topeCaracteres: TOPE_CARACTERES
       }, 200, origen);
@@ -96,7 +108,7 @@ export default {
     if (!ORIGENES.includes(origen)) {
       return json({ error: "origen no autorizado" }, 403, origen);
     }
-    if (!entorno.ELEVENLABS_API_KEY || !entorno.VOZ_ID) {
+    if (!entorno.ELEVENLABS_API_KEY) {
       return json({ error: "servicio sin configurar" }, 500, origen);
     }
 
@@ -105,18 +117,26 @@ export default {
     const texto = ((cuerpo && cuerpo.texto) || "").toString().trim().slice(0, TOPE_CARACTERES);
     if (!texto) return json({ error: "sin texto" }, 422, origen);
 
+    /* Solo se acepta un nombre de la lista de arriba. Nunca un identificador
+       suelto: si alguien pudiera mandar el que quisiera, podria gastar creditos
+       con voces que no hemos aprobado. */
+    const pedida = ((cuerpo && cuerpo.voz) || "").toString().toLowerCase().trim();
+    const nombreVoz = Object.prototype.hasOwnProperty.call(VOCES, pedida) ? pedida : VOZ_POR_DEFECTO;
+    const VOZ_ID = VOCES[nombreVoz];
+
     const cache = caches.default;
-    const llave = await clave(texto, entorno.VOZ_ID);
+    const llave = await clave(texto, VOZ_ID);
     const guardado = await cache.match(llave);
     if (guardado) {
       const r = new Response(guardado.body, guardado);
       Object.entries(cors(origen)).forEach(([k, v]) => r.headers.set(k, v));
       r.headers.set("X-Voz-Cache", "servido");
+      r.headers.set("X-Voz", nombreVoz);
       return r;
     }
 
     const r = await fetch(
-      "https://api.elevenlabs.io/v1/text-to-speech/" + entorno.VOZ_ID +
+      "https://api.elevenlabs.io/v1/text-to-speech/" + VOZ_ID +
       "?output_format=" + FORMATO,
       {
         method: "POST",
@@ -149,6 +169,7 @@ export default {
     const salida = new Response(audio.body, audio);
     Object.entries(cors(origen)).forEach(([k, v]) => salida.headers.set(k, v));
     salida.headers.set("X-Voz-Cache", "generado");
+    salida.headers.set("X-Voz", nombreVoz);
     return salida;
   }
 };
