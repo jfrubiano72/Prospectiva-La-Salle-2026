@@ -243,12 +243,19 @@
     hablar("Soy Juana, el asistente de prospectiva de la Universidad de La Salle. Con esta voz le voy a responder.");
   };
 
-  function hablar(txt) {
-    if (!vozOut || !("speechSynthesis" in window) || !txt) return;
+  /* Voz propia. El servicio guarda la clave del lado del servidor: el navegador
+     solo manda el texto y recibe el audio. Si el servicio no responde -sin red,
+     sin creditos, lo que sea- Juana sigue hablando con la voz del sistema. Nunca
+     se queda muda delante de nadie. */
+  var VOZ_SERVICIO = "https://voz-lasalle.jfrubiano.workers.dev/voz";
+  var audioVoz = null;
+
+  function hablarSistema(txt) {
+    if (!("speechSynthesis" in window)) return;
     try {
       window.speechSynthesis.cancel();
       if (!vozEs) cargarVoz();
-      var u = new SpeechSynthesisUtterance(txt.slice(0, 700));
+      var u = new SpeechSynthesisUtterance(txt);
       u.lang = "es-CO";
       if (vozEs) u.voice = vozEs;
       /* Ritmo de exposicion, no de lectura rapida: va a decir cifras.
@@ -257,7 +264,42 @@
       window.speechSynthesis.speak(u);
     } catch (e) {}
   }
-  function callar() { if ("speechSynthesis" in window) try { window.speechSynthesis.cancel(); } catch (e) {} }
+
+  function hablar(txt) {
+    if (!vozOut || !txt) return;
+    callar();
+    var t = String(txt).slice(0, 700);
+    var pedido;
+    try {
+      pedido = fetch(VOZ_SERVICIO, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ texto: t })
+      });
+    } catch (e) { hablarSistema(t); return; }
+
+    pedido.then(function (r) {
+      if (!r.ok) throw new Error("voz " + r.status);
+      return r.blob();
+    }).then(function (b) {
+      if (!b || b.size < 512) throw new Error("audio vacio");
+      var url = URL.createObjectURL(b);
+      audioVoz = new Audio(url);
+      audioVoz.onended = function () { try { URL.revokeObjectURL(url); } catch (e) {} };
+      return audioVoz.play();
+    }).catch(function () {
+      audioVoz = null;
+      hablarSistema(t);
+    });
+  }
+
+  function callar() {
+    if (audioVoz) {
+      try { audioVoz.pause(); audioVoz.currentTime = 0; } catch (e) {}
+      audioVoz = null;
+    }
+    if ("speechSynthesis" in window) try { window.speechSynthesis.cancel(); } catch (e) {}
+  }
 
   /* ---------- Reconocimiento de voz (entrada) ---------- */
   var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
