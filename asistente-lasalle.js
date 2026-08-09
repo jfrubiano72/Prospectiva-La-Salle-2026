@@ -169,24 +169,91 @@
   }
   pintarVoz();
 
-  /* ---------- Sintesis de voz (salida) ---------- */
+  /* ---------- Sintesis de voz (salida) ----------
+     Juana no tiene voz grabada: usa la del sistema operativo, asi que suena
+     distinto en cada equipo. La seleccion anterior tomaba la PRIMERA voz en
+     espanol de la lista, que en Windows suele ser una voz local antigua de
+     timbre mayor. Los equipos actuales ya traen voces neurales mucho mejores
+     -las "Online (Natural)" de Microsoft y las de Google-; solo habia que
+     pedirlas.
+
+     Se puntua cada voz disponible y se elige la mejor:
+       neural  +40  ·  nombre femenino  +25  ·  Colombia  +20
+       otro pais de America  +12  ·  Espana  +4  ·  no local  +6
+
+     Si el equipo de la sala trae otro juego de voces, se puede cambiar en el
+     momento sin tocar el codigo:
+         vozJuanaLista()        muestra las disponibles
+         vozJuana("nombre")     fija una y la prueba
+  */
   var vozEs = null;
+  var NEURAL   = /(natural|online|neural|google|premium|enhanced|siri)/i;
+  var FEMENINA = /(salom|ximena|dalia|paloma|elena|elvira|sabina|helena|laura|catalina|isabela|luciana|camila|sofia|valentina|monica|penelope|lupe|mia|female|mujer)/i;
+  var MASCULINO= /(jorge|carlos|diego|pablo|miguel|alvaro|dalia_male|male|hombre)/i;
+
+  function puntajeVoz(v) {
+    var n = ((v.name || "") + " " + (v.voiceURI || ""));
+    var l = (v.lang || "");
+    if (!/^es/i.test(l)) return -1;
+    var p = 0;
+    if (NEURAL.test(n))    p += 40;
+    if (FEMENINA.test(n))  p += 25;
+    if (MASCULINO.test(n)) p -= 30;
+    if (/es(-|_)?CO/i.test(l))                        p += 20;
+    else if (/es(-|_)?(MX|419|US|AR|CL|PE)/i.test(l)) p += 12;
+    else if (/es(-|_)?ES/i.test(l))                   p += 4;
+    if (v.localService === false) p += 6;
+    return p;
+  }
+  function vocesEs() {
+    if (!("speechSynthesis" in window)) return [];
+    return window.speechSynthesis.getVoices().filter(function (v) { return /^es/i.test(v.lang || ""); });
+  }
   function cargarVoz() {
-    if (!("speechSynthesis" in window)) return;
-    var vs = window.speechSynthesis.getVoices();
-    vozEs = vs.filter(function (v) { return /es(-|_)?(CO|419|MX|US|ES)/i.test(v.lang) || /^es/i.test(v.lang); })
-              .sort(function (a) { return /CO|419|MX/i.test(a.lang) ? -1 : 1; })[0] || null;
+    var vs = vocesEs();
+    if (!vs.length) return;
+    var fijada = null;
+    try { fijada = window.localStorage.getItem("juana.voz"); } catch (e) {}
+    if (fijada) {
+      var f = vs.filter(function (v) { return v.name === fijada; })[0];
+      if (f) { vozEs = f; return; }
+    }
+    vozEs = vs.slice().sort(function (a, b) { return puntajeVoz(b) - puntajeVoz(a); })[0] || null;
   }
   if ("speechSynthesis" in window) {
     cargarVoz();
     window.speechSynthesis.onvoiceschanged = cargarVoz;
   }
+
+  /* Herramientas para escoger la voz en la sala, sin tocar el codigo. */
+  window.vozJuanaLista = function () {
+    var vs = vocesEs().slice().sort(function (a, b) { return puntajeVoz(b) - puntajeVoz(a); });
+    if (!vs.length) { console.log("Este equipo no tiene voces en espanol instaladas."); return []; }
+    console.table(vs.map(function (v, i) {
+      return { orden: i + 1, nombre: v.name, idioma: v.lang,
+               puntaje: puntajeVoz(v), enUso: vozEs && v.name === vozEs.name ? "si" : "" };
+    }));
+    return vs.map(function (v) { return v.name; });
+  };
+  window.vozJuana = function (nombre) {
+    var v = vocesEs().filter(function (x) { return x.name === nombre; })[0];
+    if (!v) { console.log("No encuentro esa voz. Use vozJuanaLista() para ver las disponibles."); return; }
+    vozEs = v;
+    try { window.localStorage.setItem("juana.voz", nombre); } catch (e) {}
+    hablar("Soy Juana, el asistente de prospectiva de la Universidad de La Salle. Con esta voz le voy a responder.");
+  };
+
   function hablar(txt) {
     if (!vozOut || !("speechSynthesis" in window) || !txt) return;
     try {
       window.speechSynthesis.cancel();
+      if (!vozEs) cargarVoz();
       var u = new SpeechSynthesisUtterance(txt.slice(0, 700));
-      u.lang = "es-CO"; if (vozEs) u.voice = vozEs; u.rate = 1.02; u.pitch = 1;
+      u.lang = "es-CO";
+      if (vozEs) u.voice = vozEs;
+      /* Ritmo de exposicion, no de lectura rapida: va a decir cifras.
+         El tono apenas por encima del natural quita gravedad sin volverla infantil. */
+      u.rate = 1.0; u.pitch = 1.06; u.volume = 1;
       window.speechSynthesis.speak(u);
     } catch (e) {}
   }
