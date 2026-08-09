@@ -1,12 +1,11 @@
 name: Desplegar la voz de Juana
 
+# La voz ya no se fija aqui. Vive en la lista del propio Worker y se escoge en
+# cada peticion, asi que cambiarla no exige volver a desplegar. Se retiro el
+# parametro que antes prometia fijarla: no hacia nada y confundia.
+
 on:
   workflow_dispatch:
-    inputs:
-      voz_id:
-        description: "Identificador de la voz en ElevenLabs (dejar vacio para conservar la actual)"
-        required: false
-        default: ""
   push:
     paths:
       - "worker-voz/**"
@@ -17,13 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Fijar la voz elegida
-        if: inputs.voz_id != ''
-        run: |
-          cd worker-voz
-          sed -i "s|^VOZ_ID = .*|VOZ_ID = \"${{ inputs.voz_id }}\"|" wrangler.toml
-          echo "Voz fijada:"; grep VOZ_ID wrangler.toml
 
       - name: Publicar el Worker
         uses: cloudflare/wrangler-action@v3
@@ -38,6 +30,7 @@ jobs:
 
       - name: Comprobar que quedo en pie
         run: |
-          sleep 6
-          curl -s "https://voz-lasalle.${{ secrets.CLOUDFLARE_SUBDOMINIO || 'jfrubiano' }}.workers.dev/salud" || true
+          sleep 8
+          echo "Estado del servicio:"
+          curl -s --max-time 25 "https://voz-lasalle.jfrubiano.workers.dev/salud" || true
           echo
