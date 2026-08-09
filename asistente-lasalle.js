@@ -16,7 +16,8 @@
     ink: "#182430", muted: "#5c6b78", green: "#2e8b6f", red: "#b5502f", purple: "#7d5a9c"
   };
   var SERIE = [PAL.teal, PAL.gold, PAL.azul, PAL.green, PAL.purple, PAL.navyMed];
-  var LS = { key: "lasalle_gemini_key", model: "lasalle_gemini_model", voz: "lasalle_voz_out" };
+  var LS = { key: "lasalle_gemini_key", model: "lasalle_gemini_model", voz: "lasalle_voz_out",
+             vozn: "lasalle_voz_nombre" };
   var MODELO_DEF = "gemini-2.5-flash";
   var NOMBRE = "Juana";
   // Si se despliega el proxy (para que cualquiera use el chat sin poner clave), aqui va su URL.
@@ -85,6 +86,11 @@
   .als-mic.rec{background:${PAL.red};color:#fff;animation:alsPulse 1.1s infinite}
   @keyframes alsPulse{0%{box-shadow:0 0 0 0 rgba(181,80,47,.5)}70%{box-shadow:0 0 0 9px rgba(181,80,47,0)}100%{box-shadow:0 0 0 0 rgba(181,80,47,0)}}
   .als-send svg,.als-mic svg{width:18px;height:18px}
+  .als-vozsel{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.28);
+   border-radius:8px;font:600 11px/1 inherit;padding:6px 6px;cursor:pointer;outline:none;
+   max-width:88px;-webkit-appearance:none;appearance:none;text-align:center}
+  .als-vozsel:hover{background:rgba(255,255,255,.24)}
+  .als-vozsel option{color:#111;background:#fff}
   .als-hint{font-size:10px;color:${PAL.muted};text-align:center;margin-top:6px}
   .als-cfg{position:absolute;inset:0;background:${PAL.cream};z-index:5;display:none;flex-direction:column;padding:18px 16px;overflow-y:auto}
   .als-cfg.show{display:flex}
@@ -127,6 +133,11 @@
       '<div class="mk"></div>' +
       '<div class="tt"><b>Juana</b><span>Asistente &middot; Universidad de La Salle</span></div>' +
       '<button class="als-icon" id="als-voz" title="Voz de respuesta"></button>' +
+      '<select class="als-vozsel" id="als-vozsel" title="Voz de Juana">' +
+        '<option value="karly">Karly</option>' +
+        '<option value="lina">Lina</option>' +
+        '<option value="catalina">Catalina</option>' +
+      '</select>' +
       '<button class="als-icon" id="als-cfgbtn" title="Configuracion">' + IC.cfg + '</button>' +
       '<button class="als-icon" id="als-x" title="Cerrar">' + IC.close + '</button>' +
     '</div>' +
@@ -249,6 +260,10 @@
      se queda muda delante de nadie. */
   var VOZ_SERVICIO = "https://voz-lasalle.jfrubiano.workers.dev/voz";
   var audioVoz = null;
+  /* Cual de las voces aprobadas usa Juana. Se recuerda en el propio navegador,
+     asi que el equipo de la sala conserva la eleccion entre una prueba y la
+     reunion. */
+  var vozNombre = get(LS.vozn, "karly");
 
   function hablarSistema(txt) {
     if (!("speechSynthesis" in window)) return;
@@ -274,7 +289,7 @@
       pedido = fetch(VOZ_SERVICIO, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ texto: t })
+        body: JSON.stringify({ texto: t, voz: vozNombre })
       });
     } catch (e) { hablarSistema(t); return; }
 
@@ -702,10 +717,25 @@
   $("als-cfgbtn").onclick = function () { abrirCfg(true); };
   $("als-savecfg").onclick = guardarCfg;
   $("als-voz").onclick = function () { vozOut = !vozOut; set(LS.voz, vozOut ? "1" : "0"); pintarVoz(); if (!vozOut) callar(); };
+
+  /* Cambio de voz en vivo: se guarda y se prueba de inmediato, para poder
+     decidir con el oido y no con la descripcion. */
+  (function () {
+    var sel = $("als-vozsel");
+    if (!sel) return;
+    sel.value = vozNombre;
+    sel.onchange = function () {
+      vozNombre = sel.value;
+      set(LS.vozn, vozNombre);
+      var antes = vozOut; vozOut = true;
+      hablar("Soy Juana, el asistente de prospectiva de la Universidad de La Salle. Con esta voz le voy a responder.");
+      vozOut = antes || true;
+    };
+  })();
   var inp = $("als-in");
   inp.addEventListener("input", function () { autosize(inp); });
   inp.addEventListener("keydown", function (e) { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); enviar(); } });
 
   // ocultar el mic si el navegador no lo soporta
-  if (!SR) { $("als-mic").style.display = "none"; }
+  if (!SR && !ES_IOS) { $("als-mic").style.display = "none"; }
 })();
