@@ -14,6 +14,8 @@
  *    GET  /salud            -> diagnostico sin gastar creditos
  */
 
+import { leerCifras } from "./numeros.js";
+
 const ORIGENES = [
   "https://jfrubiano72.github.io",
   "https://visoria.com.co",
@@ -125,7 +127,12 @@ export default {
     const VOZ_ID = VOCES[nombreVoz];
 
     const cache = caches.default;
-    const llave = await clave(texto, VOZ_ID);
+    /* Las cifras se pasan a palabras antes de sintetizar. Un asistente de
+       prospectiva dice numeros en casi cada respuesta y leerlos mal cuesta
+       autoridad en la primera frase. */
+    const dicho = leerCifras(texto);
+
+    const llave = await clave(dicho, VOZ_ID);
     const guardado = await cache.match(llave);
     if (guardado) {
       const r = new Response(guardado.body, guardado);
@@ -145,7 +152,7 @@ export default {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          text: texto,
+          text: dicho,
           model_id: MODELO,
           language_code: "es",
           /* Estabilidad alta y estilo bajo: va a decir cifras ante un consejo
