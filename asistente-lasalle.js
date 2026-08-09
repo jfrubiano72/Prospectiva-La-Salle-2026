@@ -301,16 +301,56 @@
     if ("speechSynthesis" in window) try { window.speechSynthesis.cancel(); } catch (e) {}
   }
 
-  /* ---------- Reconocimiento de voz (entrada) ---------- */
+  /* ---------- Reconocimiento de voz (entrada) ----------
+     En iPhone el dictado del navegador no funciona: Safari expone el objeto
+     pero falla en silencio, y Chrome en iOS corre sobre el mismo motor, asi
+     que tampoco. El boton se encendia y no pasaba nada, porque el error se
+     estaba tragando sin avisar.
+
+     Ahora: si el equipo es iPhone o iPad, el boton lleva directo al teclado y
+     explica que use el microfono del teclado, que en iOS si dicta y ademas lo
+     hace bien en espanol. En computador todo sigue igual, y si el dictado
+     falla o no responde en seis segundos, avisa en vez de quedarse mudo. */
   var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  var ES_IOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+               (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  var relojMic = null;
+
+  function pararMic() {
+    recognizing = false;
+    if (relojMic) { clearTimeout(relojMic); relojMic = null; }
+    var b = $("als-mic"); if (b) b.classList.remove("rec");
+  }
+
   function initRecog() {
     if (!SR) return null;
     var r = new SR();
     r.lang = "es-CO"; r.interimResults = true; r.continuous = false; r.maxAlternatives = 1;
-    r.onstart = function () { recognizing = true; $("als-mic").classList.add("rec"); };
-    r.onend = function () { recognizing = false; $("als-mic").classList.remove("rec"); };
-    r.onerror = function () { recognizing = false; $("als-mic").classList.remove("rec"); };
+    r.onstart = function () {
+      recognizing = true;
+      $("als-mic").classList.add("rec");
+      /* Si en seis segundos no llego ni una palabra, algo lo esta bloqueando. */
+      relojMic = setTimeout(function () {
+        if (!recognizing) return;
+        try { r.stop(); } catch (e) {}
+        pararMic();
+        dictadoManual("No alcancé a oírla. Escriba su pregunta o use el micrófono del teclado.");
+      }, 6000);
+    };
+    r.onend = pararMic;
+    r.onerror = function (e) {
+      pararMic();
+      var causa = (e && e.error) || "";
+      if (causa === "not-allowed" || causa === "service-not-allowed") {
+        dictadoManual("El navegador no me dio permiso para el micrófono. Actívelo en la barra de direcciones, o escriba su pregunta.");
+      } else if (causa === "no-speech") {
+        dictadoManual("No escuché nada. Inténtelo otra vez o escriba su pregunta.");
+      } else {
+        dictadoManual("El dictado no está disponible en este navegador. Escriba su pregunta o use el micrófono del teclado.");
+      }
+    };
     r.onresult = function (e) {
+      if (relojMic) { clearTimeout(relojMic); relojMic = null; }
       var t = "";
       for (var i = 0; i < e.results.length; i++) t += e.results[i][0].transcript;
       $("als-in").value = t; autosize($("als-in"));
@@ -318,12 +358,28 @@
     };
     return r;
   }
+
+  /* Deja el cursor puesto en el campo y abre el teclado: en iPhone el
+     microfono del teclado dicta perfecto y no depende del navegador. */
+  function dictadoManual(mensaje) {
+    var campo = $("als-in");
+    if (campo) { try { campo.focus(); campo.click(); } catch (e) {} }
+    if (mensaje) pintarError(mensaje);
+  }
+
   function toggleMic() {
-    if (!SR) { pintarError("Tu navegador no soporta dictado por voz. Usa Chrome en el computador."); return; }
-    if (recognizing) { try { recog.stop(); } catch (e) {} return; }
+    if (ES_IOS) {
+      dictadoManual("En iPhone y iPad el dictado va por el teclado: toque el micrófono que aparece junto a la barra espaciadora.");
+      return;
+    }
+    if (!SR) {
+      dictadoManual("Este navegador no dicta por voz. Escriba su pregunta, o abra el tablero en Chrome desde el computador.");
+      return;
+    }
+    if (recognizing) { try { recog.stop(); } catch (e) {} pararMic(); return; }
     callar();
     if (!recog) recog = initRecog();
-    try { recog.start(); } catch (e) {}
+    try { recog.start(); } catch (e) { pararMic(); dictadoManual("No pude abrir el micrófono. Escriba su pregunta."); }
   }
 
   /* ---------- Utilidades de UI ---------- */
